@@ -4,11 +4,11 @@ const productsController = {
       },
 
     detalle: function(req, res, next) {
-        res.render('respond with a resource');
+        res.render('products/productsDetail',{title: 'Estas accediendo al detalle de un producto'});
       },
 
     nuevo: function(req, res, next) {
-        res.render('respond with a resource');
+        res.render('products/productsNew',{title: 'Creaste un nuevo producto'});
       },
 
 }
