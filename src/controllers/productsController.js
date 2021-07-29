@@ -11,6 +11,10 @@ const productsController = {
         res.render('products/productsNew',{title: 'Creaste un nuevo producto'});
       },
 
+    cart: function(req, res, next) {
+        res.render('products/productsCart',{title: 'Estas en el carrito de productos'});
+      },
+
 }
 
 module.exports = productsController;
