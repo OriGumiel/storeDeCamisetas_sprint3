@@ -1,0 +1,252 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.main-header{
+    background-color: #131313;
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    border: solid violet 3px;
+}
+.top-nav-bar{
+    background-color: #131313;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 70px;
+    border: tomato 2px dotted;
+    margin-bottom: 15px;    
+}
+.top-nav-bar img{
+    width: 20%;
+}
+.top-nav-bar div{
+    display: flex; 
+    align-items: center;
+    width: 25%;
+}
+.slide-button{
+    display: none;
+    max-width: 100px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.log-in-button{
+    background-color: #F5BF76;
+    color: white;
+    width: 50%;
+    height: 47px;
+    border-radius: 7px;
+    font-family: 'OpenSans';
+    align-self: center;
+}
+.sign-up-button{
+    background-color: #F29C38;
+    color: white;
+    width: 50%;
+    height: 47px;
+    border-radius: 7px;
+    font-family: 'OpenSans';
+    align-self: center;
+}
+.bottom-nav-bar ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content:space-between ;
+}
+
+.bottom-nav-bar a{
+    text-decoration: none;
+    padding: 5px;
+    display: inline-block;
+    color: white;
+}
+.shop-logo{
+    color: white;
+    background-color: white;
+}
+.bottom-nav-bar{
+    display: flex;
+    border: tomato 2px dotted;
+    justify-content: space-around;
+    width: 100%;
+}
+.right-bar{
+    text-align: center;
+    border: yellow 2px solid;
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+.left-bar{
+    border: yellow 2px solid;
+    display: flex;
+    width: 65%;
+}
+.left-bar ul{
+    display: flex;
+    align-items: flex-start;
+    width: auto;
+
+}
+.left-bar ul li{
+    margin: 0px 14px;
+    width: auto;
+
+}
+.logo-shop{
+    color: white;
+    align-self: center;
+    margin: 0px 5px;
+}
+
+input {
+    width: 40%;
+    height: 47px;
+    align-self: center;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 15px;
+    background-color: rgba(218, 218, 218, 1);
+    color:#979797;
+    border-radius: 10px;
+}
+.logo {
+    width: 233px;
+    height: 57px;
+    align-self: center;
+}
+
+.principal{
+    border: dotted blueviolet 3px;
+    width: 100vw;
+    height: 590px;
+    background-image: linear-gradient(to bottom, rgba(242, 156, 56, 1), rgba(242, 156, 56, 0));
+}
+.principal h1{
+    height: 10%;
+    border: solid greenyellow 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.principal .images-articles{
+    display: flex;
+    border: solid greenyellow 3px;
+    height: 80%;
+    justify-content: space-around;
+    font-family: 'Red Hat Display', sans-serif;
+    align-items: center;
+}
+.principal .images-articles div{
+    border: greenyellow solid 3px;
+}
+.principal .images-articles div h3{
+    margin-top: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.principal .images-articles div p{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+.principal article{
+    border: orange dotted 3px;
+    margin: 10px;
+}
+.principal .left-article img{
+    width: 100%;
+}
+.principal .right-article img{
+    width: 100%;
+}
+.principal .central-article img{
+    width: 100%;
+}
+.principal .left-article{
+    width: 25%;
+    height: 75%;
+}
+.principal .right-article{
+    width: 25%;
+    height: 75%;
+}
+.principal .central-article{
+    width:35%;
+    height: 90%;
+}
+
+.medium-section{
+    border: dotted rgb(226, 43, 43) 3px;
+    width: 100vw;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.medium-section h1{
+    height: 10%;
+    border: solid greenyellow 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+}
+.medium-section .medium-images{
+    display: flex;
+    border: solid greenyellow 3px;
+    height: 80%;
+    justify-content: space-around;
+    font-family: 'Red Hat Display', sans-serif;
+    align-items: center;
+}
+.medium-section .medium-images img{
+    width: 20%;
+    height: 90%;
+}
+
+
+@media (max-width: 768px){
+    .slide-button{
+        display:block;
+    }
+    .bottom-nav-bar, .log-in-button, .sign-up-button, .logo{ 
+        display: none;
+    }
+    .top-nav-bar div{ 
+        display: none;
+    }
+    input {
+        width: 75%;
+        height: 47px;
+        display: flex;
+        align-self: center;
+        justify-content: space-around;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 15px;
+        border-radius: 10px;
+        background-color: rgba(218, 218, 218, 1);
+        color:#979797;
+    }
+
+}
