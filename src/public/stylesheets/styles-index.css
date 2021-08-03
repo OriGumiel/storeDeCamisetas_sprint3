@@ -224,7 +224,6 @@ input {
     height: 90%;
 }
 
-
 @media (max-width: 768px){
     .slide-button{
         display:block;

@@ -1,0 +1,424 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+}
+
+div.titulos {
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #cccacad3;      
+    font-size: 16px;
+    color: rgb(94, 92, 92);
+    font-weight: bold;
+    display: none;    
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;    
+}
+
+.prod {
+    margin-left: 50px
+}
+
+div.carrito ul {
+    display: flex;    
+    list-style: none;    
+}
+
+div.carrito li {
+    margin: 0 15px;    
+}
+
+div.producto {    
+    margin-top: 20px;
+    background-color: #ebe6e6af;  
+    border-radius: 4px;  
+    font-size: 12px;
+    color: black;    
+    width: 90%;
+    margin-left: 20px;    
+}
+
+article {
+    display: flex;   
+}
+
+div.producto img {
+    width: 20%;
+    padding: 10px 5px;    
+}
+
+
+
+p.descripcion {
+    width: 100%;
+    align-items: center;
+    padding: 10px 5px;
+    font-weight: 300;
+}
+
+div.main-article ul {     
+    list-style: none;
+    display: flex; 
+    justify-content: space-around;
+    font-weight: bold;  
+}
+
+li.subtotal {
+    display: none;
+}
+
+li.cantidad {
+    background-color: white;
+    border: 1px solid gray;
+    font-weight: 400;  
+    align-items: center;
+    padding: 0 6px;    
+}
+
+div.resumen {
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #c4c4c475;      
+    font-size: 12px;
+    color: rgb(94, 92, 92);
+    font-weight: 400;   
+    width: 90%;
+    padding: 10px;
+    border-radius: 4px;   
+
+}
+
+p.res-cuenta {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 0.3px solid rgb(114, 113, 113);
+    padding: 0 0 10px 0;
+}
+
+p.cupon {
+    text-align: center;    
+    padding: 5px 0 10px 0;
+}
+
+div.resumen form {
+    border-bottom: 0.3px solid rgb(114, 113, 113);
+    padding: 0 0 10px 0;    
+}
+
+input {
+    width: 100%;
+    text-align: center; 
+    border: 0.3px solid rgb(114, 113, 113);
+    padding: 3px 0;
+    font-size: 10px;    
+}
+
+div.subtotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0; 
+}
+
+div.descuento {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0 10px 0; 
+    border-bottom: 0.3px solid rgb(114, 113, 113);
+}
+
+div.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;     
+}
+
+.button {
+    background-color:#38f261;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 20px;
+    align-content:  center;
+}
+
+footer {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #252F3D;
+    color: white;
+    margin-top: 100px;
+}
+
+.logo {
+    display: none;    
+}
+
+div.listas-footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+div.listas-footer ul {
+    list-style: none;
+    font-size: 8px;
+    
+}
+
+div.mobile p {
+    font-weight: bold;
+    padding: 10px 0 5px 0;
+}
+
+div.community p {
+    font-weight: bold;
+    padding: 10px 0 5px 0;
+}
+
+div.company p {
+    font-weight: bold;
+    padding: 10px 0 5px 0;
+}
+
+div.register {
+    padding: 20px 0 30px 30px; 
+}
+
+.button-log {
+    background-color:#F5BF76;
+    border: 1px solid white;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 13px;
+    align-content:  center;
+    font-size: 9px;
+}
+
+.button-sing {
+    background-color:#F29C38;
+    border: 1px solid white;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 12px;
+    align-content:  center;
+    font-size: 9px;
+}
+
+div.footer-inferior {
+    display: flex;
+    font-size: 9px;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.50);
+    padding: 10px 15px 10px 20px;
+    font-weight: bold;
+}
+
+div.social p {
+    display: none;
+}
+
+@media (min-width: 361px) {
+    footer {
+        display: block;
+    }
+
+    div.footer-superior {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .logo {
+        display: block;
+        }    
+    
+    .logo_img {
+        width: 30%;
+        padding: 20px;
+    }
+
+    div.footer-derecha {
+        width: 80%;
+        padding-right: 40px;        
+    }
+
+    div.listas-footer {
+        font-size: 12px;
+        font-weight: 300;
+    }
+    
+    div.listas-footer ul {
+        font-size: 10px;               
+    }
+
+    div.listas-footer li {
+        padding: 5px 0;
+    }    
+
+    div.register {
+        flex-direction: column;
+        width: 40%;              
+    }
+
+    div.register button {
+        margin: 5px
+    }
+
+    .button-log {
+        padding: 4px 18.5px;        
+        font-size: 12px;
+    }
+    
+    .button-sing {
+        padding: 4px 14px;        
+        font-size: 12px;
+    }
+    
+    div.footer-inferior {
+        padding: 20px 10px;
+        font-size: 12px;        
+    }
+    
+    div.social {
+        display: flex;
+        justify-content: space-around;
+        width: 20%;
+    }
+
+    div.social p {
+        display: flex;
+    }
+
+  }
+
+
+@media (min-width: 769px) {
+    main {
+        display: flex;
+    }
+
+    div.carrito {
+        width: 70%;        
+    }
+
+    
+    div.titulos {
+        display: flex;        
+    }
+
+    div.producto {    
+        margin-top: 0px;        
+        border-bottom-left-radius: 4px; 
+        border-bottom-right-radius: 4px;                
+    }
+
+    div.main-article {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    p.descripcion {
+        width: 50%;
+        font-size: 18px;
+        
+    }
+
+    li.subtotal {
+        display: flex;               
+    }
+
+    li.price {
+        padding-right: 40px;
+    }
+
+    div.main-article ul {    
+        font-size: 16px;
+    }
+
+    div.resumen {
+        width: 30%;
+        margin-right: 20px;
+        font-size: 16px;        
+    }
+
+    p.res-cuenta {
+        padding: 10px 0 20px 0;
+    }
+
+    p.cupon {          
+        padding: 10px 0 20px 0;
+    }
+
+    div.resumen form {        
+        padding: 0px 0 20px 0;            
+    }
+
+    form input {
+        font-size: 14px;        
+    }
+
+    div.subtotal {
+        padding: 20px 0; 
+    }
+    
+    div.descuento {
+        padding: 10px 0 20px 0;         
+    }
+    
+    div.total {
+        padding: 20px 0;             
+    }    
+      
+
+    div.listas-footer {
+        font-size: 14px;
+        font-weight: 300;
+    }   
+     
+
+    div.register {
+        flex-direction: column;
+        width: 20%;              
+    }
+
+    div.register button {
+        margin: 5px
+    }
+
+    .button-log {
+        padding: 4px 18.5px;        
+        font-size: 14px;
+    }
+    
+    .button-sing {
+        padding: 4px 14px;        
+        font-size: 14px;
+    }
+    
+    div.footer-inferior {
+        padding: 30px 10px;
+        font-size: 14px;        
+    }
+    
+    div.social {
+        display: flex;
+        justify-content: space-around;
+        width: 20%;
+    }
+
+    div.social p {
+        display: flex;
+    }
+
+  
+}
