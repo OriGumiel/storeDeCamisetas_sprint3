@@ -1,8 +1,12 @@
-
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 .main-header{
     background-color: #131313;
     font-family: 'Poppins', sans-serif;
-    width: 100%;
+    width: 100vw;
     border: solid violet 3px;
 }
 .top-nav-bar{
@@ -117,6 +121,7 @@ input {
     font-size: 15px;
     background-color: rgba(218, 218, 218, 1);
     color:#979797;
+    border-radius: 10px;
 }
 .logo {
     width: 233px;
@@ -217,4 +222,30 @@ input {
 .medium-section .medium-images img{
     width: 20%;
     height: 90%;
+}
+
+@media (max-width: 768px){
+    .slide-button{
+        display:block;
+    }
+    .bottom-nav-bar, .log-in-button, .sign-up-button, .logo{ 
+        display: none;
+    }
+    .top-nav-bar div{ 
+        display: none;
+    }
+    input {
+        width: 75%;
+        height: 47px;
+        display: flex;
+        align-self: center;
+        justify-content: space-around;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 15px;
+        border-radius: 10px;
+        background-color: rgba(218, 218, 218, 1);
+        color:#979797;
+    }
+
 }
