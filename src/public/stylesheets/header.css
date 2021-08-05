@@ -1,0 +1,256 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+}
+
+/* Header*/
+
+.main-header{
+    background-color: #131313;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    /*border: solid violet 3px;*/
+}
+
+.top-nav-bar{
+    background-color: #131313;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    /*height: 70px;*/
+    /*border: tomato 2px dotted;*/
+   /* margin-bottom: 10px;   */ 
+}
+.top-nav-bar img{
+    width: 15%;
+    padding: 10px 10px 10px 0;
+}
+
+div.burger-menu {
+    color: white;
+    font-size: 20px;   
+    padding: 0 0 0 10px; 
+    align-self: center;
+}
+
+
+header nav input {
+    width: 40%;
+    height: 40px;
+    align-self: center;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 10px;
+    background-color: rgba(218, 218, 218, 1);
+    color:#979797;
+}
+
+.top-nav-bar div.top-button {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15%;    
+}
+
+.logo-sup {
+    color: white;
+    align-self: center;
+    padding: 0 10px;
+}
+
+div .top-button {
+    margin: 3 px;
+}
+
+.log-in-button{
+    background-color:#F5BF76;
+    border: 1px solid white;
+    color: white;    
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 3px;
+    padding: 4px 14px;
+    align-content:  center;
+    font-size: 8px;
+    
+    
+}
+.sign-up-button{
+    background-color:#F29C38;
+    border: 1px solid white;
+    color: white;
+    margin-top: 2px;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 3px;
+    padding: 4px 11px;
+    align-content:  center;
+    font-size: 8px;
+}
+.slide-button{
+    display: none;
+    max-width: 100px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.bottom-nav-bar ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content:space-between ;
+}
+
+.bottom-nav-bar a{
+    text-decoration: none;
+    padding: 5px;
+    display: inline-block;
+    color: white;
+}
+.shop-logo {
+    color: white;
+    background-color: white;
+}
+.bottom-nav-bar{
+    display: none;    
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 10px;
+    
+}
+.right-bar{
+    text-align: center;    
+    width: 15%;
+    display: flex;    
+}
+
+.left-bar{    
+    display: flex;
+    width: 65%;
+}
+
+.left-bar ul{
+    display: flex;
+    align-items: flex-start;
+    width: auto;
+
+}
+.left-bar ul li{
+    margin: 0px 14px;
+    width: auto;
+
+}
+.logo-shop{
+    color: white;
+    align-self: center;
+    margin: 0px 5px;
+}
+
+
+.logo {
+    width: 233px;
+    height: 57px;
+    align-self: center;
+}
+
+@media (min-width: 415px) {
+    /* Header*/
+    .bottom-nav-bar {
+        display: flex;
+    }
+
+    div.burger-menu {
+        display: none;
+    }
+
+    .top-nav-bar img{
+        width: 15%;
+        padding: 10px 10px 10px 0;
+    }
+    
+    .logo-sup {
+        display: none;
+    }
+
+    header nav input {
+        width: 58%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .top-nav-bar div.top-button {
+        flex-direction: row;
+        width: 20%;    
+    }
+     
+    .log-in-button{
+        margin-right: 5px;
+        padding: 4px 15px;
+        font-size: 12px;
+               
+    }
+
+    .sign-up-button{
+        padding: 4px 11px;        
+        font-size: 12px;
+        margin-top: 0px;
+    }
+
+    .right-bar{        
+        width: 0%;
+        padding-left: 20px;    
+    }
+
+    div.right-bar ul li{
+       display: none;
+    }
+
+}
+
+@media (min-width: 769px) {
+    
+        /* Header*/
+        .top-nav-bar img{
+            width: 10%;
+            padding: 10px 10px 10px 0;
+        }
+    
+        .log-in-button{
+            margin-right: 5px;
+            padding: 6px 17px;
+            font-size: 14px;
+            
+            
+        }
+    
+        .sign-up-button{
+            padding: 6px 13px;        
+            font-size: 14px;
+            margin-top: 0px;
+        }
+    
+        .right-bar{        
+            width: 10%;
+            padding-left: 0px;    
+        }
+    
+        div.right-bar ul li{
+            display: flex;
+         }
+
+}
+
