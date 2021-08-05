@@ -1,0 +1,108 @@
+*{ box-sizing: border-box;}
+
+h1 {
+    text-align: center;
+    font-family:'Red Hat Display', sans-serif;
+    color: #F29C38;
+    font-weight:bold;
+    margin-top: 80px;
+}
+
+form {
+    margin: 0 auto;
+    width: 400px;
+    height: 350px;
+    padding: 1em;
+    border: 1px solid grey;
+    border-radius: 2px;
+    background-color: white;
+}
+
+form p {
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Red Hat Display', sans-serif;
+}
+form li + li {
+    margin-top: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input,
+textarea {
+    font-family: 'Red Hat Display', sans-serif;
+    width: 300 px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+}
+
+input#name {
+    width: 250px;
+}
+
+input#surname {
+    width: 250px;
+}
+input#mail {
+    width: 250px;
+}
+input#password-name {
+    width: 250px;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+.button {
+    text-align: center;
+    list-style: none;
+}
+
+li.button {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+button {
+    background-color: #F5BF76;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    border-radius: 5px;
+    border-color: #F5BF76;
+}
+
+footer {
+    font-family: 'Red Hat Display', sans-serif;
+    color: white;
+    background: linear-gradient(to bottom, white, #F29C38, #131313);
+    font-size: 15px;
+    text-align: right;
+}
+footer div {
+    margin: 5px;
+}
+
+.contenedor {
+    display:flex;
+    flex-wrap: wrap;
+}
+.creditos {
+    display:flex;
+    flex-direction: column-reverse;
+}
+
+.redes {
+    display:flex;
+}

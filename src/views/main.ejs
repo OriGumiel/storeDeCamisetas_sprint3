@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+    <%-include('./partials/head') %>
+</head>
+<body>
+    <%-include('./partials/header') %>
+    <section class="principal">
+        <h1 class="principal-title">¡La comunidad más grande de fanaticos de las camisetas!</h1>
+      <div class="images-articles">
+        <article class="left-article">
+        <img src="images/liga-europa.jpeg" class="left-principal-image">
+        <div>
+         <h3>Camisetas de Europa</h3> 
+         <p>Vivi la pasion del viejo continente, encuentra las camisetas de los equipos mas reconocidos de Europa</p>  
+         <p>#Juventus #Barcelona #Real Madrid #Inter de Milan #Manchester United</p>  
+        </div>
+     </article>
+     <article class="central-article">
+        <img src="images/liga-argentina.jpeg" class="central-principal-image">
+        <div>
+         <h3>Camisetas de Argentina</h3> 
+         <p>Vivi la pasión del fútbol argentino, descubrí las camisetas de los mejoreas equipo de la AFA.</p>  
+         <p>#Independiente #Boca #River #Estudiantes #San Lorenzo #Velez</p>  
+        </div>
+     </article>
+     <article class="right-article">
+        <img src="images/Clasicas.jpeg" class="right-principal-image">
+        <div>
+         <h3>Las mejores casacas de la historia</h3> 
+         <p>Recorre la historia del futbol vistiendo las camisetas que marcaron las hitoria del futbol mundial</p>  
+         <p>#Maradona #Cryuff #Ronaldo #Figo</p>  
+        </div>
+     </article>
+    </div>
+    </section>
+    <section class="medium-section">
+        <h1 class="medium-title">¡Las mejores ligas del mundo en un solo sitio!</h1>
+        <article class="medium-images"> 
+              <img src="images/premier-league.svg" class="medium-image-1">
+              <img src="images/afa.svg" class="medium-image-2">
+              <img src="images/la-liga.svg" class="medium-image-3">
+              <img src="images/serie-a.svg" class="medium-image-4">
+        </article>
+    </section>
+</body>
 </html>
