@@ -36,6 +36,13 @@ display: block;
     align-items: flex-start;
 }
 
+.masfotos{
+    padding-top: 20px;
+    justify-content: center;
+    position: relative; 
+    right: 30px;
+}
+
 .descripcion{
     width: 30%;
     position: relative;
@@ -150,7 +157,7 @@ article .foto6{
 
 .fas{
 position: relative;
-bottom: 40px;
+bottom: -40px;
 }
 
 .recomendaciones{
@@ -165,9 +172,6 @@ bottom: 40px;
     font-size:x-large;
 }
 
-.masfotos{
-    padding-top: 20px;
-}
 
 .mascamisetas{
     display: flex;
