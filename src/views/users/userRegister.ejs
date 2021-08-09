@@ -1,2 +1,41 @@
-<h1> <%= title %></h1>
+
+      <%- include('../partials/header') %>
+      
+<body>
+    <main>
+        <h1>Registrate acá</h1>
+
+        <form action="/formulario" method="post">
+           <ul>
+             <p>Unite a Store de camisetas y accede a increibles descuentos!</p>
+              <li>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="user_name">
+              </li>
+                <br>
+              <li>
+                <label for="surname">Apellido:</label>
+                <input type="text" id="surname" name="user_surname">
+              </li>
+                <br>
+              <li>
+                <label for="mail">Correo electrónico:</label>
+                <input type="email" id="mail" name="user_mail">
+              </li>
+                <br>
+              <li>
+                <label for="password">Crear contraseña:</label>
+                <input type="password" id="password-name" name="user_password">
+              </li>
+                <br>
+           </ul>
+           <li class="button">
+            <button type="submit">Registrarse</button>
+          </li>
+        </form>
+    </main>
+
+</body>
+
+<%- include('../partials/footer') %> 
 
