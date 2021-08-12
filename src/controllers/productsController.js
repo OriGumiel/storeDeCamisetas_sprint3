@@ -4,7 +4,9 @@ const productsController = {
       },
 
     detalle: function(req, res, next) {
-        res.render('products/productsDetail',{title: 'Estas accediendo al detalle de un producto'});
+        res.render('products/productsDetail',{title: 'Estas accediendo al detalle de un producto',
+        style: '/stylesheets/styles.css',
+      });
       },
 
     nuevo: function(req, res, next) {
