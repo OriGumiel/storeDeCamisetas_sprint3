@@ -1,21 +1,35 @@
-*{ box-sizing: border-box;}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+    
+
 
 h1 {
     font-family: 'Red Hat Display', sans-serif;
     font-weight: bold;
     text-align: center;
     color: #F29C38;
-    margin-top: 100px;
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+
 }
+
 form {
     margin: 0 auto;
-    width: 400px;
+    width: 90%;
     height: 240px;
     padding: 1em;
     border: 1px solid grey;
     border-radius: 2px;
     background-color: white;
+    margin-bottom: 80px;
 }
+
 ul {
     list-style: none;
     padding: 0;
@@ -31,15 +45,15 @@ label {
 }
 
 input#mail {
-    width: 250px;
+    width: 220px;
 }
 
 input#user {
-    width:250px;
+    width:220px;
 }
 
 input#password-name {
-    width:250px;
+    width:220px;
 }
 
 li.button {
@@ -56,26 +70,23 @@ button {
     border-radius: 5px;
 }
 
-footer {
-    font-family: 'Red Hat Display', sans-serif;
-    color: white;
-    background: linear-gradient(to bottom, white, #F29C38, #131313);
-    font-size: 15px;
-    text-align: right;
-}
-footer div {
-    margin: 5px;
+@media (min-width: 415px) {
+
+form {    
+    width: 400px;    
 }
 
-.contenedor {
-    display:flex;
-    flex-wrap: wrap;
-}
-.creditos {
-    display:flex;
-    flex-direction: column-reverse;
+input#mail {
+    width: 250px;
 }
 
-.redes {
-    display:flex;
+input#user {
+    width:250px;
 }
+
+input#password-name {
+    width:250px;
+}
+
+}
+
