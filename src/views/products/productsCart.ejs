@@ -1,63 +1,65 @@
+<%- include('../partials/head') %> 
 
-
+<body>
+    
 <%- include('../partials/header') %> 
 
 <!-- Carrito de Compras-->
-    <body>
-        <main>
-            <div class="carrito">
-                <div class="titulos">
-                    <div class="title">
-                        <p class="prod">Producto</p>
+    
+    <main>
+        <div class="carrito">
+            <div class="titulos">
+                <div class="title">
+                    <p class="prod">Producto</p>
+                </div>
+
+                <ul>
+                    <li>Precio Unitario</li>
+                    <li>Cantidad</li>
+                    <li>Total</li>
+                </ul>
+
+            </div>
+
+            <div class="producto">
+                <article>
+                    <img src="/images/nike-camiseta-fc-barcelona-21-22.jpg" alt="Barcelona" class="product_img">
+                    <div class="main-article">                
+                        <p class="descripcion">Camiseta Nike-Barcelona Home 2021/2022 + Parche UEFA Champion League - Talle M</p>
+                        <ul>
+                            <li class="price">$ 17.500</li>
+                            <li class="cantidad">1</li>                                  
+                            <li class="subtotal">$ 17.500</li>
+                        </ul>
                     </div>
-
-                    <ul>
-                        <li>Precio Unitario</li>
-                        <li>Cantidad</li>
-                        <li>Total</li>
-                    </ul>
-
-                </div>
-
-                <div class="producto">
-                    <article>
-                        <img src="/images/nike-camiseta-fc-barcelona-21-22.jpg" alt="Barcelona" class="product_img">
-                        <div class="main-article">                
-                            <p class="descripcion">Camiseta Nike-Barcelona Home 2021/2022 + Parche UEFA Champion League - Talle M</p>
-                            <ul>
-                                <li class="price">$ 17.500</li>
-                                <li class="cantidad">1</li>                                  
-                                <li class="subtotal">$ 17.500</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
+                </article>
             </div>
+        </div>
 
-            <div class="resumen">
-                <p class= "res-cuenta">Resumen de Compra</p>
-                <p class="cupon">¿Tienes un cupón de descuento?</p>        
-                <form action="/buscar-codigo" method="GET">
-                    <input type="text" name="codigo" placeholder="Ingresar código">        
-                </form>
-                <div class="subtotal">
-                    <p>Subtotal</p>
-                    <p>$ 17.500,00</p>
-                </div>
-                <div class="descuento">
-                    <p>Descuento</p>
-                    <p>$ 0,00</p>
-                </div>
-                <div class="total">
-                    <p>Total:</p>
-                    <p>$ 17.500,00</p>
-                </div>
-                <button type="submit" class="button">Continuar</button>
+        <div class="resumen">
+            <p class= "res-cuenta">Resumen de Compra</p>
+            <p class="cupon">¿Tienes un cupón de descuento?</p>        
+            <form action="/buscar-codigo" method="GET">
+                <input type="text" name="codigo" placeholder="Ingresar código">        
+            </form>
+            <div class="subtotal">
+                <p>Subtotal</p>
+                <p>$ 17.500,00</p>
             </div>
-        </main>
+            <div class="descuento">
+                <p>Descuento</p>
+                <p>$ 0,00</p>
+            </div>
+            <div class="total">
+                <p>Total:</p>
+                <p>$ 17.500,00</p>
+            </div>
+            <button type="submit" class="button">Continuar</button>
+        </div>
+    </main>
         
-        <%- include('../partials/footer') %> 
-    </body>
+<%- include('../partials/footer') %> 
 
+</body>
 
 </html>
