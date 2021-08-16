@@ -17,8 +17,8 @@ const productsController = {
        
         res.render('products/productsCart',{
           title: 'Estas en el carrito de productos',
-          style: '/stylesheets/productsCart.css',
-         });
+          style: '/stylesheets/productsCart.css'
+      });
       },
 
 }
