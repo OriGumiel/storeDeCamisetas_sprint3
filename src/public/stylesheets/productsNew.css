@@ -9,230 +9,27 @@ body {
     background-color: white;
 }
 
-/* Carrito*/
-
-div.titulos {
-    margin-top: 20px;
-    margin-left: 20px;
-    background-color: #cccacad3;      
-    font-size: 16px;
-    color: rgb(94, 92, 92);
-    font-weight: bold;
-    display: none;    
-    justify-content: space-between;
-    width: 90%;
-    padding: 10px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;    
-}
-
-.prod {
-    margin-left: 50px
-}
-
-div.carrito ul {
-    display: flex;    
-    list-style: none;    
-}
-
-div.carrito li {
-    margin: 0 15px;    
-}
-
-div.producto {    
-    margin-top: 20px;
-    background-color: #ebe6e6af;  
-    border-radius: 4px;  
-    font-size: 12px;
-    color: black;    
-    width: 90%;
-    margin-left: 20px;    
-}
-
-article {
-    display: flex;   
-}
-
-div.producto img {
-    width: 20%;
-    padding: 10px 5px;    
-}
-
-
-
-p.descripcion {
-    width: 100%;
-    align-items: center;
-    padding: 10px 5px;
-    font-weight: 300;
-    position: relative;
-    left: 5%;
-}
-
-div.main-article ul {     
-    list-style: none;
-    display: flex; 
-    justify-content: space-around;
-    font-weight: bold;  
-}
-
-li.subtotal {
-    display: none;
-}
-
-li.cantidad {
-    background-color: white;
-    border: 1px solid gray;
-    font-weight: 400;  
-    align-items: center;
-    padding: 0 6px;    
-}
-
-div.resumen {
-    margin-top: 20px;
-    margin-left: 20px;
-    background-color: #c4c4c475;      
-    font-size: 12px;
-    color: rgb(94, 92, 92);
-    font-weight: 400;   
-    width: 90%;
-    padding: 10px;
-    border-radius: 4px;   
-
-}
-
-p.res-cuenta {
-    text-align: center;
-    font-weight: bold;
-    border-bottom: 0.3px solid rgb(114, 113, 113);
-    padding: 0 0 10px 0;
-}
-
-p.cupon {
-    text-align: center;    
-    padding: 5px 0 10px 0;
-}
-
-div.resumen form {
-    border-bottom: 0.3px solid rgb(114, 113, 113);
-    padding: 0 0 10px 0;    
-}
-
-input {
-    width: 100%;
-    text-align: center; 
-    border: 0.3px solid rgb(114, 113, 113);
-    padding: 3px 0;
-    font-size: 10px;    
-}
-
-div.subtotal {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0; 
-}
-
-div.descuento {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0 10px 0; 
-    border-bottom: 0.3px solid rgb(114, 113, 113);
-}
-
-div.total {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;     
-}
-
-.button {
-    background-color:#38f261;
+.form-label {
+    display: inline-block;
+    font-size: 1.1 em;
+    margin: 10px 0;
+    
+  }
+  
+  .form-input {
+    display: block;
+    width: 50%;
+    height: 45px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    border-radius: 8px;
     border: none;
-    color: white;
-    border-radius: 5px;
-    padding: 8px 20px;
-    align-content:  center;
-}
-
-@media (min-width: 769px) {
-
-    /* Carrito*/
-
-    main {
-        display: flex;
-    }
-
-    div.carrito {
-        width: 70%;        
-    }
-
-    
-    div.titulos {
-        display: flex;        
-    }
-
-    div.producto {    
-        margin-top: 0px;        
-        border-bottom-left-radius: 4px; 
-        border-bottom-right-radius: 4px;                
-    }
-
-    div.main-article {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    p.descripcion {
-        width: 50%;
-        font-size: 18px;
-        
-    }
-
-    li.subtotal {
-        display: flex;               
-    }
-
-    li.price {
-        padding-right: 40px;
-    }
-
-    div.main-article ul {    
-        font-size: 16px;
-    }
-
-    div.resumen {
-        width: 30%;
-        margin-right: 20px;
-        font-size: 16px;        
-    }
-
-    p.res-cuenta {
-        padding: 10px 0 20px 0;
-    }
-
-    p.cupon {          
-        padding: 10px 0 20px 0;
-    }
-
-    div.resumen form {        
-        padding: 0px 0 20px 0;            
-    }
-
-    form input {
-        font-size: 14px;        
-    }
-
-    div.subtotal {
-        padding: 20px 0; 
-    }
-    
-    div.descuento {
-        padding: 10px 0 20px 0;         
-    }
-    
-    div.total {
-        padding: 20px 0;             
-    }   
-
-}
+    border: solid 1px gray;
+    padding: 0 15px;    
+  }
+  
+  textarea.form-input {
+    min-height: 140px;
+    resize: vertical;
+    padding: 15px;
+  }
