@@ -1,0 +1,62 @@
+<%- include('../partials/head') %> 
+
+<body>
+    
+<%- include('../partials/header') %> 
+
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Estás editando: <i><%= productToEdit.name %></i></h2>
+			</div>
+		</div>
+		<div class="col-12">
+			<form action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST">
+				<div class="row product-detail">
+					<div class="col-12 col-md-6">
+						<label for="name" class="form-label">Nombre del producto:</label>
+						<input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input" value="<%= productToEdit.name %> ">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="price" class="form-label">Precio del producto:</label>
+						<input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input" value="<%= productToEdit.price %>">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="talle" class="form-label">Talle:</label>
+						<input type="text" id="talle" name="talle" placeholder="L" class="form-input" value="<%= productToEdit.talle %>">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="color" class="form-label">Color:</label>
+						<input type="text" id="color" name="color" placeholder="Rojo" class="form-input" value="<%= productToEdit.color %>">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="esNovedad" class="form-label">Novedad:</label>
+						<select name="esNovedad" id="esNovedad" class="form-input">
+							<% if (productToEdit.esNovedad == 'in-sale') { %>
+								<option value="true" selected='true'>Si</option>
+								<option value="false">No</option>
+							<% } else { %>
+								<option value="true">Si</option>
+								<option value="false" selected='true'>No</option>
+							<% } %>
+						</select>
+					</div>
+					<div class="col-12">
+						<label for="description" class="form-label">Descipción:</label>
+						<textarea name="description" id="description" class="form-input"><%= productToEdit.description %></textarea>
+					</div>
+					<div class="col-12">
+						<button type="submit" class="buy-now-button">Guardar producto</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<!-- /todos los productos -->
+
+	<!-- footer -->
+	<%- include('../partials/footer') %> 
+	<!-- /footer -->
+</body>	
+</html>
