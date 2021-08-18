@@ -75,10 +75,6 @@ const productsController = {
       //res.redirect('/detail/'+id);
     },
 
-<<<<<<< HEAD
-
-=======
->>>>>>> da7972e7da31ccb592a24dff770edc1fa80667da
     cart: function(req, res, next) {
        
         res.render('products/productsCart',{
