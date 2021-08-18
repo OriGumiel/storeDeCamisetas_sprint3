@@ -1,9 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/productos.json');
+const productsFilePath = path.join(__dirname, '../data/Productos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 
 const productsController = {
     todos: function(req, res, next) {
@@ -76,7 +75,10 @@ const productsController = {
       //res.redirect('/detail/'+id);
     },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> da7972e7da31ccb592a24dff770edc1fa80667da
     cart: function(req, res, next) {
        
         res.render('products/productsCart',{

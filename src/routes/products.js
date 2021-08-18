@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const path = require('path');
+<<<<<<< HEAD
 
 const productsController = require ('../controllers/productsController');
 
@@ -15,6 +16,21 @@ let storage = multer.diskStorage({
   }) 
   let upload = multer({ storage: storage })
 
+=======
+
+const productsController = require ('../controllers/productsController');
+
+const multer = require('multer');
+let storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, path.join(__dirname + '../../public/images/products'))
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.originalname);
+    }
+  }) 
+  let upload = multer({ storage: storage })
+>>>>>>> da7972e7da31ccb592a24dff770edc1fa80667da
 
 /* GET users listing. */
 router.get('/', productsController.todos );
@@ -31,3 +47,4 @@ router.put('/edit/:id', productsController.update);
 router.get('/carrito',productsController.cart );
 
 module.exports = router;
+
