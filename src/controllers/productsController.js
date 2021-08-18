@@ -12,7 +12,7 @@ const productsController = {
       
         res.render('products/productsAll',{
           title: 'todos los productos',
-          style: '/stylesheets/productsAll.css',
+          style: '/stylesheets/productos.css',
           equipo: equipo
         });
       },
@@ -34,7 +34,6 @@ const productsController = {
           style: '/stylesheets/productsCart.css'
       });
       },
-
 }
 
 module.exports = productsController;
