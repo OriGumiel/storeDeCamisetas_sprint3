@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+}
+
+.form-label {
+    display: inline-block;
+    font-size: 1.1 em;
+    margin: 10px 0;
+    
+  }
+  
+  .form-input {
+    display: block;
+    width: 50%;
+    height: 45px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    border: none;
+    border: solid 1px gray;
+    padding: 0 15px;    
+  }
+  
+  textarea.form-input {
+    min-height: 140px;
+    resize: vertical;
+    padding: 15px;
+  }
