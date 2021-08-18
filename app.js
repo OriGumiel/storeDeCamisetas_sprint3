@@ -11,6 +11,7 @@ const usersRouter = require('./src/routes/users');
 const productsRouter = require('./src/routes/products')
 
 const app = express();
+const methodOverride = require('method-override');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'src/views'));
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'src/public')));
+app.use(methodOverride('_method'));
 
 
 // routes setup
