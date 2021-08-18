@@ -1,6 +1,20 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/productos.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
 const productsController = {
     todos: function(req, res, next) {
-        res.render('products/productsAll',{title: 'todos los productos'});
+
+      let equipo = products.filter(element => element.category === "Europa");
+      
+        res.render('products/productsAll',{
+          title: 'todos los productos',
+          style: '/stylesheets/productsAll.css',
+          equipo: equipo
+        });
       },
 
     detalle: function(req, res, next) {

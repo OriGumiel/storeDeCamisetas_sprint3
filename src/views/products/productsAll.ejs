@@ -1,2 +1,43 @@
+<%- include('../partials/head') %> 
+
+<body>
+    
+<%- include('../partials/header') %> 
+
 <h1> <%= title %></h1>
 
+	<!-- ultima visita -->
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Basado en tu última visita</h2>
+			</div>
+			<!-- Show the "visited" products -->
+			
+			<% for( let index = 0; index < equipo.length; index++ ) { %>
+				
+				<div class="col-12 col-sm-6 col-lg-3">
+					<section class="product-box">
+						<a href="/products/detail/<%= equipo[index].id%> ">
+							<figure class="product-box_image">
+								<img src="/images/<%= equipo[index].image%>" alt="imagen de producto">
+							</figure>
+							<article class="product-box_data">
+								<h2> $<%= equipo[index].price %> </h2>
+								<span><%= equipo[index].discount %>% OFF</span>
+								<p><%= equipo[index].name %></p>
+								<i class="fas fa-truck"></i>
+							</article>
+						</a>
+					</section>
+				</div>
+				<% } %>
+		</div>
+	</div>
+	<!-- /ultima visita -->
+
+<%- include('../partials/footer') %> 
+
+</body>
+
+</html>
