@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const path = require('path');
 
-const productsController = require ('../controllers/productsController')
+const productsController = require ('../controllers/productsController');
 
 const multer = require('multer');
 let storage = multer.diskStorage({
@@ -14,8 +14,6 @@ let storage = multer.diskStorage({
     }
   }) 
   let upload = multer({ storage: storage })
-  
-
 
 /* GET users listing. */
 router.get('/', productsController.todos );
@@ -25,13 +23,11 @@ router.get('/detalle/:id',productsController.detalle );
 router.get('/nuevoProducto',productsController.nuevo );
 router.post('/store', upload.single('images'),productsController.store); 
 
+/*** EDIT ONE PRODUCT ***/ 
+router.get('/edit/:id/', productsController.edit); 
+router.put('/edit/:id', productsController.update); 
+
 router.get('/carrito',productsController.cart );
 
-//router.get('/detail/:id/', productsController.detail); 
-
-/*** EDIT ONE PRODUCT ***/ 
-//router.get('/edit/:id/', productsController.edit); 
-//router.put('/edit/:id', productsController.update); 
-
-
 module.exports = router;
+
