@@ -11,7 +11,7 @@ const productsController = {
       let equipo = products.filter(element => element.category === "Europa");
       
         res.render('products/productsAll',{
-          title: 'todos los productos',
+          title: 'Todos los productos de nuestro Store',
           style: '/stylesheets/productos.css',
           equipo: equipo
         });

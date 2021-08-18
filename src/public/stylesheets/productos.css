@@ -1,3 +1,12 @@
 h2.products-title {
-    background-color: red;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    background-color:#F29C38;
+    color: white;
+    border: 5px solid white;
+}
+
+.product-box {
+    background-color: #cccacad3;
 }
