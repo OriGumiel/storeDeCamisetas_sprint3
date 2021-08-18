@@ -4,18 +4,13 @@ Sprint 2
 Hasta el momento no encontramos falencias o cosas que hayamos pensado que tendriamos que cambiar, claro que fue el primer sprint y en comparacion con los que vendran no tuvo tanta carga horaria ni tampoco requerimos de hacer pruebas con el codigo. 
 
 Sprint 3
-En este sprint lo que mas nos peso fue el poco tiempo de trabajo en equipo. La semana previa a la entrega nos reagrupamos y tuvimos que ponernos de acuerdo para decidir con cual de los 2 proyectos continuabamos y luego definir que tareas tomaba cada integrante. 
+En este sprint lo que mas nos peso fue el poco tiempo de trabajo en equipo. La semana previa a la entrega nos reagrupamos y tuvimos que ponernos de acuerdo para decidir con cual de los 2 proyectos continuabamos y luego definir que tareas tomaba cada integrante. Lo valorable fue la comunicacion grupal para poder cumplir con las pautas que nos quedaban pendientes en poco tiempo.
 
 Sprint 4
-Implementen nuevamente la dinámica de la estrella de mar, resaltando aquello que hay que:
-1. Comenzar a hacer
-2. Hacer más
-3. Continuar haciendo
+Implementando la dinámica de la estrella de mar:
+1. Comenzar a hacer -  Jason - Crud
+2. Hacer más - UX-UI / Links a paginas
+3. Continuar haciendo - Enfocarse en el diseño
 4. Hacer menos
 5. Dejar de hace
 
-1. Jason - Crud
-2. UX-UI / Links a paginas
-3. Enfocarse en el diseño
-4. -
-5. -
