@@ -1,2 +1,78 @@
-<h1> <%= title %></h1>
+<%- include('../partials/head') %> 
 
+<body>
+    
+<%- include('../partials/header') %> 
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Formulario de creación de productos</h2>
+			</div>
+		</div>
+		<div class="col-12">
+			<form action="/products/store" method="POST" enctype="multipart/form-data">
+				<div class="row product-detail">
+					<div class="col-12 col-md-6">
+						<label for="name" class="form-label">Nombre del producto:</label>
+						<input type="text" id="name" name="name" placeholder="Ej: Camiseta Argentina" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="price" class="form-label">Precio del producto:</label>
+						<input type="text" id="price" name="price" placeholder="Ej: 5000" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="talle" class="form-label">Talle:</label>
+						<select name="talle" id="talle" class="form-input">
+							<option value="">Elegí</option>
+							<option value="S">S</option>
+							<option value="M">M</option>
+							<option value="L">L</option>
+							<option value="XL">XL</option>
+							<option value="2XL">2XL</option>
+						</select>
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="category" class="form-label">Categoría:</label>
+						<select name="category" id="category" class="form-input">
+							<option value="">Elegí</option>
+							<option value="Argentina">Argentina</option>
+							<option value="Europa">Europa</option>
+							<option value="Selecciones">Selecciones</option>
+							<option value="Clasicas">Clásicas</option>
+						</select>
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="color" class="form-label">Color:</label>
+						<input type="text" id="color" name="color" placeholder="Ej: Rojo" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="esNovedad" class="form-label">Novedad:</label>
+						<select name="esNovedad" id="esNovedad" class="form-input">
+							<option value="">Elegí</option>
+							<option value="true">Si</option>
+							<option value="false">No</option>							
+					</div>
+					<div class="col-12">
+						<label for="description" class="form-label">Descipción:</label>
+						<textarea name="description" id="description" class="form-input"></textarea>
+					</div>
+					<div class="col-12">
+						<label for="description" class="form-label">Imagenes:</label>
+						<input name="images" id="images" class="form-input" type="file">
+					</div>
+					<div class="col-12">
+						<button type="submit" class="buy-now-button">Guardar producto</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	
+
+	<!-- footer -->
+	<%- include('../partials/footer') %> 
+	<!-- /footer -->
+</body>	
+</html>
