@@ -1,12 +1,18 @@
 h2.products-title {
-    font-size: 25px;
+    font-size: 35px;
     font-family: 'Open Sans', sans-serif;
-    text-align: left;
+    text-align: center;
     background-color:#F29C38;
     color: white;
     border: 5px solid white;
+    border-radius: 10px;
 }
 
 .product-box {
+    text-align: center;
+}
+
+.product-box_data {
     background-color: #cccacad3;
+    border-radius: 15px;
 }
