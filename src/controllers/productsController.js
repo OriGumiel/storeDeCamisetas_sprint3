@@ -7,11 +7,11 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsController = {
     todos: function(req, res, next) {
 
-      let equipo = products.filter(element => element.category === "Europa");
+      let equipo = products.filter(element => element.category === "europa");
       
         res.render('products/productsAll',{
-          title: 'todos los productos',
-          style: '/stylesheets/productsAll.css',
+          title: 'Todos los productos de nuestro Store',
+          style: '/stylesheets/productos.css',
           equipo: equipo
         });
       },
@@ -82,7 +82,6 @@ const productsController = {
           style: '/stylesheets/productsCart.css'
       });
       },
-
 }
 
 module.exports = productsController;
