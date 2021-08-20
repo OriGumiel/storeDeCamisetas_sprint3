@@ -1,20 +1,202 @@
-[{"id":1,"name":"Barcelona","description":"Camiseta Nike Barcelona Home 2021/2022 + Parche UEFA Champions League","price":17500,"image":"barca.jpeg","category":"esNovedad","color":"azul y rojo","talle":"M"},
-{"id":2,"name":"España Retro","description":"Camiseta Adidas España Retro Home 1998/1999 Dorsal 10 - Raul","price":19500,"image":"españa-retro.jpeg","category":"retro","color":"rojo","talle":"L"},
-{"id":3,"name":"PSG","description":"Camiseta Nike PSG Home 2021/2022","price":17500,"image":"psg.jpeg","category":"esNovedad","color":"azul","talle":"XL"},
-{"id":4,"name":"Alemania","description":"Camiseta Adidas Alemania Home 2020/2021 + Parche Eurocopa","price":16000,"image":"alemania.jpeg","category":"selecciones","color":"blanco","talle":"2XL"},
-{"id":5,"name":"Ajax Retro","description":"Camiseta Adidas Ajax Home 1994/1995","price":21500,"image":"ajax.jpeg","category":"retro","color":"blanco y rojo","talle":"S"},
-{"id":6,"name":"River","description":"Camiseta Adidas River Home 2021/2022","price":11500,"image":"river.jpg","category":"argentina","color":"blanco y rojo","talle":"XL"},
-{"id":7,"name":"Liverpool","description":"Camiseta Nike Liverppol Home 2021/2022 + Parche UEFA Champions League","price":17500,"image":"liverpool.jpeg","category":"europa","color":"rojo","talle":"L"},
-{"id":8,"name":"España","description":"Camiseta Adidas España Home 2021/2022","price":15000,"image":"españa.jpeg","category":"selecciones","color":"roja","talle":"M"},
-{"id":9,"name":"Boca","description":"Camiseta Adidas Boca Home 2021/2022","price":11500,"image":"boca.jpg","category":"esNovedad","color":"azul y amarillo","talle":"2XL"},
-{"id":10,"name":"Suecia Retro","description":"Camiseta Adidas Suecia Retro Home 1996/1998 Dorsal 7 - Larsson","price":20000,"image":"suecia-retro.jpeg","category":"retro","color":"amarilla","talle":"S"},
-{"id":11,"name":"Inter","description":"Camiseta Nike Inter Home 2020/2021","price":13500,"image":"inter.jpeg","category":"europa","color":"azul y negro","talle":"L"},
-{"id":12,"name":"Holanda Retro","description":"Camiseta Nike Holanda Home 1994 Dorsal 10 - Bergkamp","price":14500,"image":"holanda-retro.jpeg","category":"retro","color":"naranja","talle":"3XL"},
-{"id":13,"name":"Racing","description":"Camiseta Kappa Racing Home 2021/2022","price":11500,"image":"racing.jpeg","category":"argentina","color":"celeste y blanco","talle":"L"},
-{"id":14,"name":"Juventus","description":"Camiseta Adidas Juventus Home 2021/2022","price":14500,"image":"juventus.jpeg","category":"europa","color":"blanco y negro","talle":"S"},
-{"id":15,"name":"Francia","description":"Camiseta Nike Francia Home Vapor Match 2020/2021","price":18500,"image":"francia.jpeg","category":"europa","color":"azul","talle":"XL"},
-{"id":16,"name":"Croacia","description":"Camiseta Nike Croacia Away 2020/2021","price":13000,"image":"croacia.jpeg","category":"selecciones","color":"negro y gris","talle":"XS"},
-{"id":17,"name":"Manchester City","description":"Camiseta Puma Manchester City Home 2021/2022","price":16500,"image":"city.jpeg","category":"europa","color":"celeste","talle":"3XL"},
-{"id":18,"name":"Independiente","description":"Camiseta Puma Independiente Home 2021/2022","price":11500,"image":"indepte.jpg","category":"argentina","color":"rojo","talle":"L"},
-{"id":19,"name":"Holanda","description":"Camiseta Nike Holanda Home Vapor Match 2021/2022","price":17500,"image":"holanda.jpeg","category":"selecciones","color":"naranja","talle":"M"},
-{"id":20,"name":"Real Madrid","description":"Camiseta Adidas Real Madrid Home 2021/2022","price":15500,"image":"real.jpeg","category":"europa","color":"blanco","talle":"2XL"}]
+[
+    {
+        "id": 1,
+        "name": "Barcelona",
+        "description": "Camiseta Nike Barcelona Home 2021/2022 + Parche UEFA Champions League",
+        "price": 17500,
+        "image": "barca.jpeg",
+        "category": "esNovedad",
+        "color": "azul y rojo",
+        "talle": "M"
+    },
+    {
+        "id": 2,
+        "name": "España Retro",
+        "description": "Camiseta Adidas España Retro Home 1998/1999 Dorsal 10 - Raul",
+        "price": 19500,
+        "image": "españa-retro.jpeg",
+        "category": "retro",
+        "color": "rojo",
+        "talle": "L"
+    },
+    {
+        "id": 3,
+        "name": "PSG",
+        "description": "Camiseta Nike PSG Home 2021/2022",
+        "price": 17500,
+        "image": "psg.jpeg",
+        "category": "esNovedad",
+        "color": "azul",
+        "talle": "XL"
+    },
+    {
+        "id": 4,
+        "name": "Alemania",
+        "description": "Camiseta Adidas Alemania Home 2020/2021 + Parche Eurocopa",
+        "price": 16000,
+        "image": "alemania.jpeg",
+        "category": "selecciones",
+        "color": "blanco",
+        "talle": "2XL"
+    },
+    {
+        "id": 5,
+        "name": "Ajax Retro",
+        "description": "Camiseta Adidas Ajax Home 1994/1995",
+        "price": 21500,
+        "image": "ajax.jpeg",
+        "category": "retro",
+        "color": "blanco y rojo",
+        "talle": "S"
+    },
+    {
+        "id": 6,
+        "name": "River",
+        "description": "Camiseta Adidas River Home 2021/2022",
+        "price": 11500,
+        "image": "river.jpg",
+        "category": "argentina",
+        "color": "blanco y rojo",
+        "talle": "XL"
+    },
+    {
+        "id": 7,
+        "name": "Liverpool",
+        "description": "Camiseta Nike Liverppol Home 2021/2022 + Parche UEFA Champions League",
+        "price": 17500,
+        "image": "liverpool.jpeg",
+        "category": "europa",
+        "color": "rojo",
+        "talle": "L"
+    },
+    {
+        "id": 8,
+        "name": "España",
+        "description": "Camiseta Adidas España Home 2021/2022",
+        "price": 15000,
+        "image": "españa.jpeg",
+        "category": "selecciones",
+        "color": "roja",
+        "talle": "M"
+    },
+    {
+        "id": 9,
+        "name": "Boca",
+        "description": "Camiseta Adidas Boca Home 2021/2022",
+        "price": 11500,
+        "image": "boca.jpg",
+        "category": "esNovedad",
+        "color": "azul y amarillo",
+        "talle": "2XL"
+    },
+    {
+        "id": 10,
+        "name": "Suecia Retro",
+        "description": "Camiseta Adidas Suecia Retro Home 1996/1998 Dorsal 7 - Larsson",
+        "price": 20000,
+        "image": "suecia-retro.jpeg",
+        "category": "retro",
+        "color": "amarilla",
+        "talle": "S"
+    },
+    {
+        "id": 11,
+        "name": "Inter",
+        "description": "Camiseta Nike Inter Home 2020/2021",
+        "price": 13500,
+        "image": "inter.jpeg",
+        "category": "europa",
+        "color": "azul y negro",
+        "talle": "L"
+    },
+    {
+        "id": 12,
+        "name": "Holanda Retro",
+        "description": "Camiseta Nike Holanda Home 1994 Dorsal 10 - Bergkamp",
+        "price": 14500,
+        "image": "holanda-retro.jpeg",
+        "category": "retro",
+        "color": "naranja",
+        "talle": "3XL"
+    },
+    {
+        "id": 13,
+        "name": "Racing",
+        "description": "Camiseta Kappa Racing Home 2021/2022",
+        "price": 11500,
+        "image": "racing.jpeg",
+        "category": "argentina",
+        "color": "celeste y blanco",
+        "talle": "L"
+    },
+    {
+        "id": 14,
+        "name": "Juventus",
+        "description": "Camiseta Adidas Juventus Home 2021/2022",
+        "price": 14500,
+        "image": "juventus.jpeg",
+        "category": "europa",
+        "color": "blanco y negro",
+        "talle": "S"
+    },
+    {
+        "id": 15,
+        "name": "Francia",
+        "description": "Camiseta Nike Francia Home Vapor Match 2020/2021",
+        "price": 18500,
+        "image": "francia.jpeg",
+        "category": "europa",
+        "color": "azul",
+        "talle": "XL"
+    },
+    {
+        "id": 16,
+        "name": "Croacia",
+        "description": "Camiseta Nike Croacia Away 2020/2021",
+        "price": 13000,
+        "image": "croacia.jpeg",
+        "category": "selecciones",
+        "color": "negro y gris",
+        "talle": "XS"
+    },
+    {
+        "id": 17,
+        "name": "Manchester City",
+        "description": "Camiseta Puma Manchester City Home 2021/2022",
+        "price": 16500,
+        "image": "city.jpeg",
+        "category": "europa",
+        "color": "celeste",
+        "talle": "3XL"
+    },
+    {
+        "id": 18,
+        "name": "Independiente",
+        "description": "Camiseta Puma Independiente Home 2021/2022",
+        "price": 11500,
+        "image": "indepte.jpg",
+        "category": "argentina",
+        "color": "rojo",
+        "talle": "L"
+    },
+    {
+        "id": 19,
+        "name": "Holanda",
+        "description": "Camiseta Nike Holanda Home Vapor Match 2021/2022",
+        "price": 17500,
+        "image": "holanda.jpeg",
+        "category": "selecciones",
+        "color": "naranja",
+        "talle": "M"
+    },
+    {
+        "id": 20,
+        "name": "Real Madrid",
+        "description": "Camiseta Adidas Real Madrid Home 2021/2022",
+        "price": 15500,
+        "image": "real.jpeg",
+        "category": "europa",
+        "color": "blanco",
+        "talle": "2XL"
+    }
+]

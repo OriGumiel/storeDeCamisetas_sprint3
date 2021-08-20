@@ -6,8 +6,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
     todos: function(req, res, next) {
-
-      let equipo = products.filter(element => element.category === "europa");
+      let category = req.params.category;
+      let equipo = products.filter(element => element.category === category);
       
         res.render('products/productsAll',{
           title: 'Todos los productos de nuestro Store',

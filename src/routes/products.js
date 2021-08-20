@@ -17,7 +17,7 @@ let storage = multer.diskStorage({
 
 
 /* GET users listing. */
-router.get('/', productsController.todos );
+router.get('/:category', productsController.todos );
 
 router.get('/detalle/:id',productsController.detalle );
 
