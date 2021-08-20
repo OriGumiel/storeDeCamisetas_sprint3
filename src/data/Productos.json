@@ -5,7 +5,7 @@
         "description": "Camiseta Nike Barcelona Home 2021/2022 + Parche UEFA Champions League",
         "price": 17500,
         "image": "barca.jpeg",
-        "category": "esNovedad",
+        "category": "esnovedad",
         "color": "azul y rojo",
         "talle": "M"
     },
@@ -25,7 +25,7 @@
         "description": "Camiseta Nike PSG Home 2021/2022",
         "price": 17500,
         "image": "psg.jpeg",
-        "category": "esNovedad",
+        "category": "esnovedad",
         "color": "azul",
         "talle": "XL"
     },
@@ -85,7 +85,7 @@
         "description": "Camiseta Adidas Boca Home 2021/2022",
         "price": 11500,
         "image": "boca.jpg",
-        "category": "esNovedad",
+        "category": "esnovedad",
         "color": "azul y amarillo",
         "talle": "2XL"
     },
