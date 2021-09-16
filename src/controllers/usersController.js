@@ -1,18 +1,25 @@
 const usersController = {
     login: function(req, res, next) {
-
         res.render('users/userlogin',{
           title:'Estas en el login',
           style:'/stylesheets/styleslogin.css'
         });
       },
+
+    profile: function(req, res, next) {
+        res.render('users/profile',{
+          title:'Estas en el perfil',
+          style: '/stylesheets/profile.css'
+        });
+      },
+
     register: function(req, res, next) {
         res.render('users/userRegister',{
           title:'Estas en el registro',
           style: '/stylesheets/styleregister.css'
         });
-
       },
+
       create: (req, res) => {
           let user = {
             first_name: req.body.first_name,
@@ -37,7 +44,10 @@ const usersController = {
           fs.writeFileSync(path.resolve(__dirname, '../data/usuarios.json'), usersJSON);
           res.redirect('/userlogin.ejs');
           
-        }
+        },
+
 }
+
+
 
 module.exports = usersController;
