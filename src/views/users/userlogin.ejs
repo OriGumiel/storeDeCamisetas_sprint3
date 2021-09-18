@@ -1,5 +1,7 @@
 
 <%- include('../partials/head') %>
+<link rel="stylesheet" href="/stylesheets/styleslogin.css">
+</head>
 
 <body>
 
@@ -7,24 +9,31 @@
 
     <h1>Ingresá acá</h1>
 
-        <form action="/formulario" method="post">
+        <form action="/users/login" method="post">
            <ul>
               <li>
-                <label for="user">Usuario:</label>
-                <input type="text" id="user" name="user">
-              </li>
-                <br>
-              <li>
                 <label for="mail">Correo electrónico:</label>
-                <input type="email" id="mail" name="user_mail">
+                <input type="email" id="email" name="email">
+                <% if (locals.errors && errors.email) { %>
+									<div class="text-danger">
+										<%= errors.email.msg %>
+									</div>
+								<% } %>
               </li>
                 <br>
               <li>
                 <label for="password">Contraseña:</label>
-                <input type="password" id="password-name" name="user_password">
+                <input type="password" id="password" name="password">
               </li>
                 <br>
            </ul>
+           <div class="col-md-6 my-2">
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+              </label>
+            </div>
+          </div>
            <li class="button">
             <button type="submit">Ingresar</button>
           </li>

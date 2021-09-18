@@ -6,32 +6,46 @@
                 <i class="fa fa-bars burger"></i>
             </div>
             <div>
-                <a href="http://localhost:3000/">
+                <a href="#"></a>
                 <img src="/images/logo1.png" class="logoTop">
                 </a>
             </div>
             <input placeholder="  ... encuentra tu camiseta favorita" type="text" name="buscador">
             <div class="logo-sup"><i class="fas fa-shopping-bag"></i></div>
+            <% if (locals.isLogged) { %>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/images/users/<%= locals.userLogged.user_avatar %>" width="40" style="border-radius: 100%;">
+                        Hi <%= locals.userLogged.first_name %> 
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/users/profile">My profile</a>
+                        <li><hr class="dropdown-divider"></li>
+                        <a class="dropdown-item" href="/users/logout">Logout</a>
+                    </ul>
+                </li>
+            <% }else{ %>
             <div class='top-button'>
-                <a href="http://localhost:3000/users/login">
+                <a href="/users/login">
                 <button class="log-in-button">Log In</button>
                 </a>
-                <a href="http://localhost:3000/users/register">
+                <a href="/users/register">
                 <button class="sign-up-button">Sign Up</button>
                 </a>
             </div>
+            <% } %>
         </nav>
 
         <!-- <a href="#" class="slide-button"><i class="fas fa-angle-double-down"></i></a>-->
         <nav class="bottom-nav-bar">
             <div class="left-bar">
                 <ul>
-                    <li><a href="http://localhost:3000/products/argentina">Argentina</a></li>
-                    <li><a href="http://localhost:3000/products/europa">Europa</a></li>
-                    <li><a href="http://localhost:3000/products/selecciones">Selecciones</a></li>
-                    <li><a href="http://localhost:3000/products/clasicas">Clasicas</a></li>
-                    <li><a href="http://localhost:3000/products/esnovedad">Novedades</a></li>
-                    <li><a href="http://localhost:3000/products"></a></li>
+                    <li><a href="/products/argentina">Argentina</a></li>
+                    <li><a href="/products/europa">Europa</a></li>
+                    <li><a href="/products/selecciones">Selecciones</a></li>
+                    <li><a href="/products/clasicas">Clasicas</a></li>
+                    <li><a href="/products/esnovedad">Novedades</a></li>
+                    <li><a href="/products"></a></li>
                 </ul>
             </div>
             <div class="right-bar">
