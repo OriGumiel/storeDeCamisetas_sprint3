@@ -9,18 +9,24 @@ const { reduce } = require("../middlewares/validateRegisterMiddleware");
 
 const usersController = {
     login: function(req, res, next) {
-
         res.render('users/userlogin',{
           title:'Estas en el login',
           style:'/stylesheets/styleslogin.css'
         });
       },
+
+    profile: function(req, res, next) {
+        res.render('users/profile',{
+          title:'Estas en el perfil',
+          style: '/stylesheets/profile.css'
+        });
+      },
+
     register: function(req, res, next) {
         res.render('users/userRegister',{
           title:'Estas en el registro',
           style: '/stylesheets/styleregister.css'
         });
-
       },
     create: (req, res) => {      
         const resultValidation = validationResult(req);
@@ -58,11 +64,8 @@ const usersController = {
         
         res.redirect('/users/login');
           
-    },
-
-                
+    },           
     
-
     loginProcess: (req, res) => {
       let userToLogin = User.findByField('email', req.body.email);
       
