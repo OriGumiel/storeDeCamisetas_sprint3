@@ -14,7 +14,8 @@ CREATE TABLE Users (
     email VARCHAR(100) NOT NULL UNIQUE,
     password TEXT NOT NULL,
     user_avatar TEXT,
-    alias VARCHAR(100)
+    alias VARCHAR(100),
+    user_type: VARCHAR(100)
 );
 
 --
