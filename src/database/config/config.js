@@ -4,7 +4,8 @@ module.exports = {
     "password": null,
     "database": "storedb",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port": 8888
   },
   "test": {
     "username": "root",
