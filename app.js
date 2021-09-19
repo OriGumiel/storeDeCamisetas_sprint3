@@ -2,16 +2,16 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const session = require("express-session");
 const logger = require('morgan');
 
 
-//requiere routes
-const mainRouter = require('./src/routes/main');
-const usersRouter = require('./src/routes/users');
-const productsRouter = require('./src/routes/products')
 
-const app = express();
 const methodOverride = require('method-override');
+const app = express();
+
+const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware");
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'src/views'));
@@ -21,9 +21,22 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(
+  session({
+    secret: "StoreCamisetas",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 app.use(express.static(path.join(__dirname, 'src/public')));
 app.use(methodOverride('_method'));
+app.use(userLoggedMiddleware);
 
+
+//requiere routes
+const mainRouter = require('./src/routes/main');
+const usersRouter = require('./src/routes/users');
+const productsRouter = require('./src/routes/products')
 
 // routes setup
 app.use('/', mainRouter);
