@@ -25,7 +25,7 @@ CREATE TABLE Shop_carts(
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     price INT,
     user_id INT,-- FOREIGN KEY REFERENCES Users(id),
-    start_date DATETIME, -- Fecha de inicio del carrito.
+    crated_at DATETIME, -- Fecha de inicio del carrito.
     buy_date DATETIME, -- Fecha de compra.
     FOREIGN KEY (user_id) REFERENCES Users(id)
 
