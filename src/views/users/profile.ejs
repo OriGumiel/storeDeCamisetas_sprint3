@@ -1,5 +1,7 @@
 
 <%- include('../partials/head') %>
+<link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
       
 <body>
 
@@ -8,7 +10,15 @@
 <main class="main-profile">
     <div class="profile-container">
       <section class="profile-main-data">
+<<<<<<< HEAD
 
+=======
+        <h1>Hola, <%=user.first_name %> <%= user.last_name %></h1>
+        <figure class="profile-img">
+          <img src="/images/users/<%=user.user_avatar %>" alt="foto perfil"/>
+        </figure>
+        <div class="profile-email"><%= user.email %></div>
+>>>>>>> 2c02ab4a5c66521448e143a6c3ce209c3fc7d06d
       </section>
 
       <section class="profile-additional-data">

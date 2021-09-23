@@ -1,5 +1,6 @@
-
 <%- include('../partials/head') %>
+<link rel="stylesheet" href="/stylesheets/styleregister.css">
+</head>
       
 <body>
 
@@ -7,43 +8,61 @@
 
     <main>
         <h1>Registrate acá</h1>
+        
 
-        <div class="col-8 mx-auto bg-light ">
-          <!-- Aquí muestro los errores --->
-          <% if(typeof(errors) != 'undefined'){%>
-             <ul class="alert alert-danger">
-                <% errors.forEach(error => { %>
-                   <li><%= error.msg%></li>
-                <%});%>
-              </ul>
-          <%}%>    
-          <!----Fin mostrar errores--------->
-
-        <form action="/register" method="post" enctype="multipart/form-data">
+        <form method="POST" action="/users/register" enctype="multipart/form-data">
            <ul>
              <p>Unite a Store de camisetas y accede a increibles descuentos!</p>
               <li>
-                <label for="name">Nombre:</label>
-                <input type="text" id="first_name" name="first_name">
+                <label for="first_name">Nombre:</label>
+                <input type="text" id="first_name" name="first_name" class="form-control <%= locals.errors && errors.first_name ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.first_name : null %>">
+                <% if (locals.errors && errors.first_name) { %>
+                  <div class="text-danger">
+                    <%= errors.first_name.msg %> 
+                  </div>
+                <% } %>
               </li>
                 <br>
               <li>
-                <label for="surname">Apellido:</label>
-                <input type="text" id="last_name" name="last_name">
+                <label for="last_name">Apellido:</label>
+                <input type="text" id="last_name" name="last_name" class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.last_name : null %>">
+                <% if (locals.errors && errors.last_name) { %>
+                  <div class="text-danger">
+                    <%= errors.last_name.msg %> 
+                  </div>
+                <% } %>
               </li>
                 <br>
               <li>
-                <label for="mail">Correo electrónico:</label>
-                <input type="email" id="email" name="email">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                  <div class="text-danger">
+                    <%= errors.email.msg %> 
+                  </div>
+                <% } %>
               </li>
                 <br>
               <li>
                 <label for="password">Crear contraseña:</label>
                 <input type="password" id="password" name="password">
+                <% if (locals.errors && errors.password) { %>
+                  <div class="text-danger">
+                    <%= errors.password.msg %> 
+                  </div>
+                <% } %>
               </li>
                 <br>
                 <div class="custom-file">
-                  <input type="file"   name="user-avatar"  placeholder="Debes eligir tu avatar...">
+                  <input type="file"   name="user_avatar"  id='user_avatar' placeholder="Debes eligir tu avatar...">
+                  <% if (locals.errors && errors.user_avatar) { %>
+                    <div class="text-danger">
+                      <%= errors.user_avatar.msg %>
+                    </div>
+                  <% } %>
               </div>   
            </ul>
            <li class="button">
@@ -57,6 +76,3 @@
 </body>
 
 </html>
-
-
-

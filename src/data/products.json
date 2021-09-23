@@ -1,1 +1,210 @@
-[{"id":1,"name":"Nike Canyon","description":"justo morbi ut odio cras mi","price":3147.26,"image":"barca.jpeg","category":"Europa","color":"Orange","talle":"XL","esNovedad":"true"},{"id":2,"name":"Nike Phantom GT Elite Dynamic","description":"vivamus vel nulla eget eros elementum","price":4815.27,"image":"barca.jpeg","category":"Europa","color":"Maroon","talle":"L"},{"id":3,"name":"Nike Phantom GT Elite Dynamic","description":"adipiscing elit proin interdum mauris non","price":4495.71,"image":"barca.jpeg","category":"Europa","color":"Indigo","talle":"XL"},{"id":4,"name":"Nike Canyon","description":"velit id pretium iaculis diam erat","price":1059.31,"image":"barca.jpeg","category":"Polygender","color":"Violet","talle":"3XL"},{"id":5,"name":"Nike Phantom GT Elite Dynamic","description":"donec ut mauris eget massa","price":1477.59,"image":"barca.jpeg","category":"Agender","color":"Aquamarine","talle":"XS"},{"id":6,"name":"Nike Canyon","description":"non sodales sed tincidunt eu felis","price":4082.25,"image":"barca.jpeg","category":"Non-binary","color":"Pink","talle":"3XL"},{"id":7,"name":"Nike Air Max Pre-Day","description":"volutpat sapien arcu sed augue","price":4846.9,"image":"barca.jpeg","category":"Female","color":"Goldenrod","talle":"XS"},{"id":8,"name":"Nike Canyon","description":"viverra dapibus nulla suscipit ligula","price":3037.32,"image":"barca.jpeg","category":"Genderfluid","color":"Khaki","talle":"L"},{"id":9,"name":"Nike Canyon","description":"volutpat convallis morbi odio odio elementum","price":3470.59,"image":"barca.jpeg","category":"Agender","color":"Red","talle":"2XL"},{"id":10,"name":"LeBron 18 Low Summer","description":"sed interdum venenatis turpis enim","price":2336.54,"image":"barca.jpeg","category":"Agender","color":"Goldenrod","talle":"XS"},{"id":11,"name":"Nike Canyon","description":"blandit ultrices enim lorem ipsum","price":2549.75,"image":"barca.jpeg","category":"Non-binary","color":"Orange","talle":"S"},{"id":12,"name":"Nike Phantom GT Elite Dynamic","description":"quis turpis sed ante vivamus tortor","price":1943.64,"image":"barca.jpeg","category":"Polygender","color":"Puce","talle":"3XL"},{"id":13,"name":"Nike Air Max Pre-Day","description":"sapien iaculis congue vivamus metus arcu","price":2439.02,"image":"barca.jpeg","category":"Bigender","color":"Maroon","talle":"L"},{"id":14,"name":"Nike Phantom GT Elite Dynamic","description":"dolor quis odio consequat varius","price":3766.28,"image":"barca.jpeg","category":"Bigender","color":"Fuscia","talle":"S"},{"id":15,"name":"Nike Air Max Pre-Day","description":"natoque penatibus et magnis dis parturient","price":4685.28,"image":"barca.jpeg","category":"Genderfluid","color":"Indigo","talle":"2XL"},{"id":16,"name":"Nike Air Max Pre-Day","description":"vitae consectetuer eget rutrum at","price":1357.35,"image":"barca.jpeg","category":"Bigender","color":"Turquoise","talle":"XS"},{"id":17,"name":"Nike Phantom GT Elite Dynamic","description":"a odio in hac habitasse","price":4388.25,"image":"barca.jpeg","category":"Polygender","color":"Puce","talle":"3XL"},{"id":18,"name":"Nike Canyon","description":"pellentesque eget nunc donec quis orci","price":3248.59,"image":"barca.jpeg","category":"Female","color":"Mauv","talle":"XS"},{"id":19,"name":"LeBron 18 Low Summer","description":"velit nec nisi vulputate nonummy maecenas","price":1519.69,"image":"barca.jpeg","category":"Male","color":"Yellow","talle":"M"},{"id":20,"name":"LeBron 18 Low Summer","description":"quisque erat eros viverra eget","price":1674.38,"image":"barca.jpeg","category":"Genderqueer","color":"Puce","talle":"3XL"},{"name":"Camiseta Nigeria","price":"9000","category":"Selecciones","id":21,"image":"camisetaNigeria.jpg"}]
+[
+    {
+        "id": 1,
+        "name": "Nike Canyon",
+        "description": "justo morbi ut odio cras mi",
+        "price": 3147.26,
+        "image": "barca.jpeg",
+        "category": "Europa",
+        "color": "Orange",
+        "talle": "XL",
+        "esNovedad": "true"
+    },
+    {
+        "id": 2,
+        "name": "Nike Phantom GT Elite Dynamic",
+        "description": "vivamus vel nulla eget eros elementum",
+        "price": 4815.27,
+        "image": "barca.jpeg",
+        "category": "Europa",
+        "color": "Maroon",
+        "talle": "L"
+    },
+    {
+        "id": 3,
+        "name": "Nike Phantom GT Elite Dynamic",
+        "description": "adipiscing elit proin interdum mauris non",
+        "price": 4495.71,
+        "image": "barca.jpeg",
+        "category": "Europa",
+        "color": "Indigo",
+        "talle": "XL"
+    },
+    {
+        "id": 4,
+        "name": "Nike Canyon",
+        "description": "velit id pretium iaculis diam erat",
+        "price": 1059.31,
+        "image": "barca.jpeg",
+        "category": "Polygender",
+        "color": "Violet",
+        "talle": "3XL"
+    },
+    {
+        "id": 5,
+        "name": "Nike Phantom GT Elite Dynamic",
+        "description": "donec ut mauris eget massa",
+        "price": 1477.59,
+        "image": "barca.jpeg",
+        "category": "Agender",
+        "color": "Aquamarine",
+        "talle": "XS"
+    },
+    {
+        "id": 6,
+        "name": "Nike Canyon",
+        "description": "non sodales sed tincidunt eu felis",
+        "price": 4082.25,
+        "image": "barca.jpeg",
+        "category": "Non-binary",
+        "color": "Pink",
+        "talle": "3XL"
+    },
+    {
+        "id": 7,
+        "name": "Nike Air Max Pre-Day",
+        "description": "volutpat sapien arcu sed augue",
+        "price": 4846.9,
+        "image": "barca.jpeg",
+        "category": "Female",
+        "color": "Goldenrod",
+        "talle": "XS"
+    },
+    {
+        "id": 8,
+        "name": "Nike Canyon",
+        "description": "viverra dapibus nulla suscipit ligula",
+        "price": 3037.32,
+        "image": "barca.jpeg",
+        "category": "Genderfluid",
+        "color": "Khaki",
+        "talle": "L"
+    },
+    {
+        "id": 9,
+        "name": "Nike Canyon",
+        "description": "volutpat convallis morbi odio odio elementum",
+        "price": 3470.59,
+        "image": "barca.jpeg",
+        "category": "Agender",
+        "color": "Red",
+        "talle": "2XL"
+    },
+    {
+        "id": 10,
+        "name": "LeBron 18 Low Summer",
+        "description": "sed interdum venenatis turpis enim",
+        "price": 2336.54,
+        "image": "barca.jpeg",
+        "category": "Agender",
+        "color": "Goldenrod",
+        "talle": "XS"
+    },
+    {
+        "id": 11,
+        "name": "Nike Canyon",
+        "description": "blandit ultrices enim lorem ipsum",
+        "price": 2549.75,
+        "image": "barca.jpeg",
+        "category": "Non-binary",
+        "color": "Orange",
+        "talle": "S"
+    },
+    {
+        "id": 12,
+        "name": "Nike Phantom GT Elite Dynamic",
+        "description": "quis turpis sed ante vivamus tortor",
+        "price": 1943.64,
+        "image": "barca.jpeg",
+        "category": "Polygender",
+        "color": "Puce",
+        "talle": "3XL"
+    },
+    {
+        "id": 13,
+        "name": "Nike Air Max Pre-Day",
+        "description": "sapien iaculis congue vivamus metus arcu",
+        "price": 2439.02,
+        "image": "barca.jpeg",
+        "category": "Bigender",
+        "color": "Maroon",
+        "talle": "L"
+    },
+    {
+        "id": 14,
+        "name": "Nike Phantom GT Elite Dynamic",
+        "description": "dolor quis odio consequat varius",
+        "price": 3766.28,
+        "image": "barca.jpeg",
+        "category": "Bigender",
+        "color": "Fuscia",
+        "talle": "S"
+    },
+    {
+        "id": 15,
+        "name": "Nike Air Max Pre-Day",
+        "description": "natoque penatibus et magnis dis parturient",
+        "price": 4685.28,
+        "image": "barca.jpeg",
+        "category": "Genderfluid",
+        "color": "Indigo",
+        "talle": "2XL"
+    },
+    {
+        "id": 16,
+        "name": "Nike Air Max Pre-Day",
+        "description": "vitae consectetuer eget rutrum at",
+        "price": 1357.35,
+        "image": "barca.jpeg",
+        "category": "Bigender",
+        "color": "Turquoise",
+        "talle": "XS"
+    },
+    {
+        "id": 17,
+        "name": "Nike Phantom GT Elite Dynamic",
+        "description": "a odio in hac habitasse",
+        "price": 4388.25,
+        "image": "barca.jpeg",
+        "category": "Polygender",
+        "color": "Puce",
+        "talle": "3XL"
+    },
+    {
+        "id": 18,
+        "name": "Nike Canyon",
+        "description": "pellentesque eget nunc donec quis orci",
+        "price": 3248.59,
+        "image": "barca.jpeg",
+        "category": "Female",
+        "color": "Mauv",
+        "talle": "XS"
+    },
+    {
+        "id": 19,
+        "name": "LeBron 18 Low Summer",
+        "description": "velit nec nisi vulputate nonummy maecenas",
+        "price": 1519.69,
+        "image": "barca.jpeg",
+        "category": "Male",
+        "color": "Yellow",
+        "talle": "M"
+    },
+    {
+        "id": 20,
+        "name": "LeBron 18 Low Summer",
+        "description": "quisque erat eros viverra eget",
+        "price": 1674.38,
+        "image": "barca.jpeg",
+        "category": "Genderqueer",
+        "color": "Puce",
+        "talle": "3XL"
+    },
+    {
+        "name": "Camiseta Nigeria",
+        "price": "9000",
+        "category": "Selecciones",
+        "id": 21,
+        "image": "camisetaNigeria.jpg"
+    }
+]
