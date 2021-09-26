@@ -73,15 +73,7 @@ const productsController = {
       fs.writeFileSync(productsFilePath, JSON.stringify(productos));
       res.redirect('/');
       //res.redirect('/detail/'+id);
-    },
-
-    cart: function(req, res, next) {
-       
-        res.render('products/productsCart',{
-          title: 'Estas en el carrito de productos',
-          style: '/stylesheets/productsCart.css'
-      });
-      },
+    }
 }
 
 module.exports = productsController;

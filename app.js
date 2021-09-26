@@ -37,11 +37,13 @@ app.use(userLoggedMiddleware);
 const mainRouter = require('./src/routes/main');
 const usersRouter = require('./src/routes/users');
 const productsRouter = require('./src/routes/products')
+const shopCartRouter = require('./src/routes/shopCart')
 
 // routes setup
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter)
+app.use('/shopCart', shopCartRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
