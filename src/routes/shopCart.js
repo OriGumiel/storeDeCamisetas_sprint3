@@ -8,5 +8,8 @@ const shopCartController = require ('../controllers/shopCartController');
 /*** GET ONE CART ***/ 
 router.get('/', shopCartController.cart);
 
+/*** ADD ONE CART ***/ 
+router.post('/addProduct', shopCartController.addProduct);
+
 
 module.exports = router;
