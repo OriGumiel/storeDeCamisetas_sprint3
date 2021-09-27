@@ -10,6 +10,6 @@ router.get('/', shopCartController.cart);
 
 /*** ADD ONE CART ***/ 
 router.post('/addProduct', shopCartController.addProduct);
-
+router.get('/addProduct', shopCartController.productToAdd);
 
 module.exports = router;
