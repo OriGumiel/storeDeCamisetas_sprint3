@@ -1,17 +1,17 @@
-module.exports = (sequelize,DataTypes) => {
+module.exports = (sequelize,dataTypes) => {
 
     let alias = "Product_images"
 
     let cols = {
         id: {
-            type: DataTypes.INTEGER,
-            primarykey: true
+            type: dataTypes.INTEGER,
+            primaryKey: true
         },
         image: {
-            type: DataTypes.TEXT
+            type: dataTypes.TEXT
         },
         product_id: {
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         },
     };
 
@@ -22,12 +22,13 @@ module.exports = (sequelize,DataTypes) => {
 
     const Product_image = sequelize.define(alias, cols, config)
     
-    Product_image.associate = models => {
-        //relacion con Products
-        Product_image.belongsTo(models.Product,{
-            as: 'Products',
-            foreignKey = 'product_id'
-        });
-    }
+    // Product_image.associate = models => {
+    //     //relacion con Products
+    //     Product_image.belongsTo(models.Product,{
+    //         as: 'Products',
+    //         foreignKey: 'product_id'
+    //     });
+    // }
 
+    return Product_image
 };

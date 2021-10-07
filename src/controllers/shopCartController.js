@@ -1,9 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
+const sequelize = db.sequelize
 
 const shopCartController = {
 
-    cart: function(req, res, next) {
+    getCart: function(req, res, next) {
         res.render('shopCart/cart', {title:'Estas en el carrito de productos'});
       },
 
@@ -11,11 +13,16 @@ const shopCartController = {
         res.render('shopCart/productToAdd');
       },
     
-    addProduct: function (req, res, next){
+    createCart: function (req, res, next){
         console.log(req.body);
-        res.redirect('/products/detalle/:id');
-        // res.render('shopCart/productToAdd', {productToAdd:productToAdd});
-    }
+        db.Shop_carts.create({
+          price: req.body.price,
+          quantity: req.body.quantity
+        })
+        .then(()=> {
+          res.redirect('/products/detalle/:id');
+        })
+    },
 }
 
 module.exports = shopCartController;
