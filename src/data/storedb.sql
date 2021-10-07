@@ -49,6 +49,7 @@ CREATE TABLE Products (
     name VARCHAR(100),
     description TEXT,
     price INT,
+    category VARCHAR(100),
     available_stock_id INT,
     FOREIGN KEY (available_stock_id) REFERENCES Available_stocks(id)
 );
