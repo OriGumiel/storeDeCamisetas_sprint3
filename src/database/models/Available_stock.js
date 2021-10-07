@@ -1,5 +1,4 @@
 module.exports = (sequelize,dataTypes) => {
-
     let alias = "Available_stock"
 
     let cols = {
@@ -23,7 +22,8 @@ module.exports = (sequelize,dataTypes) => {
             type: dataTypes.INTEGER
         },
         extraExtraLarge:{
-            type: dataTypes.INTEGER}
+            type: dataTypes.INTEGER
+        }
     }
 
     let config = {
@@ -43,5 +43,4 @@ module.exports = (sequelize,dataTypes) => {
     // }
 
     return Available_stock
-
 };

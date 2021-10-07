@@ -4,7 +4,6 @@
 <body>
 
 <%- include('../partials/header') %>
-
     <div class="main">
         <section class="barca">
             <img src="/images/barca.jpeg" alt="camiseta barca" class="foto">
@@ -19,7 +18,7 @@
             </article>
         </section>
     
-        <section class="descripcion">
+        <form class="descripcion" method="POST" action="/shopCart/addProduct" enctype="multipart/form-data">
                 </p><h2>Camiseta Nike Barcelona Home </h2></p>
                 <p><h2>2021/2022 + Parche UEFA </h2></p>
                 <p><h2>Champions League</h2></p>
@@ -67,7 +66,7 @@
                 <br>
                 
                     <button class="boton"><b>Añadir al carrito</b></button>
-        </section>
+            </form>
     </div>
 
         <section class="recomendaciones">

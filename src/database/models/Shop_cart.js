@@ -19,6 +19,9 @@ module.exports = (sequelize,dataTypes) => {
         buy_date: {
             type: dataTypes.DATE
         },
+        quantity: {
+            type: dataTypes.INTEGER
+        }
     };
     
     let config = {

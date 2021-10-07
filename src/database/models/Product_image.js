@@ -31,5 +31,4 @@ module.exports = (sequelize,dataTypes) => {
     // }
 
     return Product_image
-
 };

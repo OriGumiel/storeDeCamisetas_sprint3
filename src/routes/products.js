@@ -28,7 +28,6 @@ router.post('/store', upload.single('images'),productsController.store);
 router.get('/edit/:id/', productsController.edit); 
 router.put('/edit/:id', productsController.update); 
 
-router.get('/carrito',productsController.cart );
 
 module.exports = router;
 
