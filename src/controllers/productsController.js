@@ -12,7 +12,7 @@ const productsController = {
         res.render('products/productsAll',{
           title: 'Todos los productos de nuestro Store',
           style: '/stylesheets/productos.css',
-          equipo: equipo
+          equipo: equipo    //(esto esta bien asi?????)
         });
       },
 
@@ -28,6 +28,8 @@ const productsController = {
       });
       },
 
+
+    
     store: (req, res) => {
         
         let nuevoId = products[products.length - 1].id + 1;
@@ -73,6 +75,14 @@ const productsController = {
       fs.writeFileSync(productsFilePath, JSON.stringify(productos));
       res.redirect('/');
       //res.redirect('/detail/'+id);
+    },
+
+    delete: async (req, res) => {
+    await db.Product.destroy({
+      where: {
+        id: req.params.id
+      }
+    });
     }
 }
 
