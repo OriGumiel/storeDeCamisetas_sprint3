@@ -11,11 +11,11 @@ USE storedb;-- Uso la base de datos
 CREATE TABLE Users (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     password TEXT NOT NULL,
-    user_avatar TEXT,
-    alias VARCHAR(100),
-    user_type: VARCHAR(100)
+    user_avatar TEXT,    
+    user_type VARCHAR(100)
 );
 
 --
@@ -27,6 +27,7 @@ CREATE TABLE Shop_carts(
     user_id INT,-- FOREIGN KEY REFERENCES Users(id),
     crated_at DATETIME, -- Fecha de inicio del carrito.
     buy_date DATETIME, -- Fecha de compra.
+    quantity INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES Users(id)
 
 );
@@ -48,6 +49,7 @@ CREATE TABLE Products (
     name VARCHAR(100),
     description TEXT,
     price INT,
+    category VARCHAR(100),
     available_stock_id INT,
     FOREIGN KEY (available_stock_id) REFERENCES Available_stocks(id)
 );

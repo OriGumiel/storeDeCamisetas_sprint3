@@ -6,10 +6,10 @@ const shopCartController = require ('../controllers/shopCartController');
 
 
 /*** GET ONE CART ***/ 
-router.get('/', shopCartController.cart);
+router.get('/', shopCartController.getCart);
 
 /*** ADD ONE CART ***/ 
-router.post('/addProduct', shopCartController.addProduct);
-
+router.post('/addProduct', shopCartController.createCart);
+router.get('/addProduct', shopCartController.productToAdd);
 
 module.exports = router;
