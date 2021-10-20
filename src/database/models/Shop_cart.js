@@ -14,13 +14,13 @@ module.exports = (sequelize,dataTypes) => {
             type: dataTypes.INTEGER,
         },
         created_at: {
-            type: dataTypes.DATE
+            type: dataTypes.DATE,
         },
         buy_date: {
-            type: dataTypes.DATE
+            type: dataTypes.DATE,
         },
         quantity: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
         }
     };
     

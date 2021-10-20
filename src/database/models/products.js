@@ -5,10 +5,10 @@ module.exports = (sequelize,DataTypes) => {
     let cols = {
         id:{
             type: DataTypes.INTEGER,
-            primarykey: true
+            primaryKey: true
         },
         name:{
-            type: DataTypes.VARCHAR,
+            type: DataTypes.STRING,
         },
         description:{
             type: DataTypes.TEXT,
@@ -17,7 +17,7 @@ module.exports = (sequelize,DataTypes) => {
             type: DataTypes.INTEGER,
         },
         category:{
-            type: DataTypes.VARCHAR,
+            type: DataTypes.STRING,
         },
         available_stock_id:{
             type: DataTypes.INTEGER,
@@ -31,7 +31,7 @@ module.exports = (sequelize,DataTypes) => {
 
     const Products = sequelize.define(alias, cols, config)
 
-    products.associate = models => {
+    Products.associate = models => {
         //relacion con available_stocks
 
         //relacion de product_images
