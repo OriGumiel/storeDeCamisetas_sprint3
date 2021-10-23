@@ -10,7 +10,7 @@ const sequelize = db.sequelize;
 
 const usersController = {
   login: function (req, res, next) {
-    res.render('users/userlogin', {
+    res.render('users/usersLogin', {
       title: 'Estas en el login',
       style: '/stylesheets/styleslogin.css'
     });
@@ -24,7 +24,7 @@ const usersController = {
   },
 
   register: function (req, res, next) {
-    res.render('users/userRegister', {
+    res.render('users/usersRegister', {
       title: 'Estas en el registro',
       style: '/stylesheets/styleregister.css'
     });
