@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models')
+const sequelize = db.sequelize 
 
 const productsFilePath = path.join(__dirname, '../data/Productos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -49,6 +51,17 @@ const productsController = {
         products.push(nuevoProducto);
         fs.writeFileSync(productsFilePath, JSON.stringify(products));
         res.redirect('/products/nuevoProducto')
+    },
+
+    create: async (req,res) => {
+      let newProduct = await db.Product.create({
+        name:'producto de prueba',
+        description: 'Este es el primer producto que estoy creando como una prueba',
+        price: 1700,
+        category: 'Argentina'
+      })
+
+      res.render('products/productCreate',{title: `Creaste un nuevo producto llamado ${newProduct.name}`});
     },
 
     // Update - Form to edit
