@@ -13,21 +13,21 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
 
 /* GET users listing. */
+
+router.get('/register', guestMiddleware, usersController.register );
+
+router.post('/registrar',upload.single('user_avatar'), validations, usersController.create );
+
 router.get('/login', guestMiddleware, usersController.login );
 
 router.post('/login', usersController.loginProcess );
 
-router.get('/register',guestMiddleware, usersController.register );
-// router.post('/register',upload.single('user-avatar'), validations, usersController.create );
-router.post('/register', upload.single('user_avatar'), validations, usersController.create );
+router.get('/profile', authMiddleware, usersController.profile);
 
-router.get('/profile',authMiddleware, usersController.profile);
+router.get("/edit/:id", usersController.edit);
+
+router.post("/update/:id", upload.single('user_avatar'), usersController.update);
 
 router.get('/logout', usersController.logout);
-
-
-
-router.get('/profile', usersController.profile );
-
 
 module.exports = router;

@@ -10,7 +10,7 @@
         <h1>Registrate acá</h1>
         
 
-        <form method="POST" action="/users/register" enctype="multipart/form-data">
+        <form method="POST" action="/users/registrar" enctype="multipart/form-data">
            <ul>
              <p>Unite a Store de camisetas y accede a increibles descuentos!</p>
               <li>
@@ -56,14 +56,14 @@
                 <% } %>
               </li>
                 <br>
-                <div class="custom-file">
+                <!-- <div class="custom-file">
                   <input type="file"   name="user_avatar"  id='user_avatar' placeholder="Debes eligir tu avatar...">
                   <% if (locals.errors && errors.user_avatar) { %>
                     <div class="text-danger">
                       <%= errors.user_avatar.msg %>
                     </div>
                   <% } %>
-              </div>   
+              </div>   -->
            </ul>
            <li class="button">
             <button type="submit">Registrarse</button>

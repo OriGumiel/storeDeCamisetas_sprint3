@@ -16,7 +16,7 @@ h1 {
 form {
     margin: 0 auto;
     width: 90%;
-    height: 350px;
+    min-height: 350px;
     padding: 1em;
     border: 1px solid grey;
     border-radius: 2px;
@@ -86,6 +86,12 @@ button {
     font-family: 'Red Hat Display', sans-serif;
     border-radius: 5px;
     border-color: #F5BF76;
+}
+
+.text-danger {
+    color: red;
+    font-size: small;
+    font-style: italic;
 }
 
 @media (min-width: 415px) {

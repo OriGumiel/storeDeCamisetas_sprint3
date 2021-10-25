@@ -11,11 +11,11 @@ USE storedb;-- Uso la base de datos
 CREATE TABLE Users (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     password TEXT NOT NULL,
-    user_avatar TEXT,
-    alias VARCHAR(100),
-    user_type: VARCHAR(100)
+    user_avatar TEXT,    
+    user_type VARCHAR(100)
 );
 
 --

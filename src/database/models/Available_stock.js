@@ -1,29 +1,29 @@
-module.exports = (sequelize,DataTypes) => {
+module.exports = (sequelize,dataTypes) => {
 
     let alias = "Available_stock"
 
     let cols = {
         id:{
-            type: DataTypes.INTEGER,
-            primarykey: true
+            type: dataTypes.INTEGER,
+            primaryKey: true
         },
         extraSmall:{
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         },
         small:{
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         },
         medium:{
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         },
         large:{
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         },
         extraLarge:{
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         },
         extraExtraLarge:{
-            type: DataTypes.INTEGER}
+            type: dataTypes.INTEGER}
     }
 
     let config = {
@@ -34,12 +34,13 @@ module.exports = (sequelize,DataTypes) => {
     const Available_stock = sequelize.define(alias, cols, config)
 
 
-    Available_stock.associate = models => {
-        //relacion con Products
-        Available_stock.hasMany(models.Product,{
-            as: 'Products',
-            foreignKey: 'Available_stock_id'
-        });
-    }
+    // Available_stock.associate = models => {
+    //     //relacion con Products
+    //     Available_stock.hasMany(models.Product,{
+    //         as: 'Products',
+    //         foreignKey: 'Available_stock_id'
+    //     });
+    // }
 
+    return Available_stock
 };
