@@ -1,6 +1,6 @@
 module.exports = (sequelize,dataTypes) => {
 
-    let alias = "Product_image"
+    let alias = "Product_images"
 
     let cols = {
         id: {
@@ -16,7 +16,7 @@ module.exports = (sequelize,dataTypes) => {
     };
 
     let config = {
-        tableName: "Product_images",
+        tableName: "product_images",
         timestamps: false
     }
 
@@ -26,10 +26,9 @@ module.exports = (sequelize,dataTypes) => {
     //     //relacion con Products
     //     Product_image.belongsTo(models.Product,{
     //         as: 'Products',
-    //         foreignKey = 'product_id'
+    //         foreignKey: 'product_id'
     //     });
     // }
 
     return Product_image
-
 };

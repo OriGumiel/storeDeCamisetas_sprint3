@@ -1,5 +1,4 @@
 module.exports = (sequelize,dataTypes) => {
-
     let alias = "Available_stock"
 
     let cols = {
@@ -23,12 +22,13 @@ module.exports = (sequelize,dataTypes) => {
             type: dataTypes.INTEGER
         },
         extraExtraLarge:{
-            type: dataTypes.INTEGER}
+            type: dataTypes.INTEGER
+        }
     }
 
     let config = {
-        tableName: "Available_stock",
-        timestamps: false
+        tableName: "available_stock",
+        timestamps: false        
     }
 
     const Available_stock = sequelize.define(alias, cols, config)

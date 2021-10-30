@@ -4,8 +4,9 @@
 </head>
 
 <body>
-
+  
 <%- include('../partials/header') %>
+<script src="/javaScript/usersLogin.js"></script>
 
     <h1>Ingresá acá</h1>
 
@@ -14,11 +15,7 @@
               <li>
                 <label for="mail">Correo electrónico:</label>
                 <input type="email" id="email" name="email">
-                <% if (locals.errors && errors.email) { %>
-									<div class="text-danger">
-										<%= errors.email.msg %>
-									</div>
-								<% } %>
+                
               </li>
                 <br>
               <li>

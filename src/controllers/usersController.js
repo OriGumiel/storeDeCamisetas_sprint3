@@ -9,8 +9,6 @@ const { validationResult } = require("express-validator");
 // const User = require('../models/Users');
 const { reduce } = require("../middlewares/validateRegisterMiddleware");
 
-
-
 //Otra forma de llamar a los modelos
 //const Users = db.User;
 
@@ -34,28 +32,28 @@ const usersController = {
     return this.findByfield("id", id);
   },
 
-    login: function(req, res, next) {
+  login: function(req, res, next) {
         res.render('users/userlogin',{
           title:'Estas en el login',
           style:'/stylesheets/styleslogin.css'
         });
       },
 
-    profile: function(req, res, next) {
+  profile: function(req, res, next) {
         res.render('users/profile',{
           title:'Estas en el perfil',
           style: '/stylesheets/profile.css'
         });
       },
 
-    register: function(req, res, next) {
+  register: function(req, res, next) {
         res.render('users/userRegister',{
           title:'Estas en el registro',
           style: '/stylesheets/styleregister.css'
         });
       },
     
-    create: (req, res) => {      
+  create: (req, res) => {      
         const resultValidation = validationResult(req);
                       
         
@@ -81,7 +79,7 @@ const usersController = {
           
     },
     
-    loginProcess:  (req, res) => {
+  loginProcess:  (req, res) => {
       let userToLogin = db.User.findOne({
         where: {
           email: req.body.email,
@@ -133,12 +131,12 @@ const usersController = {
     
 
 
-    profile: function(req, res, next) {
+  profile: function (req, res, next) {
 
-      res.render('users/profile',{
-        user: req.session.userLogged,
-      });
-    },
+    res.render('users/profile', {
+      user: req.session.userLogged,
+    });
+  },
 
     logout: (req, res) => {
       res.clearCookie('userEmail');
@@ -146,7 +144,7 @@ const usersController = {
       res.redirect('/');
     },
 
-    edit: function (req, res) {
+  edit: function (req, res) {
       let id = req.params.id;
       db.User.findByPk(id)      
         .then((user) => {
@@ -158,7 +156,7 @@ const usersController = {
     },
 
     
-    update: (req, res) => {
+  update: (req, res) => {
       const resultadoValidaciones = validationResult(req);
       if (resultadoValidaciones.errors.length > 0) {
         return res.render("users/edit", {

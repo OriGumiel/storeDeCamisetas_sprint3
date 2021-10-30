@@ -27,6 +27,7 @@ CREATE TABLE Shop_carts(
     user_id INT,-- FOREIGN KEY REFERENCES Users(id),
     crated_at DATETIME, -- Fecha de inicio del carrito.
     buy_date DATETIME, -- Fecha de compra.
+    quantity INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES Users(id)
 
 );
@@ -48,6 +49,7 @@ CREATE TABLE Products (
     name VARCHAR(100),
     description TEXT,
     price INT,
+    category VARCHAR(100),
     available_stock_id INT,
     FOREIGN KEY (available_stock_id) REFERENCES Available_stocks(id)
 );

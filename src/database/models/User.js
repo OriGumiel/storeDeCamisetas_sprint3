@@ -1,4 +1,4 @@
-module.exports = (sequelize,dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
 
     let alias = "User";
     
@@ -21,12 +21,12 @@ module.exports = (sequelize,dataTypes) => {
             type: dataTypes.TEXT
         },
         user_avatar: {
+            type: dataTypes.TEXT            
+        },        
+        user_type: {
             type: dataTypes.TEXT
         },
         
-        user_type: {
-            type: dataTypes.STRING
-        }
     };
 
     let config = {

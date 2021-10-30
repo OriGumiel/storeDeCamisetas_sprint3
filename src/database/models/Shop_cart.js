@@ -1,28 +1,31 @@
-module.exports = (sequelize,DataTypes) => {
+module.exports = (sequelize,dataTypes) => {
 
-    let alias = "Shop_cart"
+    let alias = "Shop_carts"
     
     let cols = {
         id: {
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey: true
         },
         price: {
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
         },
         user_id: {
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
         },
         created_at: {
-            type: DataTypes.DATE
+            type: dataTypes.DATE,
         },
         buy_date: {
-            type: DataTypes.DATE
+            type: dataTypes.DATE,
         },
+        quantity: {
+            type: dataTypes.INTEGER,
+        }
     };
     
     let config = {
-        tableName: "Shop_carts",
+        tableName: "shop_carts",
         timestamps: false
     }
 
@@ -31,8 +34,8 @@ module.exports = (sequelize,DataTypes) => {
     // Shop_cart.associate = models => {
     //     //relacion con Users.
     //     Shop_cart.belongsTo( models.Users,{
-    //         as = "Users",
-    //         foreignKey = "user_id"
+    //         as: "Users",
+    //         foreignKey: "user_id"
     //     });
     //     //relacion con Products a travez de Product_Shop_cart
     //     Shop_cart.belongsToMany(models.Products,{

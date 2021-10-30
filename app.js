@@ -18,8 +18,8 @@ app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
-app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(cookieParser());
 app.use(
   session({
@@ -33,15 +33,18 @@ app.use(methodOverride('_method'));
 app.use(userLoggedMiddleware);
 
 
+
 //requiere routes
 const mainRouter = require('./src/routes/main');
 const usersRouter = require('./src/routes/users');
 const productsRouter = require('./src/routes/products')
+const shopCartRouter = require('./src/routes/shopCart')
 
 // routes setup
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter)
+app.use('/shopCart', shopCartRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
