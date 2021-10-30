@@ -18,12 +18,13 @@ let storage = multer.diskStorage({
 
   
   router.get('/detalle/:id',productsController.detalle );
-  
-  router.get('/nuevoProducto',productsController.nuevo );
+
+ /*** CREATE product ***/  
+  router.get('/newProduct',productsController.getForm );
   router.post('/store', upload.single('images'),productsController.store); 
   router.get('/create',productsController.create); 
   
-  /*** EDIT ONE PRODUCT ***/ 
+  /*** EDIT product ***/ 
   router.get('/edit/:id/', productsController.edit); 
   router.put('/edit/:id', productsController.update); 
   router.delete('/delete/:id', productsController.delete); 

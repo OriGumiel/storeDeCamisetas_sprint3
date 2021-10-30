@@ -24,7 +24,7 @@ const productsController = {
       });
       },
 
-    nuevo: function(req, res, next) {
+    getForm: function(req, res, next) {
         res.render('products/productsNew',{title: 'Creaste un nuevo producto',
         style: '/stylesheets/productsNew.css',
       });
