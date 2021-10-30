@@ -8,9 +8,24 @@ En este sprint lo que mas nos peso fue el poco tiempo de trabajo en equipo. La s
 
 Sprint 4
 Implementando la dinámica de la estrella de mar:
-1. Comenzar a hacer -  Jason - Crud
+1. Comenzar a hacer -  JSon - Crud
 2. Hacer más - UX-UI / Links a paginas
 3. Continuar haciendo - Enfocarse en el diseño
-4. Hacer menos
-5. Dejar de hace
+4. Hacer menos: postergar cosas.
+5. Dejar de hacer: tiempos.
+
+Sprint 5
+Probablemente el sprint mas complejo hasta el momento. 
+Nos dividimos tareas como siempre pero tuvimos más reuniones de equipo que las habituales para trabajar en conjunto. 
+Nos apoyamos en el material de playground para llevar adelante las tareas de session y cookies que fueron las que mas complicaciones nos trajeron. Tuvimos que hacer varios cambios para que funcione el multer, pero finalmente quedó resuelto.
+2. Hacer mas: Recurrir a Playground para el repaso de conceptos.
+3. Continuar haciendo: reuniones en conjunto.
+
+Sprint 6
+En el sprint 6 el trabajo fue dinámico, ágil pero seguimos fallando en la organización o "liquidar" los errores y hacen que nuestras entregas sean a medias.
+1. Deberíamos comenzar a hacer mas reuniones semanales de 15 min como máximo, o consultarnos mas los errores para seguir avanzando.
+2. Hacer mas: repasar el contenido, lo que se entiende, lo que no.
+3. Continuar haciendo: explicar el código realizado por cada uno, comunicarnos como venimos haciendo por WhatsApp y Slack.
+4. Hacer menos: Dejar errores mínimos para "después".
+5. Dejar de hacer: jugar con los tiempos.
 
