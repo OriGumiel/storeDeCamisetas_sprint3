@@ -10,7 +10,7 @@ const logger = require('morgan');
 const methodOverride = require('method-override');
 const app = express();
 
-// const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware");
+const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware");
 
 
 // view engine setup
@@ -30,7 +30,7 @@ app.use(
 );
 app.use(express.static(path.join(__dirname, 'src/public')));
 app.use(methodOverride('_method'));
-// app.use(userLoggedMiddleware);
+app.use(userLoggedMiddleware);
 
 
 

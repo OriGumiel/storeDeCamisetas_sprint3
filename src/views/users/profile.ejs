@@ -10,9 +10,11 @@
 <main class="main-profile">
     <div class="profile-container">
       <section class="profile-main-data">
-        <h1>Hola, genio</h1>
-        
-        
+        <h1>Hola, <%=user.first_name %> <%= user.last_name %></h1>
+        <!-- <figure class="profile-img">
+          <img src="/images/users/<%=user.user_avatar %>" alt="foto perfil"/>
+        </figure> -->
+        <div class="profile-email"><%= user.email %></div>
       </section>
 /
       <section class="profile-additional-data">
@@ -30,7 +32,7 @@
               <a href="#">Agregar datos de compra</a>
             </li>
             <li class="profile-li">
-              <a href="#">Editar perfil</a>
+              <a href="/users/edit/<%=user.id%>">Editar perfil</a>
             </li>
             <form action="/users/delete" method="POST">
               <button type="submit">Borrar cuenta</button>
