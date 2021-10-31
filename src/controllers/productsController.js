@@ -55,10 +55,16 @@ const productsController = {
 
     create: async (req,res) => {
       let newProduct = await db.Product.create({
-        name:'producto de prueba',
-        description: 'Este es el primer producto que estoy creando como una prueba',
-        price: 1700,
-        category: 'Argentina'
+        name: req.body.name,
+        description: req.body.description,
+        price: req.body.price,
+        category: req.body.category
+      })
+
+      res.send(req.body)
+
+      .catch((error) => {
+        console.log(error)
       })
 
       res.render('products/productCreate',{title: `Creaste un nuevo producto llamado ${newProduct.name}`});
