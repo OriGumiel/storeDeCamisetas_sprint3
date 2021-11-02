@@ -33,8 +33,15 @@ module.exports = (sequelize,DataTypes) => {
 
     Products.associate = models => {
         //relacion con available_stocks
-
+        Products.belongsToMany(models.available_stock_id,{
+            as: 'available_stocks',
+            primaryKey: 'id'
+        });
         //relacion de product_images
+        Products.hasMany(models.Product_images,{
+            as: 'Product_image',
+            foreignKey:'product_id'
+        });
     }
 
     return Products // NO OLVIDAR NUNCA RETORNAR

@@ -31,21 +31,21 @@ module.exports = (sequelize,dataTypes) => {
 
     const Shop_cart = sequelize.define(alias, cols, config)
 
-    // Shop_cart.associate = models => {
-    //     //relacion con Users.
-    //     Shop_cart.belongsTo( models.Users,{
-    //         as: "Users",
-    //         foreignKey: "user_id"
-    //     });
-    //     //relacion con Products a travez de Product_Shop_cart
-    //     Shop_cart.belongsToMany(models.Products,{
-    //         as:"Products",
-    //         through: "Product_Shop_cart",
-    //         foreignKey: "shop_cart_id",
-    //         otherKey: "product_id",
-    //         timestamps: false
-    //     });
-    // }
+     Shop_cart.associate = models => {
+         //relacion con Users.
+         Shop_cart.belongsTo( models.Users,{
+             as: "Users",
+             foreignKey: "user_id"
+         });
+         //relacion con Products a traves de Product_Shop_cart
+         Shop_cart.belongsToMany(models.Products,{
+             as:"Products",
+             through: "Product_Shop_cart",
+             foreignKey: "shop_cart_id",
+             otherKey: "product_id",
+             timestamps: false
+         });
+     }
     
     return Shop_cart
 }
