@@ -42,9 +42,18 @@ const shopCartRouter = require('./src/routes/shopCart')
 
 // routes setup
 app.use('/', mainRouter);
-app.use('/users', usersRouter);
 app.use('/products', productsRouter)
 app.use('/shopCart', shopCartRouter)
+app.use('/users', usersRouter);
+
+//requiere API routes
+const api_usersRouter = require('./src/routes/api/api_users');
+const api_productsRouter = require('./src/routes/api/api_products');
+
+// API routes setup
+app.use('/api/users', api_usersRouter);
+app.use('/api/products', api_productsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

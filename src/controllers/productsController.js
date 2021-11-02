@@ -54,20 +54,22 @@ const productsController = {
     },
 
     create: async (req,res) => {
-      let newProduct = await db.Product.create({
-        name: req.body.name,
-        description: req.body.description,
-        price: req.body.price,
-        category: req.body.category
-      })
-
-      res.send(req.body)
-
-      .catch((error) => {
+      try {
+        let newProduct = await db.Product.create({
+          name: req.body.name,
+          description: req.body.description,
+          price: req.body.price,
+          category: req.body.category
+        })
+        console.log(newProduct);
+        res.send(req.body)
+        res.render('products/productCreate',{title: `Creaste un nuevo producto llamado ${newProduct.name}`});
+        
+      } catch (error) {
         console.log(error)
-      })
+        
+      }
 
-      res.render('products/productCreate',{title: `Creaste un nuevo producto llamado ${newProduct.name}`});
     },
 
     // Update - Form to edit
