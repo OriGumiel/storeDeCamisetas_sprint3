@@ -33,7 +33,7 @@ const usersController = {
   },
 
   login: function(req, res, next) {
-        res.render('users/userlogin',{
+        res.render('users/usersLogin',{
           title:'Estas en el login',
           style:'/stylesheets/styleslogin.css'
         });
