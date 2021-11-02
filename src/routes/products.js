@@ -22,7 +22,7 @@ let storage = multer.diskStorage({
  /*** CREATE product ***/  
   router.get('/newProduct',productsController.getForm );
   router.post('/store', upload.single('images'),productsController.store); 
-  router.get('/create',productsController.create); 
+  router.post('/create',productsController.create); 
   
   /*** EDIT product ***/ 
   router.get('/edit/:id/', productsController.edit); 

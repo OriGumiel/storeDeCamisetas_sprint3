@@ -19,9 +19,9 @@ module.exports = (sequelize,DataTypes) => {
         category:{
             type: DataTypes.STRING,
         },
-        available_stock_id:{
-            type: DataTypes.INTEGER,
-        },
+        // available_stock_id:{
+        //     type: DataTypes.INTEGER,
+        // },
     };
 
     let config = {
@@ -29,7 +29,7 @@ module.exports = (sequelize,DataTypes) => {
         timestamps: false
     }
 
-    const Products = sequelize.define(alias, cols, config)
+    const Product = sequelize.define(alias, cols, config)
 
     Products.associate = models => {
         //relacion con available_stocks
@@ -44,5 +44,5 @@ module.exports = (sequelize,DataTypes) => {
         });
     }
 
-    return Products // NO OLVIDAR NUNCA RETORNAR
+    return Product // NO OLVIDAR NUNCA RETORNAR
 }
