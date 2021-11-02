@@ -49,20 +49,20 @@ module.exports = [
     .withMessage(
       "La contraseña debe tener al menos 8 dígitos, incluir una mayúscula, una minúscula, y un número"
     ),
-    // body('user_avatar').custom((value, { req }) => {
-    //   let file = req.file;
-    //   let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
+    body('user_avatar').custom((value, { req }) => {
+      let file = req.file;
+      let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
   
-    //   if (!file) {
-    //     throw new Error('Tienes que subir una imagen');
-    //   }else{
-    //     let fileExtension = path.extname(file.originalname);
-    //     if (!acceptedExtensions.includes(fileExtension)) {
+      if (!file) {
+        throw new Error('Tienes que subir una imagen');
+      }else{
+        let fileExtension = path.extname(file.originalname);
+        if (!acceptedExtensions.includes(fileExtension)) {
             
-    //         throw new Error (`Las extensiones permitidas son ${acceptedExtensions.join(', ')}`);
-    //     }
-    // } 
+            throw new Error (`Las extensiones permitidas son ${acceptedExtensions.join(', ')}`);
+        }
+    } 
   
-    //   return true;
-    // })
+      return true;
+    })
   ]

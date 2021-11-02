@@ -70,7 +70,7 @@ const usersController = {
             last_name: req.body.last_name,
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 10),
-            //user_avatar: req.file.filename,
+            user_avatar: req.file.filename,
           })      
            
         
@@ -79,15 +79,13 @@ const usersController = {
           
     },
     
-  loginProcess:  (req, res) => {
-      let userToLogin = db.User.findOne({
+  loginProcess:  async (req, res) => {
+      let userToLogin = await db.User.findOne({
         where: {
-          email: req.body.email,
-          
-        },
+          email: req.body.email          
+        },      
+      });
       
-      })
-      .then((userToLogin) => {
           if (userToLogin) {
           let passwordOk = bcryptjs.compareSync(
             req.body.password,
@@ -123,10 +121,8 @@ const usersController = {
             },
           },
         });
-      })
-        .catch((e) => {
-            console.log(e);
-          })
+      
+        
     }, 
     
 
