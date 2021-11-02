@@ -32,8 +32,8 @@ module.exports = (sequelize,DataTypes) => {
     const Product = sequelize.define(alias, cols, config)
 
     Products.associate = models => {
-        //relacion con available_stocks
-        Products.belongsToMany(models.available_stock_id,{
+         //relacion con available_stocks
+         Products.belongsToMany(models.available_stock_id,{
             as: 'available_stocks',
             primaryKey: 'id'
         });
