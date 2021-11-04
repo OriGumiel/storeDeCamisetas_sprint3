@@ -12,7 +12,17 @@
             </div>
             <input placeholder="  ... encuentra tu camiseta favorita" type="text" name="buscador">
             <div class="logo-sup"><i class="fas fa-shopping-bag"></i></div>
-            
+            <% if (locals.isLogged) { %>
+               <div class="login"> 
+                    <div>
+                        <p class="logName">Hola, <%= locals.userLogged.first_name %></a>
+                    </div>                  
+                    <div class="profile">
+                        <a href="/users/profile">Profile</a>
+                        <a href="/users/logout">Log out <i class="fas fa-sign-in-alt"></i></a>
+                    </div>
+                </div>
+            <% }else{ %>
             <div class='top-button'>
                 <a href="/users/login">
                 <button class="log-in-button">Log In</button>
@@ -21,7 +31,7 @@
                 <button class="sign-up-button">Sign Up</button>
                 </a>
             </div>
-            
+            <% } %>
         </nav>
 
         <!-- <a href="#" class="slide-button"><i class="fas fa-angle-double-down"></i></a>-->

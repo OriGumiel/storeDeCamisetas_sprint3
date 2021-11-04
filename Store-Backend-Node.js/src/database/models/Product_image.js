@@ -22,13 +22,13 @@ module.exports = (sequelize,dataTypes) => {
 
     const Product_image = sequelize.define(alias, cols, config)
     
-    // Product_image.associate = models => {
-    //     //relacion con Products
-    //     Product_image.belongsTo(models.Product,{
-    //         as: 'Products',
-    //         foreignKey: 'product_id'
-    //     });
-    // }
+    Product_image.associate = models => {
+         // relacion con Products
+         Product_image.belongsTo(models.Product,{
+             as: 'Products',
+            foreignKey: 'product_id'
+        });
+    }
 
     return Product_image
 };

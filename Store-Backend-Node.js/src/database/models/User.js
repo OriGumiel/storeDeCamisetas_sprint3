@@ -26,9 +26,6 @@ module.exports = (sequelize, dataTypes) => {
         user_type: {
             type: dataTypes.TEXT
         },
-        alias: {
-            type: dataTypes.TEXT
-        },
         
     };
 
