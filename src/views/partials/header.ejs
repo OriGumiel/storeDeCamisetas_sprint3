@@ -13,17 +13,15 @@
             <input placeholder="  ... encuentra tu camiseta favorita" type="text" name="buscador">
             <div class="logo-sup"><i class="fas fa-shopping-bag"></i></div>
             <% if (locals.isLogged) { %>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <!-- <img src="/images/users/<%= locals.userLogged.user_avatar %>" width="40" style="border-radius: 100%;"> -->
-                        Hola <%= locals.userLogged.first_name %> 
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/users/profile">My profile</a>
-                        <li><hr class="dropdown-divider"></li>
-                        <a class="dropdown-item" href="/users/logout">Logout</a>
-                    </ul>
-                </li>
+               <div class="login"> 
+                    <div>
+                        <p class="logName">Hola, <%= locals.userLogged.first_name %></a>
+                    </div>                  
+                    <div class="profile">
+                        <a href="/users/profile">Profile</a>
+                        <a href="/users/logout">Log out <i class="fas fa-sign-in-alt"></i></a>
+                    </div>
+                </div>
             <% }else{ %>
             <div class='top-button'>
                 <a href="/users/login">
