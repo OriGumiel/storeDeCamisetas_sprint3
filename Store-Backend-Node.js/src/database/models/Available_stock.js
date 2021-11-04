@@ -34,13 +34,13 @@ module.exports = (sequelize,dataTypes) => {
     const Available_stock = sequelize.define(alias, cols, config)
 
 
-    // Available_stock.associate = models => {
-    //     //relacion con Products
-    //     Available_stock.hasMany(models.Product,{
-    //         as: 'Products',
-    //         foreignKey: 'Available_stock_id'
-    //     });
-    // }
+    Available_stock.associate = models => {
+         //relacion con Products
+         Available_stock.hasMany(models.Product,{
+             as: 'Products',
+             foreignKey: 'Available_stock_id'
+         });
+     }
 
     return Available_stock
 };

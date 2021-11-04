@@ -31,11 +31,18 @@ module.exports = (sequelize,DataTypes) => {
 
     const Product = sequelize.define(alias, cols, config)
 
-    // Products.associate = models => {
-    //     //relacion con available_stocks
-
-    //     //relacion de product_images
-    // }
+    Product.associate = models => {
+         //relacion con available_stocks
+         Product.hasMany(models.Available_stock,{
+            as: 'available_stocks',
+            primaryKey: 'id'
+        });
+        //relacion de product_images
+        Product.hasMany(models.Product_images,{
+            as: 'product_images',
+            foreignKey:'product_id'
+        });
+    }
 
     return Product // NO OLVIDAR NUNCA RETORNAR
 }
