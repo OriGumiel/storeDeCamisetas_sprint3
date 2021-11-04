@@ -1,0 +1,80 @@
+<%- include('../partials/head') %>
+<link rel="stylesheet" href="/stylesheets/styleregister.css">
+</head>
+      
+<body>
+
+<%- include('../partials/header') %>
+
+<script src="/javaScript/usersRegister.js"></script>
+
+    <main>
+        <h1>Registrate acá</h1>
+        
+
+        <form method="POST" action="/users/registrar" enctype="multipart/form-data">
+           <ul>
+             <p>Unite a Store de camisetas y accede a increibles descuentos!</p>
+              <li>
+                <label for="first_name">Nombre:</label>
+                <input type="text" id="first_name" name="first_name" class="form-control <%= locals.errors && errors.first_name ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.first_name : null %>">
+                <% if (locals.errors && errors.first_name) { %>
+                  <div class="text-danger">
+                    <%= errors.first_name.msg %> 
+                  </div>
+                <% } %>
+              </li>
+                <br>
+              <li>
+                <label for="last_name">Apellido:</label>
+                <input type="text" id="last_name" name="last_name" class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.last_name : null %>">
+                <% if (locals.errors && errors.last_name) { %>
+                  <div class="text-danger">
+                    <%= errors.last_name.msg %> 
+                  </div>
+                <% } %>
+              </li>
+                <br>
+              <li>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                  <div class="text-danger">
+                    <%= errors.email.msg %> 
+                  </div>
+                <% } %>
+              </li>
+                <br>
+              <li>
+                <label for="password">Crear contraseña:</label>
+                <input type="password" id="password" name="password">
+                <% if (locals.errors && errors.password) { %>
+                  <div class="text-danger">
+                    <%= errors.password.msg %> 
+                  </div>
+                <% } %>
+              </li>
+                <br>
+                <div class="custom-file">
+                  <input type="file"   name="user_avatar"  id='user_avatar' placeholder="Debes eligir tu avatar...">
+                  <% if (locals.errors && errors.user_avatar) { %>
+                    <div class="text-danger">
+                      <%= errors.user_avatar.msg %>
+                    </div>
+                  <% } %>
+              </div>  
+           </ul>
+           <li class="button">
+            <button type="submit">Registrarse</button>
+          </li>
+        </form>
+    </main>
+
+<%- include('../partials/footer') %> 
+
+</body>
+
+</html>
