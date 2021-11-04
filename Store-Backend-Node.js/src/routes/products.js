@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 const path = require('path');
 
+const validationsCreate = require('../middlewares/createProductValidation');
+const validationsEdit = require('../middlewares/editProductValidation');
+
 const productsController = require ('../controllers/productsController');
 
 const multer = require('multer');
@@ -21,12 +24,12 @@ let storage = multer.diskStorage({
 
  /*** CREATE product ***/  
   router.get('/newProduct',productsController.getForm );
-  router.post('/store', upload.single('images'),productsController.store); 
-  router.post('/create',productsController.create); 
+  router.post('/store', upload.single('images'), productsController.store); 
+  router.post('/create', upload.single('images'), validationsCreate, productsController.create); 
   
   /*** EDIT product ***/ 
   router.get('/edit/:id/', productsController.edit); 
-  router.put('/edit/:id', productsController.update); 
+  router.put('/edit/:id', upload.single('images'), validationsEdit, productsController.update); 
   router.delete('/delete/:id', productsController.delete); 
   
   /* GET users listing. */
