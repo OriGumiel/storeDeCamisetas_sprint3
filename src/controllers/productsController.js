@@ -6,6 +6,8 @@ const sequelize = db.sequelize
 const productsFilePath = path.join(__dirname, '../data/Productos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const { validationResult } = require("express-validator");
+
 const productsController = {
     todos: function(req, res, next) {
       let category = req.params.category;
