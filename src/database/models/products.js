@@ -31,15 +31,15 @@ module.exports = (sequelize,DataTypes) => {
 
     const Product = sequelize.define(alias, cols, config)
 
-    Products.associate = models => {
+    Product.associate = models => {
          //relacion con available_stocks
-         Products.belongsToMany(models.available_stock_id,{
+         Product.hasMany(models.Available_stock,{
             as: 'available_stocks',
             primaryKey: 'id'
         });
         //relacion de product_images
-        Products.hasMany(models.Product_images,{
-            as: 'Product_image',
+        Product.hasMany(models.Product_images,{
+            as: 'product_images',
             foreignKey:'product_id'
         });
     }
