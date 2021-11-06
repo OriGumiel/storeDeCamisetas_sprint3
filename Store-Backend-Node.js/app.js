@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const session = require("express-session");
 const logger = require('morgan');
+const cors = require('cors')
 
 
 
@@ -31,6 +32,7 @@ app.use(
 app.use(express.static(path.join(__dirname, 'src/public')));
 app.use(methodOverride('_method'));
 app.use(userLoggedMiddleware);
+app.use(cors());
 
 
 
