@@ -7,10 +7,12 @@
             </div>
             <div>
                 <a href="#"></a>
-                <img src="/images/logo1.png" class="logoTop">
+                <img src="/images/logo8.png" class="logoTop">
                 </a>
             </div>
+            
             <input placeholder="  ... encuentra tu camiseta favorita" type="text" name="buscador">
+            
             <div class="logo-sup"><i class="fas fa-shopping-bag"></i></div>
             <% if (locals.isLogged) { %>
                <div class="login"> 
@@ -46,6 +48,13 @@
                     <li><a href="/products"></a></li>
                 </ul>
             </div>
+            <% if (locals.isLogged) { %>
+                <% if(locals.userLogged.user_type==="1") { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/admin">Administrar</a>
+                    </li>
+                <%}%>
+            <%}%>
             <div class="right-bar">
                 <ul>
                     <li><a href="/shopCart">Mis compras</a></li>
