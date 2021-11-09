@@ -16,12 +16,12 @@ module.exports = (sequelize,DataTypes) => {
         price:{
             type: DataTypes.INTEGER,
         },
+        available_stock_id:{
+            type: DataTypes.INTEGER,
+        },
         category:{
             type: DataTypes.STRING,
         },
-        // available_stock_id:{
-        //     type: DataTypes.INTEGER,
-        // },
     };
 
     let config = {

@@ -1,45 +1,73 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import SmallCard from './SmallCard';
+
+
+
 
 /*  Cada set de datos es un objeto literal */
 
-/* <!-- Movies in DB --> */
+function ContentRowMovies(){
 
-let moviesInDB = {
-    title: 'Movies in Data Base',
+    const [ users, setUsers ] = useState([]);
+    const [ products, setProducts ] = useState([]);
+
+    useEffect(()=>{
+        const fetchUsersData = async () => {
+            let resultados = await axios.get("http://localhost:3000/api/users/all");
+            console.log(resultados.data)
+            setUsers(resultados.data);
+        }
+        fetchUsersData()
+    },[])
+
+    useEffect(()=>{
+        const fetchProductsData = async () => {
+            let resultados = await axios.get("http://localhost:3000/api/products/all");
+            console.log(resultados.data)
+            setProducts(resultados.data);
+        }
+        fetchProductsData()
+    },[])
+    console.log(products.meta)
+
+    /* <!-- Movies in DB --> */
+
+let usersInDB = {
+    title: 'Users in Data Base',
     color: 'primary', 
-    cuantity: 21,
+    cuantity: `${users.meta}`,
     icon: 'fa-clipboard-list'
 }
 
 /* <!-- Total awards --> */
 
-let totalAwards = {
-    title:' Total awards', 
+let productsInDB = {
+    title:'Products in Data Base', 
     color:'success', 
-    cuantity: '79',
+    cuantity: `${products.meta}`,
     icon:'fa-award'
 }
 
 /* <!-- Actors quantity --> */
 
-let actorsQuantity = {
-    title:'Actors quantity' ,
+let imagesInDB = {
+    title:'Images in Data Base' ,
     color:'warning',
     cuantity:'49',
     icon:'fa-user-check'
 }
 
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
+let cardsProps = [usersInDB, productsInDB, imagesInDB];
 
-function ContentRowMovies(){
     return (
     
         <div className="row">
             
-            {cartProps.map( (movie, i) => {
+            {cardsProps.map( (cardInfo, i) => {
 
-                return <SmallCard {...movie} key={i}/>
+                return <SmallCard {...cardInfo} key={i}/>
             
             })}
 
