@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+
+.profile-additional-data {
+    margin: 20px;
+    cursor: pointer;
+    outline: none;
+    
+    
+}
+
+.profile-ul{
+    list-style: none;
+    text-decoration: none;    
+}
+
+.profile-li{
+    padding-bottom: 1rem;
+    
+}

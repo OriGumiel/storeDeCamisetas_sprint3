@@ -39,14 +39,16 @@ app.use(cors());
 //requiere routes
 const mainRouter = require('./src/routes/main');
 const usersRouter = require('./src/routes/users');
-const productsRouter = require('./src/routes/products')
-const shopCartRouter = require('./src/routes/shopCart')
+const productsRouter = require('./src/routes/products');
+const shopCartRouter = require('./src/routes/shopCart');
+const adminRouter = require('./src/routes/admin');
 
 // routes setup
 app.use('/', mainRouter);
 app.use('/products', productsRouter)
 app.use('/shopCart', shopCartRouter)
-app.use('/users', usersRouter);
+app.use('/users', usersRouter)
+app.use('/admin', adminRouter)
 
 //requiere API routes
 const api_usersRouter = require('./src/routes/api/api_users');

@@ -24,14 +24,18 @@
                         <input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input" value="<%= productToEdit.price %>">
                     </div>
                     <div class="col-12 col-md-6">
+                        <label for="category" class="form-label">Categoría:</label>
+                        <input type="text" id="category" name="category" placeholder="" class="form-input" value="<%= productToEdit.category %>">
+                    </div>
+                    <!-- <div class="col-12 col-md-6">
                         <label for="talle" class="form-label">Talle:</label>
                         <input type="text" id="talle" name="talle" placeholder="L" class="form-input" value="<%= productToEdit.talle %>">
-                    </div>
-                    <div class="col-12 col-md-6">
+                    </div> -->
+                    <!-- <div class="col-12 col-md-6">
                         <label for="color" class="form-label">Color:</label>
                         <input type="text" id="color" name="color" placeholder="Rojo" class="form-input" value="<%= productToEdit.color %>">
-                    </div>
-                    <div class="col-12 col-md-6">
+                    </div> -->
+                    <!-- <div class="col-12 col-md-6">
                         <label for="esNovedad" class="form-label">Novedad:</label>
                         <select name="esNovedad" id="esNovedad" class="form-input">
                             <% if (productToEdit.esNovedad == 'in-sale') { %>
@@ -42,7 +46,7 @@
                                 <option value="false" selected='true'>No</option>
                             <% } %>
                         </select>
-                    </div>
+                    </div> -->
                     <div class="col-12">
                         <label for="description" class="form-label">Descipción:</label>
                         <textarea name="description" id="description" class="form-input"><%= productToEdit.description %></textarea>
