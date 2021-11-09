@@ -20,11 +20,27 @@ const productsController = {
         });
       },
 
-    detalle: function(req, res, next) {
-        res.render('products/productsDetail',{title: 'Estas accediendo al detalle de un producto',
-        style: '/stylesheets/styles.css',
-      });
-      },
+    // detalle: function(req, res, next) {
+    //     res.render('products/productsDetail',{title: 'Estas accediendo al detalle de un producto',
+    //     style: '/stylesheets/styles.css',
+    //   });
+    //   },
+
+    detalle:(req,res) =>{
+      //CON JSON: let prendas = JSON.parse(fs.readFileSync(productsDatos,'utf-8'));
+       //let id = req.params.id;
+      //let unProducto= prendas.find(element => element.id == id);
+      //res.render('products/detail', {product: unProducto} 
+      db.Product.findByPk(req.params.id,{
+          include:[{association:"product_images"}
+          ]
+      })
+      .then(function(product){
+          res.render('products/productsDetail', {productDetail : product})
+      })
+  },
+
+
 
     getForm: function(req, res, next) {
         res.render('products/productsNew',{title: 'Creaste un nuevo producto',
@@ -56,47 +72,76 @@ const productsController = {
     },
 
     create: async (req,res) => {
-      try {
+      
         let newProduct = await db.Product.create({
           name: req.body.name,
           description: req.body.description,
           price: req.body.price,
-          category: req.body.category
+          category: req.body.category,
+          
         })
-        console.log(newProduct);
-        res.send(req.body)
+        // IMAGES
+      // con req.files accedemos a todos los file mandados y guardados en array. Solo queremos el nombre así que creamos nuevo array donde los pushearemos
+      let images = [];
+      for (i = 0; i < req.files.length; i++) {
+        images.push(req.files[i].filename);
+      }
+      for (i = 0; i < images.length; i++) {
+        // ahora con uuid ya no son 2 iguales y creara tantas imagenes como haya en el array
+        await newProduct.createImage({ image: images[i] });
+      }
+      
+        // console.log(newProduct);
+        // res.send(req.body)
         res.render('products/productCreate',{title: `Creaste un nuevo producto llamado ${newProduct.name}`});
         
-      } catch (error) {
-        console.log(error)
-        
-      }
+       
 
     },
 
     // Update - Form to edit
     edit: (req, res) => {
       let id = req.params.id;
-      let productToEdit =  products.find(element => element.id == id);
-      res.render('products/product-edit-form', {productToEdit: productToEdit,
-      style: '/stylesheets/productsNew.css'});
+      db.Product.findByPk(id)
+      .then((product) => {
+        return res.render("products/product-edit-form", { productToEdit : product});
+      })
+      .catch((e) => {
+        console.log(e);
+      }); 
+      // let productToEdit =  products.find(element => element.id == id);
+      // res.render('products/product-edit-form', {productToEdit: productToEdit,
+      // style: '/stylesheets/productsNew.css'});
     },
     
     // Update - Method to update
-    update: (req, res) => {
-      let id = req.params.id;
-      products.forEach(element => {
-        if(element.id == id){
-          element.name = req.body.name;
-          element.description = req.body.description;
-          element.talle = req.body.talle;
-          element.category = req.body.category;
-          element.price = req.body.price;
-        }
-      })
+    update: (req, res) => {      
+      let productEdit = {
+        name: req.body.name,
+        description: req.body.description,
+        price: req.body.price,
+        category: req.body.category,
+        // image: req.file.filename        
+      }
 
-      fs.writeFileSync(productsFilePath, JSON.stringify(productos));
-      res.redirect('/');
+      db.Product.update(productEdit, { where: { id: req.params.id } })
+        .then(() => res.redirect("/"))
+        .catch((e) => {
+          console.log(e);
+        });
+
+      // products.forEach(element => {
+      //   if(element.id == id){
+      //     element.name = req.body.name;
+      //     element.description = req.body.description;
+      //     element.talle = req.body.talle;
+      //     element.category = req.body.category;
+      //     element.price = req.body.price;
+      //   }
+      // })
+
+      // fs.writeFileSync(productsFilePath, JSON.stringify(productos));
+      // res.redirect('/');
       //res.redirect('/detail/'+id);
     },
 

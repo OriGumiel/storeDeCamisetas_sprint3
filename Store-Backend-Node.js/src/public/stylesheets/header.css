@@ -32,7 +32,6 @@ body {
 .top-nav-bar img{
     width: 15%;
     padding: 10px 10px 10px 0;
-    display: none;
 }
 
 div.burger-menu {
@@ -95,23 +94,6 @@ div .top-button {
     align-content:  center;
     font-size: 8px;
 }
-
-.login{
-    color: white;
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    margin-left: 100px;
-    width: 30%;
-}
-
-.profile{
-    color:white;
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-}
-
 .slide-button{
     display: none;
     max-width: 100px;
@@ -199,7 +181,6 @@ div .top-button {
     .top-nav-bar img{
         width: 15%;
         padding: 10px 10px 10px 0;
-        display: block;
     }
     
     .logo-sup {
@@ -214,7 +195,7 @@ div .top-button {
 
     .top-nav-bar div.top-button {
         flex-direction: row;
-        width: 20%;    
+        width: 30%;    
     }
      
     .log-in-button{
@@ -245,7 +226,7 @@ div .top-button {
     
         /* Header*/
         .top-nav-bar img{
-            width: 40%;
+            width: 50%;
             padding: 10px 10px 10px 0;
             margin-left: 20px;
         }
@@ -253,8 +234,7 @@ div .top-button {
         .log-in-button{
             margin-right: 5px;
             padding: 6px 17px;
-            font-size: 14px;
-            
+            font-size: 14px;          
             
         }
     
@@ -273,9 +253,4 @@ div .top-button {
             display: flex;
          }
 
-         .top-button{
-             margin-left: 200px;
-         }
-
 }
-
