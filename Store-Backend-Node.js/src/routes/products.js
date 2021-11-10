@@ -10,10 +10,11 @@ const productsController = require ('../controllers/productsController');
 const multer = require('multer');
 let storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, path.join(__dirname + '../../public/images/products'))
+      cb(null, path.join(__dirname + '../public/images/products'))
     },
     filename: function (req, file, cb) {
-      cb(null, file.originalname);
+      let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;
+      cb(null, fileName); 
     }
   }) 
   let upload = multer({ storage: storage })
@@ -24,12 +25,12 @@ let storage = multer.diskStorage({
 
  /*** CREATE product ***/  
   router.get('/newProduct',productsController.getForm );
-  router.post('/store', upload.single('images'), productsController.store); 
-  router.post('/create', upload.single('images'), validationsCreate, productsController.create); 
+  router.post('/store', upload.single('image'), productsController.store); 
+  router.post('/create', upload.array('image', 6), validationsCreate, productsController.create); 
   
   /*** EDIT product ***/ 
   router.get('/edit/:id/', productsController.edit); 
-  router.put('/edit/:id', upload.single('images'), validationsEdit, productsController.update); 
+  router.put('/edit/:id', upload.single('image'), validationsEdit, productsController.update); 
   router.delete('/delete/:id', productsController.delete); 
   
   /* GET users listing. */

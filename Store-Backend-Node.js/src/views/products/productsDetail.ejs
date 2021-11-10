@@ -6,24 +6,24 @@
 <%- include('../partials/header') %>
     <div class="main">
         <section class="barca">
-            <img src="/images/barca.jpeg" alt="camiseta barca" class="foto">
+            <img src="/images/products/<%= productDetail.product_images[0].image %>" alt="camiseta barca" class="foto">
             <article class="masfotos">
                 <i class="fas fa-backward"></i>
-                <img src="/images/barca2.jpeg" alt="camiseta barca" class="foto2" width="12%">
-                <img src="/images/barca3.jpeg" alt="camiseta barca" class="foto3" width="12%">
-                <img src="/images/barca4.jpeg" alt="camiseta barca" class="foto4" width="12%">
-                <img src="/images/barca5.jpeg" alt="camiseta barca" class="foto5" width="12%">
-                <img src="/images/barca6.jpeg" alt="camiseta barca" class="foto6" width="12%">
+                <img src="/images/products/<%= productDetail.product_images[1].image %>" alt="camiseta barca" class="foto2" width="15%">
+                <img src="/images/products/<%= productDetail.product_images[2].image %>" alt="camiseta barca" class="foto3" width="15%">
+                <img src="/images/products/<%= productDetail.product_images[3].image %>" alt="camiseta barca" class="foto4" width="15%">
+                <img src="/images/products/<%= productDetail.product_images[4].image %>" alt="camiseta barca" class="foto5" width="15%">
+                <!-- <img src="/images/barca6.jpeg" alt="camiseta barca" class="foto6" width="12%"> -->
                 <i class="fas fa-forward"></i>
             </article>
         </section>
     
         <form class="descripcion" method="POST" action="/shopCart/addProduct" enctype="multipart/form-data">
-                </p><h2>Camiseta Nike Barcelona Home </h2></p>
-                <p><h2>2021/2022 + Parche UEFA </h2></p>
+                </p><h2><%= productDetail.name %> </h2></p>
+                <p><h2><%= productDetail.description %></h2></p>
                 <p><h2>Champions League</h2></p>
                 <br>
-                <h2>$17.500</h2>
+                <h2>$ <%= productDetail.price %></h2>
                 <br>
                 <h4>Talle</h4>
                 <br>
