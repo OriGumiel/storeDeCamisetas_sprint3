@@ -21,28 +21,128 @@ insert into Products (id, name, description, price, category, available_stock_id
 
 
 
-insert into Product_images (id, image, product_id) values (1, './images/barca.jpeg', 1);
-insert into Product_images (id, image, product_id) values (2, './images/españa-retro.jpeg', 2);
-insert into Product_images (id, image, product_id) values (3, './images/psg.jpeg', 3);
-insert into Product_images (id, image, product_id) values (4, './images/alemania.jpeg', 4);
-insert into Product_images (id, image, product_id) values (5, './images/ajax-retro.jpeg', 5);
-insert into Product_images (id, image, product_id) values (6, './images/river.jpg', 6);
-insert into Product_images (id, image, product_id) values (7, './images/liverpool.jpeg', 7);
-insert into Product_images (id, image, product_id) values (8, './images/españa.jpeg', 8);
-insert into Product_images (id, image, product_id) values (9, './images/boca.jpg', 9);
-insert into Product_images (id, image, product_id) values (10, './images/suecia-retro.jpeg', 10);
-insert into Product_images (id, image, product_id) values (11, './images/inter.jpeg', 11);
-insert into Product_images (id, image, product_id) values (12, './images/holanda-retro.jpeg', 12);
-insert into Product_images (id, image, product_id) values (13, './images/racing.jpg', 13);
-insert into Product_images (id, image, product_id) values (14, './images/francia.jpeg', 14);
-insert into Product_images (id, image, product_id) values (15, './images/croacia.jpeg', 15);
-insert into Product_images (id, image, product_id) values (16, './images/city.jpeg', 16);
-insert into Product_images (id, image, product_id) values (17, './images/indepte.jpg', 17);
-insert into Product_images (id, image, product_id) values (18, './images/holanda.jpeg', 18);
-insert into Product_images (id, image, product_id) values (19, './images/real.jpeg', 19);
-insert into Product_images (id, image, product_id) values (20, './images/juventus.jpeg', 20);
+insert into Product_images (id, image, product_id) values (1, 'barca.jpeg', 1);
+insert into Product_images (id, image, product_id) values (2, 'barca2.jpeg', 1);
+insert into Product_images (id, image, product_id) values (3, 'barca3.jpeg', 1);
+insert into Product_images (id, image, product_id) values (4, 'barca4.jpeg', 1);
+insert into Product_images (id, image, product_id) values (5, 'barca5.jpeg', 1);
+insert into Product_images (id, image, product_id) values (6, 'barca6.jpeg', 1);
+
+insert into Product_images (id, image, product_id) values (7, 'españa-retro.jpeg', 2);
+insert into Product_images (id, image, product_id) values (8, 'españa-retro2.jpeg', 2);
+insert into Product_images (id, image, product_id) values (9, 'españa-retro3.jpeg', 2);
+insert into Product_images (id, image, product_id) values (10, 'españa-retro4.jpeg', 2);
+insert into Product_images (id, image, product_id) values (11, 'españa-retro5.jpeg', 2);
+
+insert into Product_images (id, image, product_id) values (12, 'psg.jpeg', 3);
+insert into Product_images (id, image, product_id) values (13, 'psg2.jpeg', 3);
+insert into Product_images (id, image, product_id) values (14, 'psg3.jpeg', 3);
+insert into Product_images (id, image, product_id) values (15, 'psg4.jpeg', 3);
+insert into Product_images (id, image, product_id) values (16, 'psg5.jpeg', 3);
+
+insert into Product_images (id, image, product_id) values (17, 'alemania.jpeg', 4);
+insert into Product_images (id, image, product_id) values (18, 'alemania2.jpeg', 4);
+insert into Product_images (id, image, product_id) values (19, 'alemania3.jpeg', 4);
+
+insert into Product_images (id, image, product_id) values (20, 'ajax-retro.jpeg', 5);
+insert into Product_images (id, image, product_id) values (21, 'ajax-retro2.jpeg', 5);
+insert into Product_images (id, image, product_id) values (22, 'ajax-retro3.jpeg', 5);
+insert into Product_images (id, image, product_id) values (23, 'ajax-retro4.jpeg', 5);
+
+insert into Product_images (id, image, product_id) values (24, 'river.jpg', 6);
+insert into Product_images (id, image, product_id) values (25, 'river2.jpg', 6);
+insert into Product_images (id, image, product_id) values (26, 'river3.jpg', 6);
+insert into Product_images (id, image, product_id) values (27, 'river4.jpg', 6);
+
+insert into Product_images (id, image, product_id) values (28, 'liverpool.jpeg', 7);
+insert into Product_images (id, image, product_id) values (29, 'liverpool2.jpeg', 7);
+insert into Product_images (id, image, product_id) values (30, 'liverpool3.jpeg', 7);
+insert into Product_images (id, image, product_id) values (31, 'liverpool4.jpeg', 7);
+
+insert into Product_images (id, image, product_id) values (32, 'españa.jpeg', 8);
+insert into Product_images (id, image, product_id) values (33, 'españa2.jpeg', 8);
+
+insert into Product_images (id, image, product_id) values (34, 'boca.jpg', 9);
+insert into Product_images (id, image, product_id) values (35, 'boca2.jpg', 9);
+insert into Product_images (id, image, product_id) values (36, 'boca3.jpg', 9);
+insert into Product_images (id, image, product_id) values (37, 'boca4.jpg', 9);
+
+insert into Product_images (id, image, product_id) values (38, 'suecia-retro.jpeg', 10);
+insert into Product_images (id, image, product_id) values (39, 'suecia-retro2.jpeg', 10);
+insert into Product_images (id, image, product_id) values (40, 'suecia-retro3.jpeg', 10);
+insert into Product_images (id, image, product_id) values (41, 'suecia-retro4.jpeg', 10);
+insert into Product_images (id, image, product_id) values (42, 'suecia-retro5.jpeg', 10);
+
+insert into Product_images (id, image, product_id) values (43, 'inter.jpeg', 11);
+insert into Product_images (id, image, product_id) values (44, 'inter2.jpeg', 11);
+insert into Product_images (id, image, product_id) values (45, 'inter3.jpeg', 11);
+insert into Product_images (id, image, product_id) values (46, 'inter4.jpeg', 11);
+insert into Product_images (id, image, product_id) values (47, 'inter5.jpeg', 11);
+
+insert into Product_images (id, image, product_id) values (48, 'holanda-retro.jpeg', 12);
+insert into Product_images (id, image, product_id) values (49, 'holanda-retro2.jpeg', 12);
+insert into Product_images (id, image, product_id) values (50, 'holanda-retro3.jpeg', 12);
+insert into Product_images (id, image, product_id) values (51, 'holanda-retro4.jpeg', 12);
+insert into Product_images (id, image, product_id) values (52, 'holanda-retro5.jpeg', 12);
+
+insert into Product_images (id, image, product_id) values (53, 'racing.jpg', 13);
+insert into Product_images (id, image, product_id) values (54, 'racing2.jpg', 13);
+insert into Product_images (id, image, product_id) values (55, 'racing3.jpg', 13);
+insert into Product_images (id, image, product_id) values (56, 'racing4.jpg', 13);
+
+insert into Product_images (id, image, product_id) values (57, 'francia.jpeg', 14);
+insert into Product_images (id, image, product_id) values (58, 'francia2.jpeg', 14);
+insert into Product_images (id, image, product_id) values (59, 'francia3.jpeg', 14);
+insert into Product_images (id, image, product_id) values (60, 'francia4.jpeg', 14);
+insert into Product_images (id, image, product_id) values (61, 'francia5.jpeg', 14);
+
+insert into Product_images (id, image, product_id) values (62, 'croacia.jpeg', 15);
+insert into Product_images (id, image, product_id) values (63, 'croacia2.jpeg', 15);
+insert into Product_images (id, image, product_id) values (64, 'croacia3.jpeg', 15);
+insert into Product_images (id, image, product_id) values (65, 'croacia4.jpeg', 15);
+insert into Product_images (id, image, product_id) values (66, 'croacia5.jpeg', 15);
+
+insert into Product_images (id, image, product_id) values (67, 'city.jpeg', 16);
+insert into Product_images (id, image, product_id) values (68, 'city2.jpeg', 16);
+insert into Product_images (id, image, product_id) values (68, 'city3.jpeg', 16);
+insert into Product_images (id, image, product_id) values (69, 'city4.jpeg', 16);
+insert into Product_images (id, image, product_id) values (70, 'city5.jpeg', 16);
 
 
+insert into Product_images (id, image, product_id) values (71, 'indepte.jpg', 17);
+insert into Product_images (id, image, product_id) values (72, 'indepte2.jpg', 17);
+insert into Product_images (id, image, product_id) values (73, 'indepte3.jpg', 17);
+insert into Product_images (id, image, product_id) values (74, 'indepte4.jpg', 17);
+insert into Product_images (id, image, product_id) values (75, 'indepte5.jpg', 17);
+
+insert into Product_images (id, image, product_id) values (76, 'holanda.jpeg', 18);
+insert into Product_images (id, image, product_id) values (77, 'holanda2.jpeg', 18);
+insert into Product_images (id, image, product_id) values (78, 'holanda3.jpeg', 18);
+insert into Product_images (id, image, product_id) values (79, 'holanda4.jpeg', 18);
+insert into Product_images (id, image, product_id) values (80, 'holanda5.jpeg', 18);
+
+insert into Product_images (id, image, product_id) values (81, 'real.jpeg', 19);
+insert into Product_images (id, image, product_id) values (82, 'real2.jpeg', 19);
+insert into Product_images (id, image, product_id) values (83, 'real3.jpeg', 19);
+insert into Product_images (id, image, product_id) values (84, 'real4.jpeg', 19);
+insert into Product_images (id, image, product_id) values (85, 'real5.jpeg', 19);
+
+insert into Product_images (id, image, product_id) values (86, 'juventus.jpeg', 20);
+insert into Product_images (id, image, product_id) values (87, 'juventus.jpeg', 20);
+insert into Product_images (id, image, product_id) values (88, 'juventus.jpeg', 20);
+insert into Product_images (id, image, product_id) values (89, 'juventus.jpeg', 20);
+insert into Product_images (id, image, product_id) values (90, 'juventus.jpeg', 20);
+
+insert into Product_images (id, image, product_id) values (91, 'boca5.jpg', 9);
+insert into Product_images (id, image, product_id) values (92, 'racing5.jpg', 13);
+insert into Product_images (id, image, product_id) values (93, 'españa3.jpeg', 8);
+insert into Product_images (id, image, product_id) values (94, 'españa4.jpeg', 8);
+insert into Product_images (id, image, product_id) values (95, 'españa5.jpeg', 8);
+insert into Product_images (id, image, product_id) values (96, 'alemania4.jpeg', 4);
+insert into Product_images (id, image, product_id) values (97, 'alemania5.jpeg', 4);
+insert into Product_images (id, image, product_id) values (98, 'ajax-retro5.jpeg', 5);
+insert into Product_images (id, image, product_id) values (99, 'river5.jpg', 6);
+insert into Product_images (id, image, product_id) values (100, 'liverpool5.jpeg', 7);
 
 insert into Product_Shop_cart (id, product_id, shop_cart_id) values (1, 1, 1);
 insert into Product_Shop_cart (id, product_id, shop_cart_id) values (2, 2, 2);
