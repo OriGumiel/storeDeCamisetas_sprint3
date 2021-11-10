@@ -82,6 +82,15 @@ const productsController = {
         })
         // IMAGES
       // con req.files accedemos a todos los file mandados y guardados en array. Solo queremos el nombre así que creamos nuevo array donde los pushearemos
+      
+      // const files = req.files;
+      // const imagesMapped = files.map (image => image.filename);
+      // const imageStrings = JSON.stringify(imagesMapped)
+
+      // const images = await db.Product_images.create({
+      //   filename: imageStrings
+      // })
+      // await newProduct.setImages (images.id, newProduct.id)
       let images = [];
       for (i = 0; i < req.files.length; i++) {
         images.push(req.files[i].filename);
