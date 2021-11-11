@@ -32,15 +32,15 @@ En el sprint 6 el trabajo fue dinámico, ágil pero seguimos fallando en la orga
 
 Sprint 7
 La retrospectiva¡con yapa!
-Implementen nuevamente la dinámica de laestrellade mar, resaltando aquello que hay que:
-1. Comenzar a hacer.
-2. Hacer más.
-3. Continuar haciendo.
-4. Hacer menos.
-5. Dejar de hacer.
+Implementen nuevamente la dinámica de la estrella de mar, resaltando aquello que hay que:
+1. Comenzar a hacer: Hacer los ultimos repasos del proyecto.
+2. Hacer más: corregir errores y detalles.
+3. Continuar haciendo: seguir trabajando organizados como venimos hasta el dia de la fecha, realizando mini-reuniones para ponernos al dia con los avances en el proyecto.
+4. Hacer menos: -
+5. Dejar de hacer: frustrarnos si algo no sale. 
 Ya estamos casi al final del viaje y, cuando termineneste sprint, les sugerimos que prueben la
 retrospectiva delínea de tiempo. A resumidas cuentas,esta consiste en dibujar una línea de
-tiempo que incluya todos los sprints y en ella ubicarpost-its con cosas positivas (arriba de la
-línea) y negativas (debajo de la línea) que hayanocurrido en cada etapa. Al terminar tendrán un
+tiempo que incluya todos los sprints y en ella ubicar post-its con cosas positivas (arriba de la
+línea) y negativas (debajo de la línea) que hayan ocurrido en cada etapa. Al terminar tendrán un
 resumen gráfico de todo el proceso.
 
