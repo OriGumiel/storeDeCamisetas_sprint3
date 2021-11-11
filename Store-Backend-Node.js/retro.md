@@ -30,7 +30,7 @@ En el sprint 6 el trabajo fue dinámico, ágil pero seguimos fallando en la orga
 4. Hacer menos: Dejar errores mínimos para "después".
 5. Dejar de hacer: jugar con los tiempos.
 
-Sprint 7
+Sprint 8
 La retrospectiva¡con yapa!
 Implementen nuevamente la dinámica de la estrella de mar, resaltando aquello que hay que:
 1. Comenzar a hacer: Hacer los ultimos repasos del proyecto.
