@@ -28,9 +28,12 @@ body {
     /*height: 70px;*/
     /*border: tomato 2px dotted;*/
    /* margin-bottom: 10px;   */ 
+   flex-wrap: wrap;
+    padding: 5px 10px;
 }
 .top-nav-bar img{
-    width: 15%;
+    width: 100%;
+    max-width: 233px;
     padding: 10px 10px 10px 0;
 }
 
@@ -43,7 +46,7 @@ div.burger-menu {
 
 
 header nav input {
-    width: 40%;
+    width: 100%;
     height: 40px;
     align-self: center;
     font-family: 'Poppins', sans-serif;
@@ -51,6 +54,9 @@ header nav input {
     font-size: 10px;
     background-color: rgba(218, 218, 218, 1);
     color:#979797;
+    border: 1px solid #dfdfdf;
+    border-radius: 6px;
+    margin-bottom: 6px;
 }
 
 .top-nav-bar div.top-button {
@@ -151,7 +157,7 @@ div .top-button {
 
 }
 .left-bar ul li{
-    margin: 0px 14px;
+    margin: 0px 4px;
     width: auto;
 
 }
@@ -170,6 +176,9 @@ div .top-button {
 
 @media (min-width: 415px) {
     /* Header*/
+    .top-nav-bar {
+        flex-wrap: nowrap;
+    }
     .bottom-nav-bar {
         display: flex;
     }
@@ -179,7 +188,8 @@ div .top-button {
     }
 
     .top-nav-bar img{
-        width: 15%;
+        width: 100%;
+        max-width: 233px;
         padding: 10px 10px 10px 0;
     }
     
@@ -252,5 +262,26 @@ div .top-button {
         div.right-bar ul li{
             display: flex;
          }
+.left-bar ul li a{
+    color: white
+    }
 
+}
+
+@media (max-width:765px) {
+    .top-nav-bar div.top-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        margin-left: auto;
+        margin-right: 8px;
+    }
+    .top-nav-bar div.top-button a {
+        margin: 0px 6px;
+    }
+    nav.top-nav-bar {
+        flex-wrap: wrap;
+    }
 }

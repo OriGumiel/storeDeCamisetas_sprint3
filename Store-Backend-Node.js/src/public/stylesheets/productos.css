@@ -11,6 +11,9 @@ h2.products-title {
 .product-box {
     text-align: center;
 }
+.product-box img {
+    width: 100%;
+}
 
 .product-box_data {
     background-color: #cccacad3;
