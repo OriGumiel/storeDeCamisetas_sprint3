@@ -1,3 +1,4 @@
+Sprint 1
 La experiencia del primer sprint fue positiva. Terminamos resolviendolo bastante rapido porque nos repartimos las tareas en la busqueda de los sitios que tomariamos como ejemplo para hacer los wireframes. Como ambos estuvimos de acuerdo desde un primer momento con la idea, se nos hizo facil y divertido empezar a diagramar los bocetos que vamos a implementar en nuestro sitio. Nos ayudo usar Trello para esa division ya que en los momentos donde cada uno trabajo por su cuenta, sabia especificamente que tarea tenia asignada.
 
 Sprint 2
@@ -28,4 +29,18 @@ En el sprint 6 el trabajo fue dinámico, ágil pero seguimos fallando en la orga
 3. Continuar haciendo: explicar el código realizado por cada uno, comunicarnos como venimos haciendo por WhatsApp y Slack.
 4. Hacer menos: Dejar errores mínimos para "después".
 5. Dejar de hacer: jugar con los tiempos.
+
+Sprint 7
+La retrospectiva¡con yapa!
+Implementen nuevamente la dinámica de laestrellade mar, resaltando aquello que hay que:
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+Ya estamos casi al final del viaje y, cuando termineneste sprint, les sugerimos que prueben la
+retrospectiva delínea de tiempo. A resumidas cuentas,esta consiste en dibujar una línea de
+tiempo que incluya todos los sprints y en ella ubicarpost-its con cosas positivas (arriba de la
+línea) y negativas (debajo de la línea) que hayanocurrido en cada etapa. Al terminar tendrán un
+resumen gráfico de todo el proceso.
 
