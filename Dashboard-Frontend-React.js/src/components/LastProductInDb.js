@@ -5,18 +5,27 @@ import { useEffect, useState } from 'react';
 
 function LastProductInDb(){
 
-    const [ lastProduct, setLastProducts ] = useState([]);
+    const [ lastProductDescription, setLastProductDescription ] = useState([]);
+    const [ lastProductImage, setLastProductImage ] = useState([]);
 
     useEffect(()=>{
-        const fetchUsersData = async () => {
-            let resultados = await axios.get("http://localhost:3000/api/products/all");
-            console.log(resultados.data)
-            setLastProducts (resultados.data);
-        }
-        fetchUsersData()
+        fetch("http://localhost:3000/api/products/all",{method:'GET'})
+        .then( res => res.json())
+        .then( data => {
+            const lastproduct = data.data
+            setLastProductDescription(lastproduct[lastproduct.length - 1].description)
+        })
+        
+        fetch("http://localhost:3000/api/products/all",{method:'GET'})
+        .then( res => res.json())
+        .then( data => {
+            const lastproduct = data.data
+            // console.log(lastproduct[lastproduct.length - 1].product_images[0].image)
+            setLastProductImage(lastproduct[lastproduct.length - 1].product_images[0].image)
+        })
     },[])
-
-    console.log(lastProduct.data)
+    
+    console.log(lastProductImage)
 
     return(
         <div className="col-lg-6 mb-4">
@@ -26,10 +35,10 @@ function LastProductInDb(){
                 </div>
                 <div className="card-body">
                     <div className="text-center">
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src= {`/assets/images/products/${lastProductImage}`} alt={`${lastProductImage}`}/>
                     </div>
-                    <p>{`${lastProduct.data}`}</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
+                    <p>{`${lastProductDescription}`}</p>
+                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View product detail</a>
                 </div>
             </div>
         </div>

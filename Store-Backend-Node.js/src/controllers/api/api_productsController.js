@@ -3,7 +3,9 @@ const sequelize = db.sequelize;
 
 const api_productsController  = {
     all: (req,res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+            include:[{association:"product_images"}]
+            })
         .then( allProducts => {
             let response = {
                 meta : {
