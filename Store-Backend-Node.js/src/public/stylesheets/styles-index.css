@@ -16,8 +16,7 @@
     font-family: 'Red Hat Display', sans-serif;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-}
+    justify-content: space-around;}
 
 .principal .images-articles{
     /*display: flex; */
@@ -130,7 +129,8 @@ article:hover {
     height: 90%;
 }
 a:link,a:visited,a:active{
-    color: rgb(100, 100, 100)
+    color:black;
+    text-decoration: none;
     }
     a:hover{
     text-decoration:underline;
