@@ -53,17 +53,27 @@
     width: 100%;
 }
 .principal .left-article{
-    width: 90%
-    
+    width: 90%;
+    height: 80%;
+    background-color: white;
+    margin: 10px 0px;
 }
 .principal .right-article{
     width: 90%;
     height: 75%;
+    background-color: white;
+    margin: 10px 0px;
 }
 .principal .central-article{
     width:90%;
     height: 90%;
+    background-color: white;
+    margin: 10px 0px;
 }
+
+article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
 
 .medium-section{
     margin-top: 50px ;
@@ -104,7 +114,7 @@
     display: flex;
     flex-direction: row; 
     height: 80%;
-    align-items: flex-start;;    
+    align-items: flex-start;
 }
 
 .principal .left-article{
@@ -113,7 +123,7 @@
 }
 .principal .right-article{
     width: 25%;
-    height: 75%;
+    height: 90%;
 }
 .principal .central-article{
     width:35%;
