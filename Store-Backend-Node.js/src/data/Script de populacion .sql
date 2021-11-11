@@ -127,11 +127,11 @@ insert into Product_images (id, image, product_id) values (83, 'real3.jpeg', 19)
 insert into Product_images (id, image, product_id) values (84, 'real4.jpeg', 19);
 insert into Product_images (id, image, product_id) values (85, 'real5.jpeg', 19);
 
-insert into Product_images (id, image, product_id) values (86, 'juventus.jpeg', 20);
-insert into Product_images (id, image, product_id) values (87, 'juventus.jpeg', 20);
-insert into Product_images (id, image, product_id) values (88, 'juventus.jpeg', 20);
-insert into Product_images (id, image, product_id) values (89, 'juventus.jpeg', 20);
-insert into Product_images (id, image, product_id) values (90, 'juventus.jpeg', 20);
+insert into Product_images (id, image, product_id) values (86, 'juve.jpeg', 20);
+insert into Product_images (id, image, product_id) values (87, 'juve2.jpeg', 20);
+insert into Product_images (id, image, product_id) values (88, 'juve3.jpeg', 20);
+insert into Product_images (id, image, product_id) values (89, 'juve4.jpeg', 20);
+insert into Product_images (id, image, product_id) values (90, 'juve5.jpeg', 20);
 
 insert into Product_images (id, image, product_id) values (91, 'boca5.jpg', 9);
 insert into Product_images (id, image, product_id) values (92, 'racing5.jpg', 13);
