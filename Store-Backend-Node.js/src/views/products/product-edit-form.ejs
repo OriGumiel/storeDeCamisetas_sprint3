@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="col-12">
-            <form action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST">
+            <form action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="row product-detail">
                     <div class="col-12 col-md-6">
                         <label for="name" class="form-label">Nombre del producto:</label>
@@ -51,6 +51,10 @@
                         <label for="description" class="form-label">Descipción:</label>
                         <textarea name="description" id="description" class="form-input"><%= productToEdit.description %></textarea>
                     </div>
+                    <!-- <div class="col-12">
+						<label for="image" class="form-label">Imagenes:</label>
+						<input type="file" name="image" id="image" class="form-input" multiple accept="image/*">
+					</div> -->
                     <div class="col-12">
                         <button type="submit" class="buy-now-button">Guardar producto</button>
                     </div>

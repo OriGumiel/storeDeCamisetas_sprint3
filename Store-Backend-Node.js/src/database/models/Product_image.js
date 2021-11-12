@@ -10,9 +10,9 @@ module.exports = (sequelize,dataTypes) => {
         image: {
             type: dataTypes.TEXT
         },
-        product_id: {
-            type: dataTypes.INTEGER
-        },
+        // product_id: {
+        //     type: dataTypes.INTEGER
+        // },
     };
 
     let config = {

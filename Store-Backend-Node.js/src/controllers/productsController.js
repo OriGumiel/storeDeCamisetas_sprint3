@@ -7,6 +7,8 @@ const productsFilePath = path.join(__dirname, '../data/Productos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const { validationResult } = require("express-validator");
+const Product_image = require('../database/models/Product_image');
+const { Console } = require('console');
 
 const productsController = {
     todos: function(req, res, next) {
@@ -50,26 +52,26 @@ const productsController = {
 
 
     
-    store: (req, res) => {
+    // store: (req, res) => {
         
-        let nuevoId = products[products.length - 1].id + 1;
+    //     let nuevoId = products[products.length - 1].id + 1;
         
-        let nuevoProducto = {
-            id: nuevoId,
-            name: req.body.name,
-            price: req.body.price,
-            category: req.body.category,
-            talle: req.body.talle,
-            color: req.body.color,
-            esNovedad: req.body.esNovedad,
-            description: req.body.description,            
-            image: req.file.originalname,
-        }
+    //     let nuevoProducto = {
+    //         id: nuevoId,
+    //         name: req.body.name,
+    //         price: req.body.price,
+    //         category: req.body.category,
+    //         talle: req.body.talle,
+    //         color: req.body.color,
+    //         esNovedad: req.body.esNovedad,
+    //         description: req.body.description,            
+    //         image: req.file.originalname,
+    //     }
 
-        products.push(nuevoProducto);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products));
-        res.redirect('/products/nuevoProducto')
-    },
+    //     products.push(nuevoProducto);
+    //     fs.writeFileSync(productsFilePath, JSON.stringify(products));
+    //     res.redirect('/products/nuevoProducto')
+    // },
 
     create: async (req,res) => {
       
@@ -84,25 +86,25 @@ const productsController = {
       // con req.files accedemos a todos los file mandados y guardados en array. Solo queremos el nombre así que creamos nuevo array donde los pushearemos
       
       // const files = req.files;
-      // const imagesMapped = files.map (image => image.filename);
+      // const imagesMapped = files.map ((image) => image.image);
       // const imageStrings = JSON.stringify(imagesMapped)
 
       // const images = await db.Product_images.create({
-      //   filename: imageStrings
+      //   image: imageStrings
       // })
       // await newProduct.setImages (images.id, newProduct.id)
-      let images = [];
+      let imagenes = [];
       for (i = 0; i < req.files.length; i++) {
-        images.push(req.files[i].filename);
+        imagenes.push(req.files[i].filename);
       }
-      for (i = 0; i < images.length; i++) {
-        // ahora con uuid ya no son 2 iguales y creara tantas imagenes como haya en el array
-        await newProduct.createImage({ image: images[i] });
+      for (i = 0; i < imagenes.length; i++) {
+      //   // ahora con uuid ya no son 2 iguales y creara tantas imagenes como haya en el array
+        await db.Product_images.create({ image: imagenes[i], product_id: newProduct.id });
       }
       
-        // console.log(newProduct);
+       
         // res.send(req.body)
-        res.render('products/productCreate',{title: `Creaste un nuevo producto llamado ${newProduct.name}`});
+        return res.redirect('/');
         
        
 
@@ -124,7 +126,7 @@ const productsController = {
     },
     
     // Update - Method to update
-    update: (req, res) => {      
+    update: async (req, res) => {      
       let productEdit = {
         name: req.body.name,
         description: req.body.description,
@@ -133,12 +135,19 @@ const productsController = {
         // image: req.file.filename        
       }
 
-      db.Product.update(productEdit, { where: { id: req.params.id } })
-        .then(() => res.redirect("/"))
-        .catch((e) => {
-          console.log(e);
-        });
+      await db.Product.update(productEdit, { where: { id: req.params.id } });
+        
 
+      // let imagenesEdit = [];
+      //   for (i = 0; i < req.files.length; i++) {
+      //     imagenesEdit.push(req.files[i].filename);
+      //   }
+      //   for (i = 0; i < imagenesEdit.length; i++) {
+      //   //   // ahora con uuid ya no son 2 iguales y creara tantas imagenes como haya en el array
+      //     await db.Product_images.update(imagenesEdit[i], { where: { product_id: req.params.id }});
+      //   }
+      
+      return res.redirect('/');
       // products.forEach(element => {
       //   if(element.id == id){
       //     element.name = req.body.name;
