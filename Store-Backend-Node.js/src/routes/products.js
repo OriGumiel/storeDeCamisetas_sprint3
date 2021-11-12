@@ -34,7 +34,8 @@ const productsController = require ('../controllers/productsController');
   router.delete('/delete/:id', productsController.delete); 
   
   /* GET users listing. */
-  router.get('/:category', productsController.todos );
+  // router.get('/:category', productsController.todos );
+  router.get('/:category', productsController.getAllProductsByCategory);
 
 module.exports = router;
 

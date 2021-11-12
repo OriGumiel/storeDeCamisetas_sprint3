@@ -11,69 +11,72 @@ const Product_image = require('../database/models/Product_image');
 const { Console } = require('console');
 
 const productsController = {
-    todos: function(req, res, next) {
-      let category = req.params.category;
-      let equipo = products.filter(element => element.category === category);
-      
-        res.render('products/productsAll',{
-          title: 'Todos los productos de nuestro Store',
-          style: '/stylesheets/productos.css',
-          equipo: equipo    //(esto esta bien asi?????)
-        });
-      },
-
-    // detalle: function(req, res, next) {
+  
+  getAllProductsByCategory: async function (req, res, next) {
+    let category = req.params.category;
+    
+    const allProductsByCategory = await db.Product.findAll({
+      include:[{association:"product_images"}],
+      where: {category: category}
+    })
+    
+    console.log(allProductsByCategory);
+    return res.render('products/allProductsByCategory',{style: '/stylesheets/productos.css', allProductsByCategory: allProductsByCategory })
+  },
+  
+  // detalle: function(req, res, next) {
     //     res.render('products/productsDetail',{title: 'Estas accediendo al detalle de un producto',
     //     style: '/stylesheets/styles.css',
     //   });
     //   },
-
+    
     detalle:(req,res) =>{
       //CON JSON: let prendas = JSON.parse(fs.readFileSync(productsDatos,'utf-8'));
-       //let id = req.params.id;
+      //let id = req.params.id;
       //let unProducto= prendas.find(element => element.id == id);
       //res.render('products/detail', {product: unProducto} 
       db.Product.findByPk(req.params.id,{
-          include:[{association:"product_images"}
-          ]
-      })
-      .then(function(product){
-          res.render('products/productsDetail', {productDetail : product})
-      })
+        include:[{association:"product_images"}
+      ]
+    })
+    .then(function(product){
+      res.render('products/productsDetail', {productDetail : product})
+    })
   },
+  
+  
+  
+  getForm: function(req, res, next) {
+    res.render('products/productsNew',{title: 'Creaste un nuevo producto',
+    style: '/stylesheets/productsNew.css',
+  });
+},
 
 
 
-    getForm: function(req, res, next) {
-        res.render('products/productsNew',{title: 'Creaste un nuevo producto',
-        style: '/stylesheets/productsNew.css',
-      });
-      },
+store: (req, res) => {
+  
+  let nuevoId = products[products.length - 1].id + 1;
+  
+  let nuevoProducto = {
+    id: nuevoId,
+    name: req.body.name,
+    price: req.body.price,
+    category: req.body.category,
+    talle: req.body.talle,
+    color: req.body.color,
+    esNovedad: req.body.esNovedad,
+    description: req.body.description,            
+    image: req.file.originalname,
+  }
+  
+  products.push(nuevoProducto);
+  fs.writeFileSync(productsFilePath, JSON.stringify(products));
+  res.redirect('/products/nuevoProducto')
+},
 
 
-    
-    // store: (req, res) => {
-        
-    //     let nuevoId = products[products.length - 1].id + 1;
-        
-    //     let nuevoProducto = {
-    //         id: nuevoId,
-    //         name: req.body.name,
-    //         price: req.body.price,
-    //         category: req.body.category,
-    //         talle: req.body.talle,
-    //         color: req.body.color,
-    //         esNovedad: req.body.esNovedad,
-    //         description: req.body.description,            
-    //         image: req.file.originalname,
-    //     }
-
-    //     products.push(nuevoProducto);
-    //     fs.writeFileSync(productsFilePath, JSON.stringify(products));
-    //     res.redirect('/products/nuevoProducto')
-    // },
-
-    create: async (req,res) => {
+create: async (req,res) => {
       
         let newProduct = await db.Product.create({
           name: req.body.name,
@@ -169,7 +172,19 @@ const productsController = {
         id: req.params.id
       }
     });
-    }
+  }
 }
+    
+    module.exports = productsController;
+    
+// **DEJO ACA ALGUNOS METODOS YA DEPRECADOS, PARA TRABAJAR CON JSON, POR SI EN ALGUN MOMENTO ES DE UTILIDAD**
 
-module.exports = productsController;
+    // todos: function(req, res, next) {
+    //   let category = req.params.category;
+    //   let equipo = products.filter(element => element.category === category);  
+    //     res.render('products/productsAll',{
+    //       title: 'Todos los productos de nuestro Store',
+    //       style: '/stylesheets/productos.css',
+    //       equipo: equipo    //(esto esta bien asi?????)
+    //     });
+    //   },
