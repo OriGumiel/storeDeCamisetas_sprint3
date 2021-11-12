@@ -20,7 +20,7 @@ const productsController = {
       where: {category: category}
     })
     
-    console.log(allProductsByCategory);
+    // console.log(allProductsByCategory);
     return res.render('products/allProductsByCategory',{style: '/stylesheets/productos.css', allProductsByCategory: allProductsByCategory })
   },
   
@@ -167,11 +167,15 @@ create: async (req,res) => {
     },
 
     delete: async (req, res) => {
-    await db.Product.destroy({
-      where: {
-        id: req.params.id
-      }
-    });
+      let id = req.params.id;
+      const product = await db.Product.findByPk(id);
+      await product.removeImages([id]);
+      await db.Product.destroy({
+        where: {
+          id:id
+        }
+      });
+      return res.redirect("/");
   }
 }
     

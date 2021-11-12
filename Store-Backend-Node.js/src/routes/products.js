@@ -31,7 +31,7 @@ const productsController = require ('../controllers/productsController');
   /*** EDIT product ***/ 
   router.get('/edit/:id/', productsController.edit); 
   router.put('/edit/:id', upload.array('image', 5), validationsEdit, productsController.update); 
-  router.delete('/delete/:id', productsController.delete); 
+  router.delete('/edit/:id', productsController.delete); 
   
   /* GET users listing. */
   // router.get('/:category', productsController.todos );
