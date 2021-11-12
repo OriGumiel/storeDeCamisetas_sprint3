@@ -11,13 +11,25 @@ insert into Products (id, name, description, price, category, available_stock_id
 insert into Products (id, name, description, price, category, available_stock_id) values (11, 'Inter', 'Camiseta Nike Inter Home 2020/2021', '13500', 'europa', 11);
 insert into Products (id, name, description, price, category, available_stock_id) values (12, 'Holanda Retro', 'Camiseta Nike Holanda Home 1994 Dorsal 10 - Bergkamp', '15000', 'retro', 12);
 insert into Products (id, name, description, price, category, available_stock_id) values (13, 'Racing', 'Camiseta Kappa Racing Home 2021/2022', '10000', 'argentina', 13);
-insert into Products (id, name, description, price, category, available_stock_id) values (14, 'Francia', 'Camiseta Nike Francia Home Vapor Match 2020/2021', '16500', 'europa', 14);
+insert into Products (id, name, description, price, category, available_stock_id) values (14, 'Francia', 'Camiseta Nike Francia Home Vapor Match 2020/2021', '16500', 'selecciones', 14);
 insert into Products (id, name, description, price, category, available_stock_id) values (15, 'Croacia', 'Camiseta Nike Croacia Away 2020/2021', '13000', 'europa', 15);
 insert into Products (id, name, description, price, category, available_stock_id) values (16, 'Manchester City', 'Camiseta Puma Manchester City Home 2021/2022', '14500', 'europa', 16);
 insert into Products (id, name, description, price, category, available_stock_id) values (17, 'Independiente', 'Camiseta Puma Independiente Home 2021/2022', '10000', 'argentina', 17);
 insert into Products (id, name, description, price, category, available_stock_id) values (18, 'Holanda', 'Camiseta Nike Holanda Home Vapor Match 2021/2022', '16500', 'selecciones', 18);
 insert into Products (id, name, description, price, category, available_stock_id) values (19, 'Real Madrid', 'Camiseta Adidas Real Madrid Home 2021/2022', '14500', 'europa', 19);
 insert into Products (id, name, description, price, category, available_stock_id) values (20, 'Juventus', 'Camiseta Adidas Juventus Home 2021/2022', '13500', 'europa', 20);
+insert into Products (id, name, description, price, category, available_stock_id) values (21, 'Parma Retro', 'Champion Parma 1999/2000 Away - Dorsal 28 Cannavaro', '15500', 'retro', 21);
+insert into Products (id, name, description, price, category, available_stock_id) values (22, 'Manchester United Retro', 'Camiseta Adidas Manchester United 1990/1992 Away', '13500', 'retro', 22);
+insert into Products (id, name, description, price, category, available_stock_id) values (23, 'Juventus Retro', 'Camiseta Kappa Juventus 1999/2000 Away - Dorsal 10 Del Piero - Match', '15000', 'retro', 23);
+insert into Products (id, name, description, price, category, available_stock_id) values (24, 'Barcelona Retro', 'Camiseta Meyba Barcelona 1982/1984 Home', '15000', 'retro', 24);
+insert into Products (id, name, description, price, category, available_stock_id) values (25, 'Nigeria', 'Camiseta Nike Vapor Match Nigeria Home 2020/2021', '14500', 'selecciones', 25);
+insert into Products (id, name, description, price, category, available_stock_id) values (26, 'Brasil', 'Camiseta Nike Brasil Visitante 2020/2021', '11500', 'selecciones', 26);
+insert into Products (id, name, description, price, category, available_stock_id) values (27, 'Belgica', 'Camiseta Adidas Bélgica Home 2020-2021', '11500', 'selecciones', 27);
+insert into Products (id, name, description, price, category, available_stock_id) values (28, 'Colombia', 'Camiseta Adidas Colombia Home 2021-2022', '13500', 'selecciones', 28);
+insert into Products (id, name, description, price, category, available_stock_id) values (29, 'Velez', 'Camiseta Kappa Velez Sarsfield Home 2021/2022', '10000', 'argentina', 29);
+insert into Products (id, name, description, price, category, available_stock_id) values (30, 'San Lorenzo', 'Camiseta Nike San Lorenzo Home 2021/2022', '10000', 'argentina', 30);
+insert into Products (id, name, description, price, category, available_stock_id) values (31, 'Huracan', 'Camiseta Peak Huracan Home 2021/2022', '9500', 'argentina', 31);
+insert into Products (id, name, description, price, category, available_stock_id) values (32, 'Estudiantes', 'Camiseta Under Armour Estudiantes LP Home 2021/2022', '9500', 'argentina', 32);
 
 
 
@@ -144,6 +156,79 @@ insert into Product_images (id, image, product_id) values (98, 'ajax-retro5.jpeg
 insert into Product_images (id, image, product_id) values (99, 'river5.jpg', 6);
 insert into Product_images (id, image, product_id) values (100, 'liverpool5.jpeg', 7);
 
+insert into Product_images (id, image, product_id) values (101, 'parma-retro.jpeg', 21);
+insert into Product_images (id, image, product_id) values (102, 'parma-retro2.jpeg', 21);
+insert into Product_images (id, image, product_id) values (103, 'parma-retro3.jpeg', 21);
+insert into Product_images (id, image, product_id) values (104, 'parma-retro4.jpeg', 21);
+insert into Product_images (id, image, product_id) values (105, 'parma-retro5.jpeg', 21);
+
+insert into Product_images (id, image, product_id) values (106, 'united-retro.jpeg', 22);
+insert into Product_images (id, image, product_id) values (107, 'united-retro2.jpeg', 22);
+insert into Product_images (id, image, product_id) values (108, 'united-retro3.jpeg', 22);
+insert into Product_images (id, image, product_id) values (109, 'united-retro4.jpeg', 22);
+insert into Product_images (id, image, product_id) values (110, 'united-retro5.jpeg', 22);
+
+insert into Product_images (id, image, product_id) values (111, 'juve-retro.jpeg', 23);
+insert into Product_images (id, image, product_id) values (112, 'juve-retro2.jpeg', 23);
+insert into Product_images (id, image, product_id) values (113, 'juve-retro3.jpeg', 23);
+insert into Product_images (id, image, product_id) values (114, 'juve-retro4.jpeg', 23);
+insert into Product_images (id, image, product_id) values (115, 'juve-retro5.jpeg', 23);
+
+insert into Product_images (id, image, product_id) values (116, 'barca-retro.jpeg', 24);
+insert into Product_images (id, image, product_id) values (117, 'barca-retro2.jpeg', 24);
+insert into Product_images (id, image, product_id) values (118, 'barca-retro3.jpeg', 24);
+insert into Product_images (id, image, product_id) values (119, 'barca-retro4.jpeg', 24);
+insert into Product_images (id, image, product_id) values (120, 'barca-retro5.jpeg', 24);
+
+insert into Product_images (id, image, product_id) values (121, 'nigeria.jpeg', 25);
+insert into Product_images (id, image, product_id) values (122, 'nigeria2.jpeg', 25);
+insert into Product_images (id, image, product_id) values (123, 'nigeria3.jpeg', 25);
+insert into Product_images (id, image, product_id) values (124, 'nigeria4.jpeg', 25);
+insert into Product_images (id, image, product_id) values (125, 'nigeria5.jpeg', 25);
+
+insert into Product_images (id, image, product_id) values (126, 'brasil.jpeg', 26);
+insert into Product_images (id, image, product_id) values (127, 'brasil2.jpeg', 26);
+insert into Product_images (id, image, product_id) values (128, 'brasil3.jpeg', 26);
+insert into Product_images (id, image, product_id) values (129, 'brasil4.jpeg', 26);
+insert into Product_images (id, image, product_id) values (130, 'brasil5.jpeg', 26);
+
+insert into Product_images (id, image, product_id) values (131, 'belgica.jpeg', 27);
+insert into Product_images (id, image, product_id) values (132, 'belgica2.jpeg', 27);
+insert into Product_images (id, image, product_id) values (133, 'belgica3.jpeg', 27);
+insert into Product_images (id, image, product_id) values (134, 'belgica4.jpeg', 27);
+insert into Product_images (id, image, product_id) values (135, 'belgica5.jpeg', 27);
+
+insert into Product_images (id, image, product_id) values (136, 'colombia.jpeg', 28);
+insert into Product_images (id, image, product_id) values (137, 'colombia2.jpeg', 28);
+insert into Product_images (id, image, product_id) values (138, 'colombia3.jpeg', 28);
+insert into Product_images (id, image, product_id) values (139, 'colombia4.jpeg', 28);
+insert into Product_images (id, image, product_id) values (140, 'colombia5.jpeg', 28);
+
+insert into Product_images (id, image, product_id) values (141, 'velez.jpg', 29);
+insert into Product_images (id, image, product_id) values (142, 'velez2.jpg', 29);
+insert into Product_images (id, image, product_id) values (143, 'velez3.jpg', 29);
+insert into Product_images (id, image, product_id) values (144, 'velez4.jpg', 29);
+insert into Product_images (id, image, product_id) values (145, 'velez5.jpg', 29);
+
+insert into Product_images (id, image, product_id) values (146, 'SL.jpg', 30);
+insert into Product_images (id, image, product_id) values (147, 'SL2.jpg', 30);
+insert into Product_images (id, image, product_id) values (148, 'SL3.jpg', 30);
+insert into Product_images (id, image, product_id) values (149, 'SL4.jpg', 30);
+insert into Product_images (id, image, product_id) values (150, 'SL5.jpg', 30);
+
+insert into Product_images (id, image, product_id) values (151, 'huracan.jpg', 31);
+insert into Product_images (id, image, product_id) values (152, 'huracan2.jpg', 31);
+insert into Product_images (id, image, product_id) values (153, 'huracan3.jpg', 31);
+insert into Product_images (id, image, product_id) values (154, 'huracan4.jpg', 31);
+insert into Product_images (id, image, product_id) values (155, 'huracan5.jpg', 31);
+
+insert into Product_images (id, image, product_id) values (156, 'estudiantes.jpg', 32);
+insert into Product_images (id, image, product_id) values (157, 'estudiantes2.jpg', 32);
+insert into Product_images (id, image, product_id) values (158, 'estudiantes3.jpg', 32);
+insert into Product_images (id, image, product_id) values (159, 'estudiantes4.jpg', 32);
+insert into Product_images (id, image, product_id) values (160, 'estudiantes5.jpg', 32);
+
+
 insert into Product_Shop_cart (id, product_id, shop_cart_id) values (1, 1, 1);
 insert into Product_Shop_cart (id, product_id, shop_cart_id) values (2, 2, 2);
 insert into Product_Shop_cart (id, product_id, shop_cart_id) values (3, 3, 3);
@@ -164,6 +249,18 @@ insert into Product_Shop_cart (id, product_id, shop_cart_id) values (17, 17, 17)
 insert into Product_Shop_cart (id, product_id, shop_cart_id) values (18, 18, 18);
 insert into Product_Shop_cart (id, product_id, shop_cart_id) values (19, 19, 19);
 insert into Product_Shop_cart (id, product_id, shop_cart_id) values (20, 20, 20);
+insert into Product_Shop_cart (id, product_id, shop_cart_id) values (21, 21, 21);
+insert into Product_Shop_cart (id, product_id, shop_cart_id) values (22, 22, 22);
+insert into Product_Shop_cart (id, product_id, shop_cart_id) values (23, 23, 23);
+insert into Product_Shop_cart (id, product_id, shop_cart_id) values (24, 24, 24);
+insert into Product_Shop_cart (id, product_id, shop_cart_id) values (25, 25, 25);
+insert into Product_Shop_cart (id, product_id, shop_cart_id) values (26, 26, 26);
+insert into Product_Shop_cart (id, product_id, shop_cart_id) values (27, 27, 27);
+insert into Product_Shop_cart (id, product_id, shop_cart_id) values (28, 28, 28);
+insert into Product_Shop_cart (id, product_id, shop_cart_id) values (29, 29, 29);
+insert into Product_Shop_cart (id, product_id, shop_cart_id) values (30, 30, 30);
+insert into Product_Shop_cart (id, product_id, shop_cart_id) values (31, 31, 31);
+insert into Product_Shop_cart (id, product_id, shop_cart_id) values (32, 32, 32);
 
 
 
@@ -210,6 +307,18 @@ insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (17,
 insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (18, 0, 1, 0, 2);
 insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (19, 3, 2, 2, 2);
 insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (20, 1, 2, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (21, 0, 0, 1, 1);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (22, 0, 1, 1, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (23, 0, 1, 0, 1);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (24, 0, 2, 2, 1);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (25, 2, 2, 3, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (26, 2, 3, 4, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (27, 2, 1, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (28, 2, 1, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (29, 1, 2, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (30, 2, 2, 1, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (31, 2, 1, 1, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (32, 1, 2, 1, 2);
 
 
 
