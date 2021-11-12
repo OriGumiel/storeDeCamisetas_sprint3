@@ -12,6 +12,16 @@ const { Console } = require('console');
 
 const productsController = {
   
+  getProducts: async function (req, res, next) {
+        
+    const allProducts = await db.Product.findAll({
+      include:[{association:"product_images"}],      
+    })
+    
+    
+    res.render('products/productsAll',{style: '/stylesheets/productos.css', allProducts: allProducts })
+  },
+  
   getAllProductsByCategory: async function (req, res, next) {
     let category = req.params.category;
     
@@ -23,6 +33,7 @@ const productsController = {
     // console.log(allProductsByCategory);
     return res.render('products/allProductsByCategory',{style: '/stylesheets/productos.css', allProductsByCategory: allProductsByCategory })
   },
+  
   
   // detalle: function(req, res, next) {
     //     res.render('products/productsDetail',{title: 'Estas accediendo al detalle de un producto',

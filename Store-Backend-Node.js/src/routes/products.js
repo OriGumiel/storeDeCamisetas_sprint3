@@ -35,7 +35,9 @@ const productsController = require ('../controllers/productsController');
   
   /* GET users listing. */
   // router.get('/:category', productsController.todos );
+  router.get('/products', productsController.getProducts);
   router.get('/:category', productsController.getAllProductsByCategory);
+  
 
 module.exports = router;
 
