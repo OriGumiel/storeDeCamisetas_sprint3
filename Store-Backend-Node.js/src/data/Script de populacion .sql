@@ -1,3 +1,36 @@
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (1, 2, 3, 4, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (2, 0, 1, 0, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (3, 5, 8, 6, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (4, 2, 3, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (5, 0, 2, 1, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (6, 3, 3, 4, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (7, 2, 4, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (8, 2, 1, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (9, 4, 3, 4, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (10, 0, 0, 1, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (11, 2, 3, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (12, 0, 0, 1, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (13, 2, 2, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (14, 0, 1, 1, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (15, 2, 1, 1, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (16, 3, 2, 3, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (17, 2, 3, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (18, 0, 1, 0, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (19, 3, 2, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (20, 1, 2, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (21, 0, 0, 1, 1);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (22, 0, 1, 1, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (23, 0, 1, 0, 1);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (24, 0, 2, 2, 1);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (25, 2, 2, 3, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (26, 2, 3, 4, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (27, 2, 1, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (28, 2, 1, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (29, 1, 2, 2, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (30, 2, 2, 1, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (31, 2, 1, 1, 2);
+insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (32, 1, 2, 1, 2);
+
 insert into Products (id, name, description, price, category, available_stock_id) values (1, 'Barcelona', 'Camiseta Nike Barcelona Home 2021/2022 + Parche UEFA Champions League', '15500', 'europa', 1);
 insert into Products (id, name, description, price, category, available_stock_id) values (2, 'España Retro', 'Camiseta Adidas España Retro Home 1998/1999 Dorsal 10 - Raul', '15000', 'retro', 2);
 insert into Products (id, name, description, price, category, available_stock_id) values (3, 'PSG', 'Camiseta Nike PSG Home 2021/2022', '14500', 'europa', 3);
@@ -156,7 +189,7 @@ insert into Product_images (id, image, product_id) values (98, 'ajax-retro5.jpeg
 insert into Product_images (id, image, product_id) values (99, 'river5.jpg', 6);
 insert into Product_images (id, image, product_id) values (100, 'liverpool5.jpeg', 7);
 
-insert into Product_images (id, image, product_id) values (101, 'parma-retro.jpeg', 21);
+insert into Product_images (id, image, product_id) values (161, 'parma-retro.jpeg', 21);
 insert into Product_images (id, image, product_id) values (102, 'parma-retro2.jpeg', 21);
 insert into Product_images (id, image, product_id) values (103, 'parma-retro3.jpeg', 21);
 insert into Product_images (id, image, product_id) values (104, 'parma-retro4.jpeg', 21);
@@ -284,42 +317,6 @@ insert into Shop_carts (id, price, user_id, created_at, buy_date, quantity) valu
 insert into Shop_carts (id, price, user_id, created_at, buy_date, quantity) values (18, '14301.74', 18, '3/29/2021', '9/29/2021', 1);
 insert into Shop_carts (id, price, user_id, created_at, buy_date, quantity) values (19, '15476.54', 19, '6/18/2021', '3/11/2021', 1);
 insert into Shop_carts (id, price, user_id, created_at, buy_date, quantity) values (20, '24550.47', 20, '12/1/2020', '9/8/2021', 1);
-
-
-
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (1, 2, 3, 4, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (2, 0, 1, 0, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (3, 5, 8, 6, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (4, 2, 3, 2, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (5, 0, 2, 1, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (6, 3, 3, 4, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (7, 2, 4, 2, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (8, 2, 1, 2, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (9, 4, 3, 4, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (10, 0, 0, 1, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (11, 2, 3, 2, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (12, 0, 0, 1, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (13, 2, 2, 2, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (14, 0, 1, 1, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (15, 2, 1, 1, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (16, 3, 2, 3, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (17, 2, 3, 2, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (18, 0, 1, 0, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (19, 3, 2, 2, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (20, 1, 2, 2, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (21, 0, 0, 1, 1);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (22, 0, 1, 1, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (23, 0, 1, 0, 1);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (24, 0, 2, 2, 1);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (25, 2, 2, 3, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (26, 2, 3, 4, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (27, 2, 1, 2, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (28, 2, 1, 2, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (29, 1, 2, 2, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (30, 2, 2, 1, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (31, 2, 1, 1, 2);
-insert into Available_stocks (id, Small, Medium, Large, Extra_large) values (32, 1, 2, 1, 2);
-
 
 
 insert into Users (id, first_name, last_name, email, password, user_avatar, user_type) values (1, 'Lorianne', 'Loos', 'lloos0@blogs.com', 'fb44595ecc48c79913898681fe4b91d31dec6c32', '', 1);
