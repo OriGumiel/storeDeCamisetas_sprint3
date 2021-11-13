@@ -10,13 +10,15 @@
     background-image: linear-gradient(to bottom, rgba(242, 156, 56, 1), rgba(242, 156, 56, 0));
 }
 .principal h1{
-    padding-top: 20px;
+    padding-top: 30px;
     height: 10%;    
     text-align: center;
     font-family: 'Red Hat Display', sans-serif;
     display: flex;
     align-items: center;
-    justify-content: space-around;}
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
 
 .principal .images-articles{
     /*display: flex; */
@@ -26,6 +28,7 @@
     justify-content: space-around;
     font-family: 'Red Hat Display', sans-serif;
     align-items: center;
+    text-align: center;
 }
 
 .principal .images-articles div h3{
@@ -47,6 +50,7 @@
 }
 .principal .right-article img{
     width: 100%;
+    height: 42%;
 }
 .principal .central-article img{
     width: 100%;
@@ -58,10 +62,15 @@
     margin: 10px 0px;
 }
 .principal .right-article{
-    width: 90%;
-    height: 75%;
+    /* width: 90%;
+    height: 75%; */
     background-color: white;
     margin: 10px 0px;
+    width: 25%;
+    height: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column
 }
 .principal .central-article{
     width:90%;
@@ -72,7 +81,10 @@
 
 article:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }
+}
+article:hover h3{
+    text-decoration:underline;
+    }
 
 .medium-section{
     margin-top: 50px ;
@@ -113,17 +125,14 @@ article:hover {
     display: flex;
     flex-direction: row; 
     height: 80%;
-    align-items: flex-start;
+    justify-content: space-around;
 }
 
 .principal .left-article{
     width: 25%;
     height: 75%;
 }
-.principal .right-article{
-    width: 25%;
-    height: 90%;
-}
+
 .principal .central-article{
     width:35%;
     height: 90%;
@@ -132,9 +141,9 @@ a:link,a:visited,a:active{
     color:black;
     text-decoration: none;
     }
-    a:hover{
+    /* a:hover{
     text-decoration:underline;
-    }
+    } */
 }
 
 
