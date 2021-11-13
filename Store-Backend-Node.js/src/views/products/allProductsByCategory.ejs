@@ -10,17 +10,20 @@
 	<div class="container products-wrapper">
 		<div class="products-container">
 			<!-- Show the "visited" products -->
-			<section class="product-box-addProduct">
-				<a href="/products/newproduct">
-					<figure class="product-box-addProduct-image">
-					 <i class="fas fa-plus-circle"></i>
-					</figure>
-					<article class="product-box-addProduct-data">
-						<h2> AGREGAR NUEVO PRODUCTO </h2>
-					</article>
-				</a>
-			</section>
-
+			<% if (locals.isLogged) { %>
+                <% if(locals.userLogged.user_type==="admin") { %>
+				<section class="product-box-addProduct">
+					<a href="/products/newproduct">
+						<figure class="product-box-addProduct-image">
+						<i class="fas fa-plus-circle"></i>
+						</figure>
+						<article class="product-box-addProduct-data">
+							<h2> AGREGAR NUEVO PRODUCTO </h2>
+						</article>
+					</a>
+				</section>
+				<%}%>
+            <%}%>
 			<% for( let index = 0; index < allProductsByCategory.length; index++ ) { %>
 			<section class="product-box">
 				<a href="/products/detalle/<%= allProductsByCategory[index].id%>">

@@ -46,9 +46,15 @@
                     <button class="boton-buy"><b>Comprar Ahora </b></button><br>
                     <button class="boton-add"><b>Añadir al carrito</b></button>
                 </div>
-                <div class="edit-product">
-                    <button class="boton"><b>Editar este Producto</b></button>
-                </div>
+                <% if (locals.isLogged) { %>
+                    <% if(locals.userLogged.user_type==="admin") { %>
+                    <div class="edit-product">
+                        <a href="/products/edit/<%= productDetail.id %>">
+                        <button class="boton"><b>Editar este Producto</b></button>
+                        </a>
+                    </div>
+                    <%}%>
+                <%}%>
         </section>
 
     </div>
