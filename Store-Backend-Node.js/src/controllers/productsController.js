@@ -7,8 +7,20 @@ const productsFilePath = path.join(__dirname, '../data/Productos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const { validationResult } = require("express-validator");
+const Product_image = require('../database/models/Product_image');
+const { Console } = require('console');
 
 const productsController = {
+  
+  getProducts: async function (req, res, next) {
+        
+    const allProducts = await db.Product.findAll({
+      include:[{association:"product_images"}],      
+    })
+    
+    
+    res.render('products/productsAll',{style: '/stylesheets/productos.css', allProducts: allProducts })
+  },
   
   getAllProductsByCategory: async function (req, res, next) {
     let category = req.params.category;
@@ -18,9 +30,10 @@ const productsController = {
       where: {category: category}
     })
     
-    console.log(allProductsByCategory);
+    // console.log(allProductsByCategory);
     return res.render('products/allProductsByCategory',{style: '/stylesheets/productos.css', allProductsByCategory: allProductsByCategory })
   },
+  
   
   // detalle: function(req, res, next) {
     //     res.render('products/productsDetail',{title: 'Estas accediendo al detalle de un producto',
@@ -73,97 +86,109 @@ store: (req, res) => {
   res.redirect('/products/nuevoProducto')
 },
 
+
 create: async (req,res) => {
-  
-  let newProduct = await db.Product.create({
-    name: req.body.name,
-    description: req.body.description,
-    price: req.body.price,
-    category: req.body.category,
-    
-  })
-  // IMAGES
-  // con req.files accedemos a todos los file mandados y guardados en array. Solo queremos el nombre así que creamos nuevo array donde los pushearemos
-  
-  // const files = req.files;
-  // const imagesMapped = files.map (image => image.filename);
-  // const imageStrings = JSON.stringify(imagesMapped)
-  
-  // const images = await db.Product_images.create({
-    //   filename: imageStrings
-    // })
-    // await newProduct.setImages (images.id, newProduct.id)
-    let images = [];
-    for (i = 0; i < req.files.length; i++) {
-      images.push(req.files[i].filename);
-    }
-    for (i = 0; i < images.length; i++) {
-      // ahora con uuid ya no son 2 iguales y creara tantas imagenes como haya en el array
-      await newProduct.createImage({ image: images[i] });
-    }
-    
-    // console.log(newProduct);
-    // res.send(req.body)
-    res.render('products/productCreate',{title: `Creaste un nuevo producto llamado ${newProduct.name}`});
-    
-    
-    
-  },
-  
-  // Update - Form to edit
-  edit: (req, res) => {
-    let id = req.params.id;
-    db.Product.findByPk(id)
-    .then((product) => {
-      return res.render("products/product-edit-form", { productToEdit : product});
-    })
-    .catch((e) => {
-      console.log(e);
-    }); 
-    // let productToEdit =  products.find(element => element.id == id);
-    // res.render('products/product-edit-form', {productToEdit: productToEdit,
-    // style: '/stylesheets/productsNew.css'});
-  },
-  
-  // Update - Method to update
-  update: (req, res) => {      
-    let productEdit = {
-      name: req.body.name,
-      description: req.body.description,
-      price: req.body.price,
-      category: req.body.category,
-      // image: req.file.filename        
-    }
-    
-    db.Product.update(productEdit, { where: { id: req.params.id } })
-    .then(() => res.redirect("/"))
-    .catch((e) => {
-      console.log(e);
-    });
-    
-    // products.forEach(element => {
-      //   if(element.id == id){
-        //     element.name = req.body.name;
-        //     element.description = req.body.description;
-        //     element.talle = req.body.talle;
-        //     element.category = req.body.category;
-        //     element.price = req.body.price;
-        //   }
-        // })
-        
-        // fs.writeFileSync(productsFilePath, JSON.stringify(productos));
-        // res.redirect('/');
-        //res.redirect('/detail/'+id);
-      },
       
-      delete: async (req, res) => {
-        await db.Product.destroy({
-          where: {
-            id: req.params.id
-          }
-        });
+        let newProduct = await db.Product.create({
+          name: req.body.name,
+          description: req.body.description,
+          price: req.body.price,
+          category: req.body.category,
+          
+        })
+        // IMAGES
+      // con req.files accedemos a todos los file mandados y guardados en array. Solo queremos el nombre así que creamos nuevo array donde los pushearemos
+      
+      // const files = req.files;
+      // const imagesMapped = files.map ((image) => image.image);
+      // const imageStrings = JSON.stringify(imagesMapped)
+
+      // const images = await db.Product_images.create({
+      //   image: imageStrings
+      // })
+      // await newProduct.setImages (images.id, newProduct.id)
+      let imagenes = [];
+      for (i = 0; i < req.files.length; i++) {
+        imagenes.push(req.files[i].filename);
       }
-    }
+      for (i = 0; i < imagenes.length; i++) {
+      //   // ahora con uuid ya no son 2 iguales y creara tantas imagenes como haya en el array
+        await db.Product_images.create({ image: imagenes[i], product_id: newProduct.id });
+      }
+      
+       
+        // res.send(req.body)
+        return res.redirect('/');
+        
+       
+
+    },
+
+    // Update - Form to edit
+    edit: (req, res) => {
+      let id = req.params.id;
+      db.Product.findByPk(id)
+      .then((product) => {
+        return res.render("products/product-edit-form", { productToEdit : product});
+      })
+      .catch((e) => {
+        console.log(e);
+      }); 
+      // let productToEdit =  products.find(element => element.id == id);
+      // res.render('products/product-edit-form', {productToEdit: productToEdit,
+      // style: '/stylesheets/productsNew.css'});
+    },
+    
+    // Update - Method to update
+    update: async (req, res) => {      
+      let productEdit = {
+        name: req.body.name,
+        description: req.body.description,
+        price: req.body.price,
+        category: req.body.category,
+        // image: req.file.filename        
+      }
+
+      await db.Product.update(productEdit, { where: { id: req.params.id } });
+        
+
+      // let imagenesEdit = [];
+      //   for (i = 0; i < req.files.length; i++) {
+      //     imagenesEdit.push(req.files[i].filename);
+      //   }
+      //   for (i = 0; i < imagenesEdit.length; i++) {
+      //   //   // ahora con uuid ya no son 2 iguales y creara tantas imagenes como haya en el array
+      //     await db.Product_images.update(imagenesEdit[i], { where: { product_id: req.params.id }});
+      //   }
+      
+      return res.redirect('/');
+      // products.forEach(element => {
+      //   if(element.id == id){
+      //     element.name = req.body.name;
+      //     element.description = req.body.description;
+      //     element.talle = req.body.talle;
+      //     element.category = req.body.category;
+      //     element.price = req.body.price;
+      //   }
+      // })
+
+      // fs.writeFileSync(productsFilePath, JSON.stringify(productos));
+      // res.redirect('/');
+      //res.redirect('/detail/'+id);
+    },
+
+    delete: async (req, res) => {
+      let id = req.params.id;
+      const product = await db.Product.findByPk(id);
+      await product.removeImages([id]);
+      await db.Product.destroy({
+        where: {
+          id:id
+        }
+      });
+      return res.redirect("/");
+  }
+}
     
     module.exports = productsController;
     

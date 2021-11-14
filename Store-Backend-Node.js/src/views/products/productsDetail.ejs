@@ -4,112 +4,87 @@
 <body>
 
 <%- include('../partials/header') %>
-    <div class="main">
-        <section class="barca">
-            <img src="/images/products/<%= productDetail.product_images[0].image %>" alt="camiseta barca" class="foto">
-            <article class="masfotos">
+    <div class="product-box">
+
+        <section class="product-box-images">
+
+            <div class="principal-product-image">
+                <img src="/images/products/<%= productDetail.product_images[0].image %>" >
+            </div>
+            
+            <div class="other-product-images">
                 <i class="fas fa-backward"></i>
-                <img src="/images/products/<%= productDetail.product_images[1].image %>" alt="camiseta barca" class="foto2" width="15%">
-                <img src="/images/products/<%= productDetail.product_images[2].image %>" alt="camiseta barca" class="foto3" width="15%">
-                <img src="/images/products/<%= productDetail.product_images[3].image %>" alt="camiseta barca" class="foto4" width="15%">
-                <img src="/images/products/<%= productDetail.product_images[4].image %>" alt="camiseta barca" class="foto5" width="15%">
-                <!-- <img src="/images/barca6.jpeg" alt="camiseta barca" class="foto6" width="12%"> -->
+                <img src="/images/products/<%= productDetail.product_images[1].image %>" class="litle-image" width="15%">
+                <img src="/images/products/<%= productDetail.product_images[2].image %>" class="litle-image" width="15%">
+                <img src="/images/products/<%= productDetail.product_images[3].image %>" class="litle-image" width="15%">
+                <img src="/images/products/<%= productDetail.product_images[4].image %>" class="litle-image" width="15%">
                 <i class="fas fa-forward"></i>
-            </article>
+            </div>
+
         </section>
-    
-        <form class="descripcion" method="POST" action="/shopCart/addProduct" enctype="multipart/form-data">
-                </p><h2><%= productDetail.name %> </h2></p>
-                <p><h2><%= productDetail.description %></h2></p>
-                <p><h2>Champions League</h2></p>
-                <br>
-                <h2>$ <%= productDetail.price %></h2>
-                <br>
-                <h4>Talle</h4>
-                <br>
-                <p>
-                    <h3 class="talles">
-                        <div class="circulo">
-                            <h2>S</h2>
-                        </div>   
-                        <div class="circulo">
-                            <h2>M</h2>
-                        </div>   
-                        <div class="circulo">
-                            <h2>L</h2>
-                        </div>   
-                        <div class="circulo">
-                            <h2>XL</h2>
-                        </div>   
-                        <div class="circulo">
-                            <h2>XXL</h2>
-                        </div>   
-                        <div class="circulo">
-                            <h2>XXXL</h2>
-                        </div>
-                    </h3>
-                </p>
-                <br>
-                <br>
-                <P></P>
-                <hr>
-                <br>
-                <h4>Guia de talles</h4>
-                <br>
-                <hr>
-                <br>
-                <h4 class="cantidad">Cantidad <div class="cuadrado">1</div></h4> 
-                <br>
-                <hr>
-                <br>
-                <br>
-                <br>
-                
-                    <button class="boton"><b>Añadir al carrito</b></button>
-            </form>
+
+
+
+
+
+        <section class="product-information" method="POST" action="/shopCart/addProduct" enctype="multipart/form-data">
+                <div class="product-information-detail">
+                    <h1><%= productDetail.name %> </h1>
+                    <br>
+                    <h3><%= productDetail.description %></h3>
+                    <br>
+                    <h2>$ <%= productDetail.price %></h2>
+                    <br>
+                    <h4>Producto Disponible</h4>
+                    <br>
+                    <h4 class="cantidad">   Cantidad <div class="cuadrado">1</div></h4> 
+                    <br>
+                    <hr>
+                    <h4>Ver Mis medios de Pago</h4>
+                    <hr>
+                    <br>
+                    <button class="boton-buy"><b>Comprar Ahora </b></button><br>
+                    <button class="boton-add"><b>Añadir al carrito</b></button>
+                </div>
+                <% if (locals.isLogged) { %>
+                    <% if(locals.userLogged.user_type==="admin") { %>
+                    <div class="edit-product">
+                        <a href="/products/edit/<%= productDetail.id %>">
+                        <button class="boton"><b>Editar este Producto</b></button>
+                        </a>
+                    </div>
+                    <%}%>
+                <%}%>
+        </section>
+
     </div>
+
+    <div class="other-recomendations">
 
         <section class="recomendaciones">
             <h2>Otras recomendaciones</h2>
         </section>
 
-        <br>
-
-    <div>
-        <section class="mascamisetas">
-            <div class="cam1">
+        <section class="other-products">
+            <div class="litle-other-products">
                 <img src="/images/barca.jpeg" alt="" width="80%" class="imgBar">
-                <h4>Camiseta Nike Barcelona Home
-                   2021/2022 + Parche UEFA
-                   Champions League</h4>
+                <h7>Camiseta Nike Barcelona Home 2021/2022 + Parche UEFA Champions League</h7>
             </div>
-    
-            <div class="cam2">
-                <img src="/images/barca.jpeg" alt="" width="80%" class="imgBar">
-                <h4>Camiseta Nike Barcelona Home
-                       2021/2022 + Parche UEFA
-                       Champions League</h4>
+            <div class="litle-other-products">
+                <img src="/images/españa-retro 2.jpeg" alt="" width="80%" class="imgBar">
+                <h7>Camiseta Adidas España Retro Home 1998/1999 Dorsal 10 - Raul</h7>
             </div>
-    
-            <div class="cam3">
-                <img src="/images/barca.jpeg" alt="" width="80%" class="imgBar">
-                <h4>Camiseta Nike Barcelona Home
-                        2021/2022 + Parche UEFA
-                        Champions League</h4>
+            <div class="litle-other-products">
+                <img src="/images/psg.jpeg" alt="" width="80%" class="imgBar">
+                <h7>Camiseta Nike PSG Home 2021/2022</h7>
             </div>
-    
-            <div class="cam4">
-                <img src="/images/barca.jpeg" alt="" width="80%" class="imgBar">
-                <h4>Camiseta Nike Barcelona Home
-                               2021/2022 + Parche UEFA
-                               Champions League</h4>
+            <div class="litle-other-products">
+                <img src="/images/alemania.jpeg" alt="" width="80%" class="imgBar">
+                <h7>Camiseta Adidas Alemania Home 2020/2021 + Parche Eurocopa</h7>
             </div>
-    
-            <div class="cam5">
-                <img src="/images/barca.jpeg" alt="" width="80%" class="imgBar">
-                <h4>Camiseta Nike Barcelona Home
-                        2021/2022 + Parche UEFA
-                        Champions League</h4>
+            <div class="litle-other-products">
+                <img src="/images/ajax-retro.jpeg" alt="" width="80%" class="imgBar">
+                <h7>Camiseta Adidas Ajax Home 1994/1995</h7>
             </div>
             
         </section>
