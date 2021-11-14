@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family:'Red Hat Display', sans-serif;
     background-color: white;
 }
 
@@ -34,4 +34,74 @@ body {
     padding: 15px;
   }
 
-  
+  .col-12 {
+    border: 1px solid grey;
+    margin: 0 auto;
+    width: 90%;
+    min-height: auto;
+    padding: 1em;
+    font-size: small;
+  }
+
+  .nombrep {
+    margin: 0 auto;
+    width: 90%;
+    min-height: auto;
+    padding: 1em;
+    font-size: small;
+    border: none;
+  }
+
+  .preciop {
+    margin: 0 auto;
+    width: 90%;
+    min-height: auto;
+    padding: 1em;
+    font-size: small;
+    border: none;
+  }
+
+  .tallep {
+    margin: 0 auto;
+    width: 90%;
+    min-height: auto;
+    padding: 1em;
+    font-size: small;
+    border: none;
+  }
+
+  .categoriap {
+    margin: 0 auto;
+    width: 90%;
+    min-height: auto;
+    padding: 1em;
+    font-size: small;
+    border: none;
+  }
+
+  .descripcionp {
+    margin: 0 auto;
+    width: 90%;
+    min-height: auto;
+    padding: 1em;
+    font-size: small;
+    border: none;
+  }
+
+  .imagenp {
+    margin: 0 auto;
+    width: 90%;
+    min-height: auto;
+    padding: 1em;
+    font-size: small;
+    border: none;
+  }
+
+  .guardarp {
+    margin: 0 auto;
+    width: 90%;
+    min-height: auto;
+    padding: 1em;
+    font-size: small;
+    border: none;
+  }

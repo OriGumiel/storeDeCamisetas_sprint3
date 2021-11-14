@@ -15,15 +15,15 @@
 		<div class="col-12">
 			<form action="/products/create" method="POST" enctype="multipart/form-data">
 				<div class="row product-detail">
-					<div class="col-12 col-md-6">
+					<div class="nombrep">
 						<label for="name" class="form-label">Nombre del producto:</label>
 						<input type="text" id="name" name="name" placeholder="Ej: Camiseta Argentina" class="form-input">
 					</div>
-					<div class="col-12 col-md-6">
+					<div class="preciop">
 						<label for="price" class="form-label">Precio del producto:</label>
 						<input type="text" id="price" name="price" placeholder="Ej: 5000" class="form-input">
 					</div>
-					<div class="col-12 col-md-6">
+					<div class="tallep">
 						<label for="talle" class="form-label">Talle:</label>
 						<select name="talle" id="talle" class="form-input">
 							<option value="">Elegí</option>
@@ -34,7 +34,7 @@
 							<option value="2XL">2XL</option>
 						</select>
 					</div>
-					<div class="col-12 col-md-6">
+					<div class="categoriap">
 						<label for="category" class="form-label">Categoría:</label>
 						<select type= "text" name="category" id="category" class="form-input">
 							<option value="">Elegí</option>
@@ -55,15 +55,15 @@
 							<option value="true">Si</option>
 							<option value="false">No</option>							
 					</div> -->
-					<div class="col-12">
+					<div class="descripcionp">
 						<label for="description" class="form-label">Descipción:</label>
 						<textarea name="description" id="description" class="form-input"></textarea>
 					</div>
-					<div class="col-12">
+					<div class="imagenp">
 						<label for="image" class="form-label">Imagenes:</label>
 						<input type="file" name="image" id="image" class="form-input" multiple accept="image/*">
 					</div>
-					<div class="col-12">
+					<div class="guardarp">
 						<button type="submit" class="buy-now-button">Guardar producto</button>
 					</div>
 				</div>
