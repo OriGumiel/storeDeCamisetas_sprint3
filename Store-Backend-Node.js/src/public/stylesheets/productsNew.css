@@ -110,6 +110,7 @@ body {
     white-space: nowrap;
     will-change: box-shadow,transform;
     font-size: 18px;
+    height: 25px;
 }
 
 .input-file-box input{

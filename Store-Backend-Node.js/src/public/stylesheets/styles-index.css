@@ -47,13 +47,19 @@
 }
 .principal .left-article img{
     width: 100%;
+    border-start-start-radius: 6%;
+    border-start-end-radius: 6%;
 }
 .principal .right-article img{
     width: 100%;
     height: 42%;
+    border-start-start-radius: 6%;
+    border-start-end-radius: 6%;
 }
 .principal .central-article img{
     width: 100%;
+    border-start-start-radius: 6%;
+    border-start-end-radius: 6%;
 }
 .principal .left-article{
     width: 90%;
@@ -70,7 +76,8 @@
     height: 75%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column
+    flex-direction: column;
+    border-radius: 6%;
 }
 .principal .central-article{
     width:90%;
@@ -131,11 +138,13 @@ article:hover h3{
 .principal .left-article{
     width: 25%;
     height: 75%;
+    border-radius: 6%;
 }
 
 .principal .central-article{
     width:35%;
     height: 90%;
+    border-radius: 6%;
 }
 a:link,a:visited,a:active{
     color:black;
