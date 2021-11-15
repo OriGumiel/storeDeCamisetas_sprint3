@@ -66,14 +66,15 @@
     height: 80%;
     background-color: white;
     margin: 10px 0px;
+    border-radius: 6%;
 }
 .principal .right-article{
     /* width: 90%;
     height: 75%; */
     background-color: white;
     margin: 10px 0px;
-    width: 25%;
-    height: 75%;
+    width: 90%;
+    height: 90%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -84,6 +85,7 @@
     height: 90%;
     background-color: white;
     margin: 10px 0px;
+    border-radius: 6%;
 }
 
 article:hover {
@@ -122,6 +124,11 @@ article:hover h3{
     height: 90%;
 }
 
+a:link,a:visited,a:active{
+    color:black;
+    text-decoration: none;
+    }
+
 @media (min-width: 769px) {
 
 .principal{     
@@ -146,6 +153,13 @@ article:hover h3{
     height: 90%;
     border-radius: 6%;
 }
+
+.principal .right-article{
+    width: 25%;
+    height: 75%;
+    border-radius: 6%;
+}
+
 a:link,a:visited,a:active{
     color:black;
     text-decoration: none;
