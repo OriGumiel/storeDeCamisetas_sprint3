@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family:'Red Hat Display', sans-serif;
     background-color: white;
 }
 
@@ -13,14 +13,16 @@ body {
     display: inline-block;
     font-size: 1.1 em;
     margin: 10px 0;
+    padding-right: 10px;
+    max-width: 150px;
+    width: 100%;
     
   }
   
   .form-input {
     display: block;
-    width: 50%;
-    height: 45px;
-    margin-bottom: 15px;
+    width: 68%;
+    height: 40px;
     font-size: 1.1em;
     border-radius: 8px;
     border: none;
@@ -34,4 +36,90 @@ body {
     padding: 15px;
   }
 
-  
+  .col-12 {
+    border: 1px solid grey;
+    margin: 0 auto;
+    width: 68%;
+    min-height: auto;
+    padding: 1em;
+    font-size: small;
+  }
+
+  .nombrep, .preciop, .tallep, .categoriap, .imagenp, .descripcionp, .guardarp {
+    margin: 0 auto;
+    width: 90%;
+    min-height: auto;
+    padding: 1em;
+    font-size: small;
+    border: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .buy-now-button {
+    background-image: linear-gradient( 
+      92.88deg, #42250c 9.16%, #762f04 43.89%, #914713 64.72%);
+          border-radius: 8px;
+          border-style: none;
+          box-sizing: border-box;
+          color: #FFFFFF;
+          cursor: pointer;
+          flex-shrink: 0;
+          font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          height: 36px;
+          padding: 0 0.6rem;
+          padding: 0 0.6rem;
+          text-align: center;
+          text-shadow: rgb(0 0 0 / 25%) 0 3px 8px;
+          transition: all .5s;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+          margin: auto;
+  }
+
+.input-file-box{
+  align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    height: 25px;
+}
+
+.input-file-box input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.container-productsNew{
+  padding-top: 30px;
+}

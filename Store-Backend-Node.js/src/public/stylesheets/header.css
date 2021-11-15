@@ -135,6 +135,12 @@ div .top-button {
     display: inline-block;
     color: white;
 }
+.bottom-nav-bar .right-bar a{
+    text-decoration: none;
+    padding: 5px;
+    display: inline-block;
+    color: white;
+}
 .shop-logo {
     color: white;
     background-color: white;
@@ -164,7 +170,7 @@ div .top-button {
 
 }
 .left-bar ul li{
-    margin: 0px 4px;
+    margin: 0px 8px;
     width: auto;
 
 }
@@ -206,7 +212,7 @@ div .top-button {
 
     header nav input {
         width: 58%;
-        height: 40px;
+        height: 30px;
         font-size: 14px;
     }
 
@@ -243,7 +249,7 @@ div .top-button {
     
         /* Header*/
         .top-nav-bar img{
-            width: 50%;
+            width: 90%;
             padding: 10px 10px 10px 0;
             margin-left: 20px;
         }
@@ -262,7 +268,7 @@ div .top-button {
         }
     
         .right-bar{        
-            width: 10%;
+            width: 18%;
             padding-left: 0px;    
         }
     
